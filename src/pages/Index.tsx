@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useFavorites, useRecents } from "@/hooks/use-preferences";
+import { SEO } from "@/components/SEO";
 
 const Index = () => {
   const [search, setSearch] = useState("");
@@ -31,6 +32,12 @@ const Index = () => {
 
   return (
     <div className="max-w-5xl mx-auto">
+      <SEO
+        title="DevTools Hub — 60+ Free Online Developer Tools"
+        description="Free online developer tools suite: JSON formatter, Base64 encoder, regex tester, API tester, UUID generator, color picker, PDF merger, CSS generators and 50+ more tools. Fast, private, runs in your browser."
+        path="/"
+        keywords="developer tools, online tools, json formatter, base64 encoder, regex tester, uuid generator, css generator, pdf tools, free dev tools"
+      />
       <div className="text-center mb-8">
         <div className="inline-flex items-center gap-2 mb-3">
           <Terminal className="h-8 w-8 text-primary" />
