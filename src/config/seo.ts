@@ -590,4 +590,19 @@ export const toolSEO: Record<string, { title: string; description: string; keywo
     description: "Create quick presentations from Markdown text. Fullscreen mode, keyboard navigation, grid overview. Free presentation tool.",
     keywords: "markdown slides, markdown presentation, slide presenter, markdown to slides, quick presentation, free slides tool",
   },
+  "sql-playground": {
+    title: "SQL Playground Online — Run SQLite in Browser",
+    description: "Run SQL queries directly in your browser with SQLite. Create tables, insert data, and query — no server needed. Free online SQL playground.",
+    keywords: "sql playground, sql online, sqlite browser, run sql, sql editor, sql practice, sql tester online",
+  },
+  "mongo-query": {
+    title: "MongoDB Query Builder — Visual Query Generator",
+    description: "Build MongoDB find and aggregation pipeline queries visually. Generate ready-to-use MongoDB shell commands. Free online tool.",
+    keywords: "mongodb query builder, mongodb find, mongodb aggregate, mongo query generator, mongodb visual builder",
+  },
+  "websocket-tester": {
+    title: "WebSocket Tester — Connect & Send Messages",
+    description: "Test WebSocket connections in real-time. Connect to any WebSocket server, send and receive messages with timestamps. Free online tool.",
+    keywords: "websocket tester, websocket client, ws tester, websocket debug, websocket online, test websocket",
+  },
 };

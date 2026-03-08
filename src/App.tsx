@@ -258,6 +258,9 @@ const App = () => (
                   <Route path="/tools/fake-data" element={<FakeDataGenerator />} />
                   <Route path="/tools/pdf-viewer" element={<PdfViewer />} />
                   <Route path="/tools/md-slides" element={<MarkdownSlidePresenter />} />
+                  <Route path="/tools/sql-playground" element={<SqlPlayground />} />
+                  <Route path="/tools/mongo-query" element={<MongoQueryBuilder />} />
+                  <Route path="/tools/websocket-tester" element={<WebSocketTester />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
