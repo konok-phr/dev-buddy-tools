@@ -66,7 +66,8 @@ export default function PackageJsonGenerator() {
   const addDevDep = () => { if (newDevDep.trim() && !devDeps.includes(newDevDep.trim())) { setDevDeps([...devDeps, newDevDep.trim()]); setNewDevDep(""); } };
 
   return (
-    <ToolPage toolId="package-json" title="package.json Generator" description="Build package.json interactively with presets">
+    <div className="space-y-0">
+      <ToolHeader title="package.json Generator" description="Build package.json interactively with presets" />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-4">
           <div className="flex gap-2 flex-wrap">
