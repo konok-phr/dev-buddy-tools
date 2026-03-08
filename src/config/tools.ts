@@ -115,7 +115,7 @@ export const tools: ToolDef[] = [
   { id: "code-screenshot", title: "Code Screenshot", description: "Create beautiful code screenshots", icon: Camera, category: "code-testing", path: "/tools/code-screenshot" },
   { id: "htaccess", title: ".htaccess Generator", description: "Generate Apache .htaccess configs", icon: FileKey, category: "code-testing", path: "/tools/htaccess" },
   { id: "responsive-tester", title: "Responsive Tester", description: "Preview websites at different screen sizes", icon: Monitor, category: "code-testing", path: "/tools/responsive-tester" },
-  { id: "csv-viewer", title: "CSV Viewer / Editor", description: "View, edit and export CSV data", icon: TableProperties, category: "text-data", path: "/tools/csv-viewer" },
+  { id: "csv-viewer", title: "CSV / Excel Viewer", description: "View, sort, filter & edit CSV and Excel files", icon: TableProperties, category: "text-data", path: "/tools/csv-viewer" },
   { id: "html-css-js-minifier", title: "HTML/CSS/JS Minifier", description: "Minify HTML, CSS and JavaScript combined", icon: Minimize2, category: "code-testing", path: "/tools/html-css-js-minifier" },
   { id: "code-beautifier", title: "Code Beautifier", description: "Beautify JSON, CSS, HTML, SQL and XML", icon: Sparkles, category: "code-testing", path: "/tools/code-beautifier" },
   { id: "webpack-config", title: "Webpack Config Generator", description: "Generate webpack.config.js interactively", icon: PackageIcon, category: "code-testing", path: "/tools/webpack-config" },

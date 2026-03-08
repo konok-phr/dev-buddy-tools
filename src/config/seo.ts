@@ -381,8 +381,9 @@ export const toolSEO: Record<string, { title: string; description: string; keywo
     keywords: "responsive tester, responsive design test, mobile preview, screen size tester, viewport tester, responsive checker",
   },
   "csv-viewer": {
-    title: "CSV Viewer & Editor Online",
-    description: "View, edit and export CSV data in a spreadsheet-like table. Upload CSV files or paste data. Free online tool.",
+    title: "CSV & Excel Viewer Online — Sort, Filter & Edit",
+    description: "View, sort, filter and edit CSV & Excel (.xlsx) files in a spreadsheet table. Upload or paste data. Export as CSV or XLSX. Free tool.",
+    keywords: "csv viewer, excel viewer, xlsx viewer, csv editor, spreadsheet viewer, csv sort filter, csv online, excel online viewer",
     keywords: "csv viewer, csv editor, csv reader, view csv online, edit csv, csv table",
   },
   "html-css-js-minifier": {
