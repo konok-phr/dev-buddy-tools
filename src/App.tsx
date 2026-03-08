@@ -120,6 +120,9 @@ import GlassmorphismGenerator from "./pages/tools/GlassmorphismGenerator";
 import NeumorphismGenerator from "./pages/tools/NeumorphismGenerator";
 import CssTransitionBuilder from "./pages/tools/CssTransitionBuilder";
 import SvgPathEditor from "./pages/tools/SvgPathEditor";
+import NginxConfigGenerator from "./pages/tools/NginxConfigGenerator";
+import GithubActionsBuilder from "./pages/tools/GithubActionsBuilder";
+import FakeDataGenerator from "./pages/tools/FakeDataGenerator";
 
 const queryClient = new QueryClient();
 
