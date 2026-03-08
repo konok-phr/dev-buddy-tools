@@ -48,7 +48,8 @@ export default function CssTransitionBuilder() {
   }, [items, hovered]);
 
   return (
-    <ToolPage toolId="css-transition" title="CSS Transition Builder" description="Build multi-property CSS transitions visually">
+    <div className="space-y-0">
+      <ToolHeader title="CSS Transition Builder" description="Build multi-property CSS transitions visually" />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-4">
           {items.map((item, i) => (
