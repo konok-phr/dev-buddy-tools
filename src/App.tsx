@@ -31,6 +31,10 @@ import SvgOptimizer from "./pages/tools/SvgOptimizer";
 import PdfMerger from "./pages/tools/PdfMerger";
 import PdfPageExtractor from "./pages/tools/PdfPageExtractor";
 import PdfMetadata from "./pages/tools/PdfMetadata";
+import NumberBaseConverter from "./pages/tools/NumberBaseConverter";
+import YamlToJson from "./pages/tools/YamlToJson";
+import JsonSchemaValidator from "./pages/tools/JsonSchemaValidator";
+import TextCaseConverter from "./pages/tools/TextCaseConverter";
 
 const queryClient = new QueryClient();
 
@@ -70,6 +74,10 @@ const App = () => (
                   <Route path="/tools/pdf-merger" element={<PdfMerger />} />
                   <Route path="/tools/pdf-extractor" element={<PdfPageExtractor />} />
                   <Route path="/tools/pdf-metadata" element={<PdfMetadata />} />
+                  <Route path="/tools/number-base" element={<NumberBaseConverter />} />
+                  <Route path="/tools/yaml-json" element={<YamlToJson />} />
+                  <Route path="/tools/json-schema" element={<JsonSchemaValidator />} />
+                  <Route path="/tools/text-case" element={<TextCaseConverter />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>

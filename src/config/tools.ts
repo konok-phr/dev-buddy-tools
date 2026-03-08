@@ -1,7 +1,8 @@
 import {
   Braces, Binary, Regex, Globe, Clock, Fingerprint, Lock, Palette,
   Shield, FileText, Type, FileSearch, Key, Link, GitCompare, Code, FileCode,
-  ArrowLeftRight, Timer, BookOpen, Image, FileUp, Scissors, FileCheck
+  ArrowLeftRight, Timer, BookOpen, Image, FileUp, Scissors, FileCheck,
+  Hash, FileJson, CheckSquare, CaseSensitive
 } from "lucide-react";
 
 export interface ToolDef {
@@ -46,4 +47,8 @@ export const tools: ToolDef[] = [
   { id: "pdf-merger", title: "PDF Merger", description: "Combine multiple PDF files into one", icon: FileUp, category: "pdf", path: "/tools/pdf-merger" },
   { id: "pdf-extractor", title: "PDF Page Extractor", description: "Extract specific pages from a PDF", icon: Scissors, category: "pdf", path: "/tools/pdf-extractor" },
   { id: "pdf-metadata", title: "PDF Metadata Viewer", description: "View PDF properties & metadata", icon: FileCheck, category: "pdf", path: "/tools/pdf-metadata" },
+  { id: "number-base", title: "Number Base Converter", description: "Convert between binary, octal, decimal & hex", icon: Hash, category: "converters", path: "/tools/number-base" },
+  { id: "yaml-json", title: "YAML ↔ JSON", description: "Convert between YAML and JSON", icon: FileJson, category: "text-data", path: "/tools/yaml-json" },
+  { id: "json-schema", title: "JSON Schema Validator", description: "Validate JSON against a schema", icon: CheckSquare, category: "code-testing", path: "/tools/json-schema" },
+  { id: "text-case", title: "Text Case Converter", description: "Convert text between different cases", icon: CaseSensitive, category: "text-data", path: "/tools/text-case" },
 ];
