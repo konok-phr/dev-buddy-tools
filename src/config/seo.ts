@@ -330,4 +330,54 @@ export const toolSEO: Record<string, { title: string; description: string; keywo
     description: "Convert between byte units: B, KB, MB, GB, TB and SI units. Binary and decimal conversions. Free online calculator.",
     keywords: "byte size calculator, kb to mb, mb to gb, byte converter, file size converter, data size calculator",
   },
+  "slug-generator": {
+    title: "Slug Generator — URL Slug from Text Online",
+    description: "Convert any text into a clean, SEO-friendly URL slug. Supports hyphens, underscores and dots. Free online slug generator.",
+    keywords: "slug generator, url slug, slugify, text to slug, seo url, url friendly text, generate slug online",
+  },
+  "robots-txt": {
+    title: "Robots.txt Generator Online — Free Tool",
+    description: "Generate robots.txt files for your website. Configure user-agents, allow/disallow rules, sitemap URL and crawl delay. Free tool.",
+    keywords: "robots.txt generator, generate robots txt, robots file, seo robots, crawler rules, search engine robots",
+  },
+  "sitemap-generator": {
+    title: "XML Sitemap Generator Online — Free SEO Tool",
+    description: "Generate XML sitemaps for better SEO and search engine indexing. Add URLs with priority and change frequency. Free tool.",
+    keywords: "sitemap generator, xml sitemap, generate sitemap, seo sitemap, sitemap builder, sitemap creator",
+  },
+  "md-to-html": {
+    title: "Markdown to HTML Converter Online",
+    description: "Convert Markdown to clean HTML with live preview. Supports headings, bold, italic, links, images and lists. Free tool.",
+    keywords: "markdown to html, convert markdown, md to html, markdown converter, markdown html, markdown parser",
+  },
+  "image-compressor": {
+    title: "Image Compressor Online — Free Browser Tool",
+    description: "Compress and resize images directly in your browser. No uploads to servers. Adjust quality and max width. Free tool.",
+    keywords: "image compressor, compress image, reduce image size, image optimizer, resize image online, jpeg compressor",
+  },
+  "color-blindness": {
+    title: "Color Blindness Simulator — Accessibility Tool",
+    description: "Simulate how colors appear to people with color vision deficiency. Test protanopia, deuteranopia, tritanopia. Free tool.",
+    keywords: "color blindness simulator, color blind test, accessibility, protanopia, deuteranopia, color vision deficiency",
+  },
+  "css-specificity": {
+    title: "CSS Specificity Calculator Online",
+    description: "Calculate and compare CSS selector specificity. Understand which styles take priority. Sort selectors by weight. Free tool.",
+    keywords: "css specificity calculator, specificity, css selector weight, css priority, specificity score, css cascade",
+  },
+  "code-screenshot": {
+    title: "Code Screenshot Generator — Carbon Alternative",
+    description: "Create beautiful code screenshots with syntax themes like Monokai, Dracula and Nord. Export as PNG. Free online tool.",
+    keywords: "code screenshot, code to image, carbon alternative, code image generator, code snippet image, beautiful code",
+  },
+  "htaccess": {
+    title: ".htaccess Generator — Apache Config Online",
+    description: "Generate .htaccess files with HTTPS redirect, gzip compression, caching, custom error pages and URL redirects. Free tool.",
+    keywords: "htaccess generator, generate htaccess, apache config, htaccess redirect, htaccess https, htaccess gzip",
+  },
+  "responsive-tester": {
+    title: "Responsive Design Tester — Preview at Any Screen Size",
+    description: "Preview any website at different screen sizes. Test responsive design for iPhone, iPad, desktop and custom dimensions. Free tool.",
+    keywords: "responsive tester, responsive design test, mobile preview, screen size tester, viewport tester, responsive checker",
+  },
 };

@@ -8,7 +8,9 @@ import {
   QrCode, LetterText, MapPin, Ruler, FileType, Database, Wind, Wand2,
   FileDiff, Play, GitBranch, Braces as BracesIcon,
   Contrast, SmilePlus, ImagePlus, Quote, Pentagon,
-  FileCode as FileCodeIcon, FileX, Settings2, ClockArrowUp, HardDrive
+  FileCode as FileCodeIcon, FileX, Settings2, ClockArrowUp, HardDrive,
+  Link2, Bot, Map, FileOutput, ImageDown, EyeOff, Hash as HashIcon,
+  Camera, FileKey, Monitor
 } from "lucide-react";
 
 export interface ToolDef {
@@ -96,4 +98,14 @@ export const tools: ToolDef[] = [
   { id: "toml-json", title: "TOML ↔ JSON", description: "Convert between TOML and JSON", icon: Settings2, category: "text-data", path: "/tools/toml-json" },
   { id: "epoch-batch", title: "Epoch Batch Converter", description: "Convert multiple timestamps at once", icon: ClockArrowUp, category: "converters", path: "/tools/epoch-batch" },
   { id: "byte-size", title: "Byte Size Calculator", description: "Convert between byte units", icon: HardDrive, category: "converters", path: "/tools/byte-size" },
+  { id: "slug-generator", title: "Slug Generator", description: "Convert text to URL-friendly slugs", icon: Link2, category: "text-data", path: "/tools/slug-generator" },
+  { id: "robots-txt", title: "Robots.txt Generator", description: "Generate robots.txt for crawlers", icon: Bot, category: "code-testing", path: "/tools/robots-txt" },
+  { id: "sitemap-generator", title: "Sitemap Generator", description: "Generate XML sitemaps for SEO", icon: Map, category: "code-testing", path: "/tools/sitemap-generator" },
+  { id: "md-to-html", title: "Markdown to HTML", description: "Convert Markdown to clean HTML", icon: FileOutput, category: "text-data", path: "/tools/md-to-html" },
+  { id: "image-compressor", title: "Image Compressor", description: "Compress images in your browser", icon: ImageDown, category: "converters", path: "/tools/image-compressor" },
+  { id: "color-blindness", title: "Color Blindness Simulator", description: "Preview colors with color vision deficiency", icon: EyeOff, category: "css-design", path: "/tools/color-blindness" },
+  { id: "css-specificity", title: "CSS Specificity Calculator", description: "Calculate CSS selector specificity", icon: HashIcon, category: "css-design", path: "/tools/css-specificity" },
+  { id: "code-screenshot", title: "Code Screenshot", description: "Create beautiful code screenshots", icon: Camera, category: "code-testing", path: "/tools/code-screenshot" },
+  { id: "htaccess", title: ".htaccess Generator", description: "Generate Apache .htaccess configs", icon: FileKey, category: "code-testing", path: "/tools/htaccess" },
+  { id: "responsive-tester", title: "Responsive Tester", description: "Preview websites at different screen sizes", icon: Monitor, category: "code-testing", path: "/tools/responsive-tester" },
 ];
