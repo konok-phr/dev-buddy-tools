@@ -63,6 +63,16 @@ import JsonDiffViewer from "./pages/tools/JsonDiffViewer";
 import CssAnimationGenerator from "./pages/tools/CssAnimationGenerator";
 import GitCommandBuilder from "./pages/tools/GitCommandBuilder";
 import TypeScriptTypeGenerator from "./pages/tools/TypeScriptTypeGenerator";
+import ColorContrastChecker from "./pages/tools/ColorContrastChecker";
+import EmojiPicker from "./pages/tools/EmojiPicker";
+import PlaceholderImageGenerator from "./pages/tools/PlaceholderImageGenerator";
+import StringEscaper from "./pages/tools/StringEscaper";
+import CssClipPathGenerator from "./pages/tools/CssClipPathGenerator";
+import HtmlPreview from "./pages/tools/HtmlPreview";
+import XmlFormatter from "./pages/tools/XmlFormatter";
+import TomlJsonConverter from "./pages/tools/TomlJsonConverter";
+import EpochBatchConverter from "./pages/tools/EpochBatchConverter";
+import ByteSizeCalculator from "./pages/tools/ByteSizeCalculator";
 
 const queryClient = new QueryClient();
 
@@ -134,6 +144,16 @@ const App = () => (
                   <Route path="/tools/css-animation" element={<CssAnimationGenerator />} />
                   <Route path="/tools/git-command" element={<GitCommandBuilder />} />
                   <Route path="/tools/ts-type" element={<TypeScriptTypeGenerator />} />
+                  <Route path="/tools/color-contrast" element={<ColorContrastChecker />} />
+                  <Route path="/tools/emoji-picker" element={<EmojiPicker />} />
+                  <Route path="/tools/placeholder-image" element={<PlaceholderImageGenerator />} />
+                  <Route path="/tools/string-escaper" element={<StringEscaper />} />
+                  <Route path="/tools/clip-path" element={<CssClipPathGenerator />} />
+                  <Route path="/tools/html-preview" element={<HtmlPreview />} />
+                  <Route path="/tools/xml-formatter" element={<XmlFormatter />} />
+                  <Route path="/tools/toml-json" element={<TomlJsonConverter />} />
+                  <Route path="/tools/epoch-batch" element={<EpochBatchConverter />} />
+                  <Route path="/tools/byte-size" element={<ByteSizeCalculator />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
