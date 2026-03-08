@@ -251,6 +251,9 @@ const App = () => (
                   <Route path="/tools/neumorphism" element={<NeumorphismGenerator />} />
                   <Route path="/tools/css-transition" element={<CssTransitionBuilder />} />
                   <Route path="/tools/svg-path-editor" element={<SvgPathEditor />} />
+                  <Route path="/tools/nginx-config" element={<NginxConfigGenerator />} />
+                  <Route path="/tools/github-actions" element={<GithubActionsBuilder />} />
+                  <Route path="/tools/fake-data" element={<FakeDataGenerator />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>

@@ -152,4 +152,7 @@ export const tools: ToolDef[] = [
   { id: "neumorphism", title: "Neumorphism Generator", description: "Create soft raised UI elements", icon: Layers, category: "css-design", path: "/tools/neumorphism" },
   { id: "css-transition", title: "CSS Transition Builder", description: "Build multi-property transitions visually", icon: ArrowRightFromLine, category: "css-design", path: "/tools/css-transition" },
   { id: "svg-path-editor", title: "SVG Path Editor", description: "Edit SVG paths with live preview", icon: PenTool, category: "css-design", path: "/tools/svg-path-editor" },
+  { id: "nginx-config", title: "Nginx Config Generator", description: "Build production-ready Nginx configs visually", icon: Settings2, category: "code-testing", path: "/tools/nginx-config" },
+  { id: "github-actions", title: "GitHub Actions Builder", description: "Build CI/CD workflow YAML with templates", icon: GitBranch, category: "code-testing", path: "/tools/github-actions" },
+  { id: "fake-data", title: "Fake Data Generator", description: "Generate realistic fake data for testing", icon: Database, category: "converters", path: "/tools/fake-data" },
 ];
