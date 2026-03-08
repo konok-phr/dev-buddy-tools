@@ -105,6 +105,12 @@ import AsciiTableGenerator from "./pages/tools/AsciiTableGenerator";
 import HttpHeaderInspector from "./pages/tools/HttpHeaderInspector";
 import TsToJson from "./pages/tools/TsToJson";
 import DnsPropagation from "./pages/tools/DnsPropagation";
+import ImageMetadata from "./pages/tools/ImageMetadata";
+import ImageResizer from "./pages/tools/ImageResizer";
+import ImageColorExtractor from "./pages/tools/ImageColorExtractor";
+import ImageToAscii from "./pages/tools/ImageToAscii";
+import ImageFormatConverter from "./pages/tools/ImageFormatConverter";
+import ImageFilters from "./pages/tools/ImageFilters";
 
 const queryClient = new QueryClient();
 
