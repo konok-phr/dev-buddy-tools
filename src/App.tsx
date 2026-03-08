@@ -125,6 +125,9 @@ import GithubActionsBuilder from "./pages/tools/GithubActionsBuilder";
 import FakeDataGenerator from "./pages/tools/FakeDataGenerator";
 import PdfViewer from "./pages/tools/PdfViewer";
 import MarkdownSlidePresenter from "./pages/tools/MarkdownSlidePresenter";
+import SqlPlayground from "./pages/tools/SqlPlayground";
+import MongoQueryBuilder from "./pages/tools/MongoQueryBuilder";
+import WebSocketTester from "./pages/tools/WebSocketTester";
 
 const queryClient = new QueryClient();
 
