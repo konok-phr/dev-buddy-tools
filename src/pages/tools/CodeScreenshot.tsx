@@ -157,6 +157,9 @@ export default function CodeScreenshot() {
   const [showDots, setShowDots] = useState(true);
   const [borderRadius, setBorderRadius] = useState(12);
   const [opacity, setOpacity] = useState(100);
+  const [watermark, setWatermark] = useState("");
+  const [watermarkPosition, setWatermarkPosition] = useState<"bottom-right" | "bottom-left" | "bottom-center">("bottom-right");
+  const [showWatermark, setShowWatermark] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const t = themes[theme as keyof typeof themes];
