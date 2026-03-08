@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useFavorites, useRecents } from "@/hooks/use-preferences";
+import { SEO } from "@/components/SEO";
 
 const Index = () => {
   const [search, setSearch] = useState("");
