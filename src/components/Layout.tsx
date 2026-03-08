@@ -30,7 +30,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               >
                 <Search className="h-3 w-3" />
                 <span className="hidden sm:inline">Search tools</span>
-                <kbd className="ml-1 px-1 py-0.5 bg-muted rounded text-[10px] font-mono hidden sm:inline">⌘K</kbd>
+                <kbd className="ml-1 px-1.5 py-0.5 bg-muted text-muted-foreground border border-border rounded text-[10px] font-mono hidden sm:inline">⌘K</kbd>
               </Button>
               <Button variant="ghost" size="icon" onClick={toggle} className="h-8 w-8 text-muted-foreground hover:text-foreground">
                 {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
