@@ -61,11 +61,8 @@ export default function GraphqlPlayground() {
   };
 
   return (
-    <ToolPage
-      toolId="graphql-playground"
-      title="GraphQL Playground"
-      description="Send GraphQL queries to any endpoint and view responses"
-    >
+    <div className="space-y-0">
+      <ToolHeader title="GraphQL Playground" description="Send GraphQL queries to any endpoint and view responses" />
       <div className="space-y-4">
         <div className="flex gap-2 flex-wrap">
           {ENDPOINTS.map((ep) => (
