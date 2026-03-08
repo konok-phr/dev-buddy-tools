@@ -65,7 +65,7 @@ export default function SqlPlayground() {
         const sqljs = await import("sql.js");
         const initSqlJs = sqljs.default;
         const SQL = await initSqlJs({
-          locateFile: (file: string) => `https://sql.js.org/dist/${file}`,
+          locateFile: (file: string) => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.11.0/${file}`,
         });
         const database = new SQL.Database();
         setDb(database);
