@@ -4,7 +4,8 @@ import {
   ArrowLeftRight, Timer, BookOpen, Image, FileUp, Scissors, FileCheck,
   Hash, FileJson, CheckSquare, CaseSensitive, Network, ShieldCheck, List, Table2,
   Paintbrush, Square, AlignHorizontalSpaceBetween, LayoutGrid,
-  Blend, Circle, TypeIcon, Ratio, ImageIcon, Smile, Tags, Eye
+  Blend, Circle, TypeIcon, Ratio, ImageIcon, Smile, Tags, Eye,
+  QrCode, LetterText, MapPin, Ruler
 } from "lucide-react";
 
 export interface ToolDef {
@@ -70,4 +71,8 @@ export const tools: ToolDef[] = [
   { id: "favicon-generator", title: "Favicon Generator", description: "Generate favicons from emoji", icon: Smile, category: "css-design", path: "/tools/favicon-generator" },
   { id: "meta-tag", title: "Meta Tag Generator", description: "Generate SEO-friendly meta tags", icon: Tags, category: "code-testing", path: "/tools/meta-tag" },
   { id: "og-preview", title: "Open Graph Preview", description: "Preview social media share cards", icon: Eye, category: "code-testing", path: "/tools/og-preview" },
+  { id: "qr-code", title: "QR Code Generator", description: "Generate QR codes from text or URLs", icon: QrCode, category: "converters", path: "/tools/qr-code" },
+  { id: "char-counter", title: "Character Counter", description: "Count characters, words & reading time", icon: LetterText, category: "text-data", path: "/tools/char-counter" },
+  { id: "json-path", title: "JSON Path Finder", description: "Navigate and query JSON with paths", icon: MapPin, category: "text-data", path: "/tools/json-path" },
+  { id: "css-unit", title: "CSS Unit Converter", description: "Convert between px, rem, em, vw & more", icon: Ruler, category: "css-design", path: "/tools/css-unit" },
 ];
