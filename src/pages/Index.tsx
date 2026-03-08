@@ -86,8 +86,8 @@ const Index = () => {
         </div>
       )}
 
-      <div className="flex flex-col sm:flex-row gap-3 mb-6">
-        <div className="relative flex-1">
+      <div className="mb-4">
+        <div className="relative">
           <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
           <Input
             placeholder="Search tools..."
@@ -96,25 +96,25 @@ const Index = () => {
             className="pl-9 bg-card border-border"
           />
         </div>
-        <div className="flex gap-2 flex-wrap">
+      </div>
+      <div className="flex gap-2 flex-wrap mb-6">
+        <Badge
+          variant={activeCategory === null ? "default" : "secondary"}
+          className="cursor-pointer"
+          onClick={() => setActiveCategory(null)}
+        >
+          All
+        </Badge>
+        {categories.map(cat => (
           <Badge
-            variant={activeCategory === null ? "default" : "secondary"}
+            key={cat.id}
+            variant={activeCategory === cat.id ? "default" : "secondary"}
             className="cursor-pointer"
-            onClick={() => setActiveCategory(null)}
+            onClick={() => setActiveCategory(cat.id)}
           >
-            All
+            {cat.label}
           </Badge>
-          {categories.map(cat => (
-            <Badge
-              key={cat.id}
-              variant={activeCategory === cat.id ? "default" : "secondary"}
-              className="cursor-pointer"
-              onClick={() => setActiveCategory(cat.id)}
-            >
-              {cat.label}
-            </Badge>
-          ))}
-        </div>
+        ))}
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
