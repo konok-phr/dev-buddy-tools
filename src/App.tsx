@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "@/components/Layout";
+import { ThemeProvider, FavoritesProvider, RecentsProvider } from "@/hooks/use-preferences";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import JsonFormatter from "./pages/tools/JsonFormatter";
@@ -35,42 +36,48 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/tools/json-formatter" element={<JsonFormatter />} />
-            <Route path="/tools/base64" element={<Base64Tool />} />
-            <Route path="/tools/regex-tester" element={<RegexTester />} />
-            <Route path="/tools/api-tester" element={<ApiTester />} />
-            <Route path="/tools/timestamp" element={<TimestampConverter />} />
-            <Route path="/tools/uuid-generator" element={<UuidGenerator />} />
-            <Route path="/tools/password-generator" element={<PasswordGenerator />} />
-            <Route path="/tools/color-picker" element={<ColorPicker />} />
-            <Route path="/tools/hash-generator" element={<HashGenerator />} />
-            <Route path="/tools/markdown-preview" element={<MarkdownPreview />} />
-            <Route path="/tools/lorem-ipsum" element={<LoremIpsum />} />
-            <Route path="/tools/log-viewer" element={<LogViewer />} />
-            <Route path="/tools/jwt-decoder" element={<JwtDecoder />} />
-            <Route path="/tools/url-encoder" element={<UrlEncoder />} />
-            <Route path="/tools/diff-checker" element={<DiffChecker />} />
-            <Route path="/tools/css-minifier" element={<CssMinifier />} />
-            <Route path="/tools/html-entity" element={<HtmlEntityEncoder />} />
-            <Route path="/tools/json-csv" element={<JsonToCsv />} />
-            <Route path="/tools/cron-parser" element={<CronParser />} />
-            <Route path="/tools/regex-cheatsheet" element={<RegexCheatsheet />} />
-            <Route path="/tools/svg-optimizer" element={<SvgOptimizer />} />
-            <Route path="/tools/pdf-merger" element={<PdfMerger />} />
-            <Route path="/tools/pdf-extractor" element={<PdfPageExtractor />} />
-            <Route path="/tools/pdf-metadata" element={<PdfMetadata />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
-      </BrowserRouter>
-    </TooltipProvider>
+    <ThemeProvider>
+      <FavoritesProvider>
+        <RecentsProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <Layout>
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/tools/json-formatter" element={<JsonFormatter />} />
+                  <Route path="/tools/base64" element={<Base64Tool />} />
+                  <Route path="/tools/regex-tester" element={<RegexTester />} />
+                  <Route path="/tools/api-tester" element={<ApiTester />} />
+                  <Route path="/tools/timestamp" element={<TimestampConverter />} />
+                  <Route path="/tools/uuid-generator" element={<UuidGenerator />} />
+                  <Route path="/tools/password-generator" element={<PasswordGenerator />} />
+                  <Route path="/tools/color-picker" element={<ColorPicker />} />
+                  <Route path="/tools/hash-generator" element={<HashGenerator />} />
+                  <Route path="/tools/markdown-preview" element={<MarkdownPreview />} />
+                  <Route path="/tools/lorem-ipsum" element={<LoremIpsum />} />
+                  <Route path="/tools/log-viewer" element={<LogViewer />} />
+                  <Route path="/tools/jwt-decoder" element={<JwtDecoder />} />
+                  <Route path="/tools/url-encoder" element={<UrlEncoder />} />
+                  <Route path="/tools/diff-checker" element={<DiffChecker />} />
+                  <Route path="/tools/css-minifier" element={<CssMinifier />} />
+                  <Route path="/tools/html-entity" element={<HtmlEntityEncoder />} />
+                  <Route path="/tools/json-csv" element={<JsonToCsv />} />
+                  <Route path="/tools/cron-parser" element={<CronParser />} />
+                  <Route path="/tools/regex-cheatsheet" element={<RegexCheatsheet />} />
+                  <Route path="/tools/svg-optimizer" element={<SvgOptimizer />} />
+                  <Route path="/tools/pdf-merger" element={<PdfMerger />} />
+                  <Route path="/tools/pdf-extractor" element={<PdfPageExtractor />} />
+                  <Route path="/tools/pdf-metadata" element={<PdfMetadata />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Layout>
+            </BrowserRouter>
+          </TooltipProvider>
+        </RecentsProvider>
+      </FavoritesProvider>
+    </ThemeProvider>
   </QueryClientProvider>
 );
 

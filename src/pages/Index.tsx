@@ -1,13 +1,18 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Search, Terminal } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { Search, Terminal, Star, Clock } from "lucide-react";
 import { tools, categories } from "@/config/tools";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { useFavorites, useRecents } from "@/hooks/use-preferences";
 
 const Index = () => {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const { favorites, toggleFav, isFav } = useFavorites();
+  const { recents, addRecent } = useRecents();
+  const navigate = useNavigate();
 
   const filtered = tools.filter(t => {
     const matchSearch = t.title.toLowerCase().includes(search.toLowerCase()) ||
@@ -15,6 +20,14 @@ const Index = () => {
     const matchCat = !activeCategory || t.category === activeCategory;
     return matchSearch && matchCat;
   });
+
+  const favTools = tools.filter(t => favorites.includes(t.id));
+  const recentTools = recents.map(id => tools.find(t => t.id === id)).filter(Boolean) as typeof tools;
+
+  const handleToolClick = (tool: typeof tools[0]) => {
+    addRecent(tool.id);
+    navigate(tool.path);
+  };
 
   return (
     <div className="max-w-5xl mx-auto">
@@ -27,6 +40,41 @@ const Index = () => {
           Free, fast, client-side developer tools. No sign-up required.
         </p>
       </div>
+
+      {/* Favorites */}
+      {favTools.length > 0 && !search && !activeCategory && (
+        <div className="mb-6">
+          <h2 className="text-sm font-semibold text-foreground flex items-center gap-2 mb-3">
+            <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" /> Favorites
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {favTools.map(tool => (
+              <ToolCard key={tool.id} tool={tool} isFav={true} onToggleFav={() => toggleFav(tool.id)} onClick={() => handleToolClick(tool)} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Recent Tools */}
+      {recentTools.length > 0 && !search && !activeCategory && (
+        <div className="mb-6">
+          <h2 className="text-sm font-semibold text-foreground flex items-center gap-2 mb-3">
+            <Clock className="h-4 w-4 text-muted-foreground" /> Recently Used
+          </h2>
+          <div className="flex gap-2 flex-wrap">
+            {recentTools.map(tool => (
+              <button
+                key={tool.id}
+                onClick={() => handleToolClick(tool)}
+                className="flex items-center gap-2 bg-card border border-border rounded-md px-3 py-1.5 text-sm hover:border-primary/50 transition-colors"
+              >
+                <tool.icon className="h-3.5 w-3.5 text-primary" />
+                <span className="text-foreground">{tool.title}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="flex flex-col sm:flex-row gap-3 mb-6">
         <div className="relative flex-1">
@@ -61,23 +109,7 @@ const Index = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filtered.map(tool => (
-          <Link
-            key={tool.id}
-            to={tool.path}
-            className="group rounded-lg border border-border bg-card p-5 hover:border-primary/50 hover:bg-card/80 transition-all"
-          >
-            <div className="flex items-start gap-3">
-              <div className="p-2 rounded-md bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
-                <tool.icon className="h-5 w-5" />
-              </div>
-              <div>
-                <h2 className="font-semibold text-foreground group-hover:text-primary transition-colors">
-                  {tool.title}
-                </h2>
-                <p className="text-sm text-muted-foreground mt-1">{tool.description}</p>
-              </div>
-            </div>
-          </Link>
+          <ToolCard key={tool.id} tool={tool} isFav={isFav(tool.id)} onToggleFav={() => toggleFav(tool.id)} onClick={() => handleToolClick(tool)} />
         ))}
       </div>
 
@@ -89,5 +121,32 @@ const Index = () => {
     </div>
   );
 };
+
+function ToolCard({ tool, isFav, onToggleFav, onClick }: {
+  tool: typeof tools[0]; isFav: boolean; onToggleFav: () => void; onClick: () => void;
+}) {
+  return (
+    <div className="group relative rounded-lg border border-border bg-card p-5 hover:border-primary/50 hover:bg-card/80 transition-all cursor-pointer" onClick={onClick}>
+      <button
+        onClick={e => { e.stopPropagation(); onToggleFav(); }}
+        className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity"
+        title={isFav ? "Remove from favorites" : "Add to favorites"}
+      >
+        <Star className={`h-4 w-4 ${isFav ? "text-yellow-500 fill-yellow-500" : "text-muted-foreground hover:text-yellow-500"}`} />
+      </button>
+      <div className="flex items-start gap-3">
+        <div className="p-2 rounded-md bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+          <tool.icon className="h-5 w-5" />
+        </div>
+        <div>
+          <h2 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+            {tool.title}
+          </h2>
+          <p className="text-sm text-muted-foreground mt-1">{tool.description}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default Index;

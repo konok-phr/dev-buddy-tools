@@ -4,6 +4,37 @@
 
 @layer base {
   :root {
+    --background: 0 0% 100%;
+    --foreground: 220 16% 12%;
+    --card: 0 0% 97%;
+    --card-foreground: 220 16% 12%;
+    --popover: 0 0% 97%;
+    --popover-foreground: 220 16% 12%;
+    --primary: 210 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 92%;
+    --secondary-foreground: 220 16% 12%;
+    --muted: 220 14% 92%;
+    --muted-foreground: 215 14% 45%;
+    --accent: 160 84% 32%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 14% 88%;
+    --input: 220 14% 88%;
+    --ring: 210 100% 45%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 16% 30%;
+    --sidebar-primary: 210 100% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 94%;
+    --sidebar-accent-foreground: 220 16% 12%;
+    --sidebar-border: 220 14% 90%;
+    --sidebar-ring: 210 100% 45%;
+  }
+
+  .dark {
     --background: 220 16% 8%;
     --foreground: 210 20% 90%;
     --card: 220 16% 11%;
@@ -23,7 +54,6 @@
     --border: 220 14% 18%;
     --input: 220 14% 18%;
     --ring: 210 100% 55%;
-    --radius: 0.5rem;
     --sidebar-background: 220 16% 6%;
     --sidebar-foreground: 210 20% 80%;
     --sidebar-primary: 210 100% 55%;
@@ -48,23 +78,11 @@
   }
 }
 
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: hsl(220 16% 8%);
-}
-::-webkit-scrollbar-thumb {
-  background: hsl(220 14% 22%);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(220 14% 30%);
-}
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: hsl(var(--background)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground)); }
 
-/* Markdown preview styles */
 .markdown-preview h1 { @apply text-2xl font-bold mb-4; }
 .markdown-preview h2 { @apply text-xl font-bold mb-3; }
 .markdown-preview h3 { @apply text-lg font-semibold mb-2; }
