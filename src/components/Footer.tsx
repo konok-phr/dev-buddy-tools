@@ -1,4 +1,4 @@
-import { Terminal, Github, Twitter, Heart } from "lucide-react";
+import { Terminal, Github, Twitter, Heart, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function Footer() {
@@ -14,9 +14,15 @@ export function Footer() {
           </div>
           <div className="flex items-center gap-4">
             <span className="text-xs text-muted-foreground flex items-center gap-1">
-              Made with <Heart className="h-3 w-3 text-destructive" /> for developers
+              Made with <Heart className="h-3 w-3 text-destructive" /> by{" "}
+              <a href="https://www.linkedin.com/in/kssadi" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors font-medium">
+                Khaled Saifullah Sadi
+              </a>
             </span>
             <div className="flex items-center gap-2">
+              <a href="https://www.linkedin.com/in/kssadi" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Linkedin className="h-4 w-4" />
+              </a>
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
                 <Github className="h-4 w-4" />
               </a>
