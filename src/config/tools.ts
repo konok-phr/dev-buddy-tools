@@ -2,7 +2,8 @@ import {
   Braces, Binary, Regex, Globe, Clock, Fingerprint, Lock, Palette,
   Shield, FileText, Type, FileSearch, Key, Link, GitCompare, Code, FileCode,
   ArrowLeftRight, Timer, BookOpen, Image, FileUp, Scissors, FileCheck,
-  Hash, FileJson, CheckSquare, CaseSensitive, Network, ShieldCheck, List, Table2
+  Hash, FileJson, CheckSquare, CaseSensitive, Network, ShieldCheck, List, Table2,
+  Paintbrush, Square, AlignHorizontalSpaceBetween, LayoutGrid
 } from "lucide-react";
 
 export interface ToolDef {
@@ -18,6 +19,7 @@ export const categories = [
   { id: "text-data", label: "Text & Data" },
   { id: "code-testing", label: "Code & Testing" },
   { id: "converters", label: "Converters & Generators" },
+  { id: "css-design", label: "CSS & Design" },
   { id: "security", label: "Security" },
   { id: "pdf", label: "PDF Tools" },
 ];
@@ -55,4 +57,8 @@ export const tools: ToolDef[] = [
   { id: "unix-permissions", title: "Unix Permissions", description: "Calculate chmod values interactively", icon: ShieldCheck, category: "code-testing", path: "/tools/unix-permissions" },
   { id: "http-status", title: "HTTP Status Codes", description: "Quick reference for HTTP status codes", icon: List, category: "code-testing", path: "/tools/http-status" },
   { id: "markdown-table", title: "Markdown Table Generator", description: "Build markdown tables visually", icon: Table2, category: "text-data", path: "/tools/markdown-table" },
+  { id: "color-palette", title: "Color Palette Generator", description: "Generate harmonious color palettes", icon: Paintbrush, category: "css-design", path: "/tools/color-palette" },
+  { id: "box-shadow", title: "Box Shadow Generator", description: "Visually design CSS box-shadow values", icon: Square, category: "css-design", path: "/tools/box-shadow" },
+  { id: "flexbox", title: "Flexbox Playground", description: "Visualize CSS flexbox properties", icon: AlignHorizontalSpaceBetween, category: "css-design", path: "/tools/flexbox" },
+  { id: "css-grid", title: "CSS Grid Generator", description: "Visually build CSS Grid layouts", icon: LayoutGrid, category: "css-design", path: "/tools/css-grid" },
 ];

@@ -86,6 +86,10 @@ const App = () => (
                   <Route path="/tools/unix-permissions" element={<UnixPermissionsCalculator />} />
                   <Route path="/tools/http-status" element={<HttpStatusCodeReference />} />
                   <Route path="/tools/markdown-table" element={<MarkdownTableGenerator />} />
+                  <Route path="/tools/color-palette" element={<ColorPaletteGenerator />} />
+                  <Route path="/tools/box-shadow" element={<BoxShadowGenerator />} />
+                  <Route path="/tools/flexbox" element={<FlexboxPlayground />} />
+                  <Route path="/tools/css-grid" element={<CssGridGenerator />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
