@@ -73,6 +73,16 @@ import XmlFormatter from "./pages/tools/XmlFormatter";
 import TomlJsonConverter from "./pages/tools/TomlJsonConverter";
 import EpochBatchConverter from "./pages/tools/EpochBatchConverter";
 import ByteSizeCalculator from "./pages/tools/ByteSizeCalculator";
+import SlugGenerator from "./pages/tools/SlugGenerator";
+import RobotsTxtGenerator from "./pages/tools/RobotsTxtGenerator";
+import SitemapGeneratorPage from "./pages/tools/SitemapGeneratorPage";
+import MarkdownToHtml from "./pages/tools/MarkdownToHtml";
+import ImageCompressor from "./pages/tools/ImageCompressor";
+import ColorBlindnessSimulator from "./pages/tools/ColorBlindnessSimulator";
+import CssSpecificityCalculator from "./pages/tools/CssSpecificityCalculator";
+import CodeScreenshot from "./pages/tools/CodeScreenshot";
+import HtaccessGenerator from "./pages/tools/HtaccessGenerator";
+import ResponsiveBreakpointTester from "./pages/tools/ResponsiveBreakpointTester";
 
 const queryClient = new QueryClient();
 
@@ -154,6 +164,16 @@ const App = () => (
                   <Route path="/tools/toml-json" element={<TomlJsonConverter />} />
                   <Route path="/tools/epoch-batch" element={<EpochBatchConverter />} />
                   <Route path="/tools/byte-size" element={<ByteSizeCalculator />} />
+                  <Route path="/tools/slug-generator" element={<SlugGenerator />} />
+                  <Route path="/tools/robots-txt" element={<RobotsTxtGenerator />} />
+                  <Route path="/tools/sitemap-generator" element={<SitemapGeneratorPage />} />
+                  <Route path="/tools/md-to-html" element={<MarkdownToHtml />} />
+                  <Route path="/tools/image-compressor" element={<ImageCompressor />} />
+                  <Route path="/tools/color-blindness" element={<ColorBlindnessSimulator />} />
+                  <Route path="/tools/css-specificity" element={<CssSpecificityCalculator />} />
+                  <Route path="/tools/code-screenshot" element={<CodeScreenshot />} />
+                  <Route path="/tools/htaccess" element={<HtaccessGenerator />} />
+                  <Route path="/tools/responsive-tester" element={<ResponsiveBreakpointTester />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
