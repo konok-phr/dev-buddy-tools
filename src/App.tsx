@@ -111,6 +111,7 @@ import ImageColorExtractor from "./pages/tools/ImageColorExtractor";
 import ImageToAscii from "./pages/tools/ImageToAscii";
 import ImageFormatConverter from "./pages/tools/ImageFormatConverter";
 import ImageFilters from "./pages/tools/ImageFilters";
+import ImageCropper from "./pages/tools/ImageCropper";
 
 const queryClient = new QueryClient();
 
@@ -230,6 +231,7 @@ const App = () => (
                   <Route path="/tools/image-ascii" element={<ImageToAscii />} />
                   <Route path="/tools/image-convert" element={<ImageFormatConverter />} />
                   <Route path="/tools/image-filters" element={<ImageFilters />} />
+                  <Route path="/tools/image-cropper" element={<ImageCropper />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
