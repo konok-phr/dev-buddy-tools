@@ -30,6 +30,7 @@ export const categories = [
   { id: "converters", label: "Converters & Generators" },
   { id: "css-design", label: "CSS & Design" },
   { id: "security", label: "Security" },
+  { id: "networking", label: "Networking" },
   { id: "pdf", label: "PDF Tools" },
 ];
 
