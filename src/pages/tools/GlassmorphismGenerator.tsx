@@ -42,7 +42,8 @@ border: 1px solid rgba(${r}, ${g}, ${b}, ${borderOpacity.toFixed(2)});`;
   const b = parseInt(hex.slice(5, 7), 16);
 
   return (
-    <ToolPage toolId="glassmorphism" title="Glassmorphism Generator" description="Create frosted glass UI effects with CSS backdrop-filter">
+    <div className="space-y-0">
+      <ToolHeader title="Glassmorphism Generator" description="Create frosted glass UI effects with CSS backdrop-filter" />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-5">
           <div className="flex items-center gap-3">
