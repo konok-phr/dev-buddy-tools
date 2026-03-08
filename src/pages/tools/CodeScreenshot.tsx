@@ -488,6 +488,27 @@ export default function CodeScreenshot() {
             <Switch checked={showDots} onCheckedChange={setShowDots} />
           </div>
 
+          {/* Watermark / Branding */}
+          <div className="pt-2 border-t border-border">
+            <div className="flex items-center justify-between mb-2">
+              <Label className="text-xs text-muted-foreground">Watermark</Label>
+              <Switch checked={showWatermark} onCheckedChange={setShowWatermark} />
+            </div>
+            {showWatermark && (
+              <div className="space-y-2">
+                <Input value={watermark} onChange={e => setWatermark(e.target.value)} className="h-8 text-xs" placeholder="@yourname or brand" />
+                <Select value={watermarkPosition} onValueChange={v => setWatermarkPosition(v as typeof watermarkPosition)}>
+                  <SelectTrigger className="h-8 text-xs"><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="bottom-right">Bottom Right</SelectItem>
+                    <SelectItem value="bottom-left">Bottom Left</SelectItem>
+                    <SelectItem value="bottom-center">Bottom Center</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
+          </div>
+
           <div className="flex gap-2 pt-2">
             <Button onClick={exportImage} size="sm" className="flex-1 text-xs">
               <Download className="h-3.5 w-3.5 mr-1" /> Export PNG
@@ -495,7 +516,7 @@ export default function CodeScreenshot() {
             <Button onClick={copyToClipboard} size="sm" variant="outline" className="text-xs">
               <Copy className="h-3.5 w-3.5" />
             </Button>
-            <Button onClick={() => { setCode(defaultCode); setTheme("One Dark"); setPadding(40); setFontSize(14); setGradient("Purple Haze"); setShowLineNumbers(true); setShowDots(true); setBorderRadius(12); setOpacity(100); setTitle("Counter.tsx"); setLanguage("typescript"); }} size="sm" variant="ghost" className="text-xs">
+            <Button onClick={() => { setCode(defaultCode); setTheme("One Dark"); setPadding(40); setFontSize(14); setGradient("Purple Haze"); setShowLineNumbers(true); setShowDots(true); setBorderRadius(12); setOpacity(100); setTitle("Counter.tsx"); setLanguage("typescript"); setWatermark(""); setShowWatermark(false); }} size="sm" variant="ghost" className="text-xs">
               <RotateCcw className="h-3.5 w-3.5" />
             </Button>
           </div>
