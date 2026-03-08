@@ -208,6 +208,16 @@ const App = () => (
                   <Route path="/tools/dns-lookup" element={<DnsLookup />} />
                   <Route path="/tools/ssl-decoder" element={<SslDecoder />} />
                   <Route path="/tools/npm-size" element={<NpmPackageSize />} />
+                  <Route path="/tools/js-benchmark" element={<JsBenchmark />} />
+                  <Route path="/tools/cron-builder" element={<CronBuilder />} />
+                  <Route path="/tools/ssh-keygen" element={<SshKeyGenerator />} />
+                  <Route path="/tools/docker-compose" element={<DockerComposeGenerator />} />
+                  <Route path="/tools/regex-debugger" element={<RegexDebugger />} />
+                  <Route path="/tools/gitignore" element={<GitignoreGenerator />} />
+                  <Route path="/tools/ascii-table" element={<AsciiTableGenerator />} />
+                  <Route path="/tools/http-headers" element={<HttpHeaderInspector />} />
+                  <Route path="/tools/ts-to-json" element={<TsToJson />} />
+                  <Route path="/tools/dns-propagation" element={<DnsPropagation />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
