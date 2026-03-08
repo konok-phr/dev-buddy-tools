@@ -13,7 +13,8 @@ import {
   Camera, FileKey, Monitor,
   TableProperties, Minimize2, Sparkles, Package as PackageIcon, FileEdit,
   ShieldAlert, KeyRound, Webhook, Wifi, LockKeyhole, Box,
-  Gauge, CalendarClock, KeySquare, Container, Bug, GitFork, TableIcon, Search, ArrowRightLeft, Radio
+  Gauge, CalendarClock, KeySquare, Container, Bug, GitFork, TableIcon, Search, ArrowRightLeft, Radio,
+  FileImage, Scaling, Pipette, TerminalSquare, RefreshCw, Wand2 as WandIcon
 } from "lucide-react";
 
 export interface ToolDef {
@@ -33,6 +34,7 @@ export const categories = [
   { id: "security", label: "Security" },
   { id: "networking", label: "Networking" },
   { id: "pdf", label: "PDF Tools" },
+  { id: "imagery", label: "Image Tools" },
 ];
 
 export const tools: ToolDef[] = [
@@ -134,4 +136,10 @@ export const tools: ToolDef[] = [
   { id: "http-headers", title: "HTTP Header Inspector", description: "Inspect response headers of any URL", icon: Search, category: "networking", path: "/tools/http-headers" },
   { id: "ts-to-json", title: "TS to JSON", description: "Convert TypeScript interfaces to JSON", icon: ArrowRightLeft, category: "converters", path: "/tools/ts-to-json" },
   { id: "dns-propagation", title: "DNS Propagation", description: "Check DNS propagation across servers", icon: Radio, category: "networking", path: "/tools/dns-propagation" },
+  { id: "image-metadata", title: "Image Metadata", description: "Extract EXIF data & file info from images", icon: FileImage, category: "imagery", path: "/tools/image-metadata" },
+  { id: "image-resizer", title: "Image Resizer", description: "Resize images to exact dimensions", icon: Scaling, category: "imagery", path: "/tools/image-resizer" },
+  { id: "image-colors", title: "Image Color Extractor", description: "Extract dominant colors from images", icon: Pipette, category: "imagery", path: "/tools/image-colors" },
+  { id: "image-ascii", title: "Image to ASCII Art", description: "Convert images to ASCII text art", icon: TerminalSquare, category: "imagery", path: "/tools/image-ascii" },
+  { id: "image-convert", title: "Image Format Converter", description: "Convert between PNG, JPEG & WebP", icon: RefreshCw, category: "imagery", path: "/tools/image-convert" },
+  { id: "image-filters", title: "Image Filters", description: "Apply CSS filters & effects to images", icon: WandIcon, category: "imagery", path: "/tools/image-filters" },
 ];

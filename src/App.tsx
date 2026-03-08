@@ -105,6 +105,12 @@ import AsciiTableGenerator from "./pages/tools/AsciiTableGenerator";
 import HttpHeaderInspector from "./pages/tools/HttpHeaderInspector";
 import TsToJson from "./pages/tools/TsToJson";
 import DnsPropagation from "./pages/tools/DnsPropagation";
+import ImageMetadata from "./pages/tools/ImageMetadata";
+import ImageResizer from "./pages/tools/ImageResizer";
+import ImageColorExtractor from "./pages/tools/ImageColorExtractor";
+import ImageToAscii from "./pages/tools/ImageToAscii";
+import ImageFormatConverter from "./pages/tools/ImageFormatConverter";
+import ImageFilters from "./pages/tools/ImageFilters";
 
 const queryClient = new QueryClient();
 
@@ -218,6 +224,12 @@ const App = () => (
                   <Route path="/tools/http-headers" element={<HttpHeaderInspector />} />
                   <Route path="/tools/ts-to-json" element={<TsToJson />} />
                   <Route path="/tools/dns-propagation" element={<DnsPropagation />} />
+                  <Route path="/tools/image-metadata" element={<ImageMetadata />} />
+                  <Route path="/tools/image-resizer" element={<ImageResizer />} />
+                  <Route path="/tools/image-colors" element={<ImageColorExtractor />} />
+                  <Route path="/tools/image-ascii" element={<ImageToAscii />} />
+                  <Route path="/tools/image-convert" element={<ImageFormatConverter />} />
+                  <Route path="/tools/image-filters" element={<ImageFilters />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>

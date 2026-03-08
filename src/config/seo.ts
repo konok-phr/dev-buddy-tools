@@ -490,4 +490,34 @@ export const toolSEO: Record<string, { title: string; description: string; keywo
     description: "Check DNS record propagation across global DNS servers. Verify A, AAAA, CNAME, MX records. Free tool.",
     keywords: "dns propagation, dns propagation checker, dns check, dns global, dns server check",
   },
+  "image-metadata": {
+    title: "Image Metadata Viewer — EXIF Data Extractor",
+    description: "Extract EXIF data, camera settings, dimensions and file info from images. View all metadata in your browser. Free tool.",
+    keywords: "image metadata, exif viewer, exif data, image info, photo metadata, camera settings",
+  },
+  "image-resizer": {
+    title: "Image Resizer Online — Resize & Convert",
+    description: "Resize images to exact dimensions with format conversion. HD, 4K, social media presets. Free browser-based tool.",
+    keywords: "image resizer, resize image, image dimensions, resize photo, image scaler",
+  },
+  "image-colors": {
+    title: "Image Color Extractor — Palette from Image",
+    description: "Extract dominant colors and color palette from any image. Export as CSS variables. Free online color extraction tool.",
+    keywords: "image color extractor, color palette from image, extract colors, dominant colors, image palette",
+  },
+  "image-ascii": {
+    title: "Image to ASCII Art Converter Online",
+    description: "Convert images to ASCII text art with multiple styles. Adjustable width and character sets. Free online tool.",
+    keywords: "image to ascii, ascii art, image to text, ascii converter, text art generator",
+  },
+  "image-convert": {
+    title: "Image Format Converter — PNG JPEG WebP",
+    description: "Convert images between PNG, JPEG and WebP formats. Adjustable quality. Compare file sizes. Free browser tool.",
+    keywords: "image converter, png to webp, jpg to png, image format, convert image, webp converter",
+  },
+  "image-filters": {
+    title: "Image Filters & Effects — CSS Filter Editor",
+    description: "Apply filters and effects to images: grayscale, sepia, blur, brightness, contrast. Presets and custom values. Free tool.",
+    keywords: "image filter, photo effects, css filter, image effects, photo filter online, grayscale sepia",
+  },
 };
