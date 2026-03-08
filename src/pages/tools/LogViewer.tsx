@@ -1,5 +1,7 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import { ToolHeader } from "@/components/ToolPage";
+import { Button } from "@/components/ui/button";
+import { Upload } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -24,6 +26,16 @@ export default function LogViewer() {
   const [logs, setLogs] = useState("");
   const [filter, setFilter] = useState("");
   const [activeLevel, setActiveLevel] = useState<string | null>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
+
+  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => setLogs(reader.result as string);
+    reader.readAsText(file);
+    e.target.value = "";
+  };
 
   const lines = useMemo(() => {
     return logs.split("\n").filter(l => l.trim()).map((line, i) => ({
@@ -47,8 +59,15 @@ export default function LogViewer() {
 
   return (
     <div className="max-w-5xl mx-auto">
-      <ToolHeader title="Log Viewer" description="Paste logs, filter by level and search" />
+      <ToolHeader title="Log Viewer" description="Paste logs or upload a log file, filter by level and search" />
       <div className="mb-4">
+        <div className="flex items-center gap-2 mb-2">
+          <Button variant="outline" size="sm" onClick={() => fileRef.current?.click()} className="gap-2">
+            <Upload className="h-3.5 w-3.5" /> Upload log file
+          </Button>
+          <input ref={fileRef} type="file" accept=".log,.txt,.csv,.json,*" className="hidden" onChange={handleFile} />
+          <span className="text-xs text-muted-foreground">or paste below</span>
+        </div>
         <Textarea
           value={logs}
           onChange={e => setLogs(e.target.value)}
