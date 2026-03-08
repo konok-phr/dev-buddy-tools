@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Play, Trash2, Plus, Database, Download, Upload } from "lucide-react";
 import { toast } from "sonner";
-import initSqlJs, { type Database as SqlDatabase } from "sql.js";
+// sql.js types
+type SqlDatabase = any;
 
 const SAMPLE_SETUP = `CREATE TABLE users (
   id INTEGER PRIMARY KEY,
@@ -61,6 +62,8 @@ export default function SqlPlayground() {
   useEffect(() => {
     const init = async () => {
       try {
+        const sqljs = await import("sql.js");
+        const initSqlJs = sqljs.default;
         const SQL = await initSqlJs({
           locateFile: (file: string) => `https://sql.js.org/dist/${file}`,
         });
