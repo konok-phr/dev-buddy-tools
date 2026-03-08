@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import ToolPage from "@/components/ToolPage";
+import { ToolHeader } from "@/components/ToolPage";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
