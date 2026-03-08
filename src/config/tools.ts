@@ -3,7 +3,8 @@ import {
   Shield, FileText, Type, FileSearch, Key, Link, GitCompare, Code, FileCode,
   ArrowLeftRight, Timer, BookOpen, Image, FileUp, Scissors, FileCheck,
   Hash, FileJson, CheckSquare, CaseSensitive, Network, ShieldCheck, List, Table2,
-  Paintbrush, Square, AlignHorizontalSpaceBetween, LayoutGrid
+  Paintbrush, Square, AlignHorizontalSpaceBetween, LayoutGrid,
+  Blend, Circle, TypeIcon, Ratio
 } from "lucide-react";
 
 export interface ToolDef {
@@ -61,4 +62,8 @@ export const tools: ToolDef[] = [
   { id: "box-shadow", title: "Box Shadow Generator", description: "Visually design CSS box-shadow values", icon: Square, category: "css-design", path: "/tools/box-shadow" },
   { id: "flexbox", title: "Flexbox Playground", description: "Visualize CSS flexbox properties", icon: AlignHorizontalSpaceBetween, category: "css-design", path: "/tools/flexbox" },
   { id: "css-grid", title: "CSS Grid Generator", description: "Visually build CSS Grid layouts", icon: LayoutGrid, category: "css-design", path: "/tools/css-grid" },
+  { id: "gradient", title: "Gradient Generator", description: "Create beautiful CSS gradients visually", icon: Blend, category: "css-design", path: "/tools/gradient" },
+  { id: "border-radius", title: "Border Radius Generator", description: "Visually adjust CSS border-radius", icon: Circle, category: "css-design", path: "/tools/border-radius" },
+  { id: "text-shadow", title: "Text Shadow Generator", description: "Design CSS text-shadow values", icon: TypeIcon, category: "css-design", path: "/tools/text-shadow" },
+  { id: "aspect-ratio", title: "Aspect Ratio Calculator", description: "Calculate and visualize aspect ratios", icon: Ratio, category: "css-design", path: "/tools/aspect-ratio" },
 ];
