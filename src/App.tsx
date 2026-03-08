@@ -186,6 +186,18 @@ const App = () => (
                   <Route path="/tools/code-screenshot" element={<CodeScreenshot />} />
                   <Route path="/tools/htaccess" element={<HtaccessGenerator />} />
                   <Route path="/tools/responsive-tester" element={<ResponsiveBreakpointTester />} />
+                  <Route path="/tools/csv-viewer" element={<CsvViewer />} />
+                  <Route path="/tools/html-css-js-minifier" element={<HtmlCssJsMinifier />} />
+                  <Route path="/tools/code-beautifier" element={<CodeBeautifier />} />
+                  <Route path="/tools/webpack-config" element={<WebpackConfigGenerator />} />
+                  <Route path="/tools/env-editor" element={<EnvFileEditor />} />
+                  <Route path="/tools/cors-checker" element={<CorsHeaderChecker />} />
+                  <Route path="/tools/csp-generator" element={<CspGenerator />} />
+                  <Route path="/tools/totp-generator" element={<TotpGenerator />} />
+                  <Route path="/tools/webhook-tester" element={<WebhookTester />} />
+                  <Route path="/tools/dns-lookup" element={<DnsLookup />} />
+                  <Route path="/tools/ssl-decoder" element={<SslDecoder />} />
+                  <Route path="/tools/npm-size" element={<NpmPackageSize />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
