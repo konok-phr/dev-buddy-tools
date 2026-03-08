@@ -48,7 +48,7 @@ function getExpiryBadge(days: number | null) {
   if (days === null) return null;
   if (days < 0) return <Badge variant="destructive" className="ml-2">Expired {Math.abs(days)} days ago</Badge>;
   if (days <= 30) return <Badge variant="destructive" className="ml-2">Expires in {days} days</Badge>;
-  if (days <= 90) return <Badge className="ml-2 bg-yellow-500/20 text-yellow-600 border-yellow-500/30">Expires in {days} days</Badge>;
+  if (days <= 90) return <Badge variant="outline" className="ml-2 text-accent-foreground">Expires in {days} days</Badge>;
   return <Badge variant="secondary" className="ml-2">{days} days remaining</Badge>;
 }
 
