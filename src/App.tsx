@@ -125,6 +125,9 @@ import GithubActionsBuilder from "./pages/tools/GithubActionsBuilder";
 import FakeDataGenerator from "./pages/tools/FakeDataGenerator";
 import PdfViewer from "./pages/tools/PdfViewer";
 import MarkdownSlidePresenter from "./pages/tools/MarkdownSlidePresenter";
+import SqlPlayground from "./pages/tools/SqlPlayground";
+import MongoQueryBuilder from "./pages/tools/MongoQueryBuilder";
+import WebSocketTester from "./pages/tools/WebSocketTester";
 
 const queryClient = new QueryClient();
 
@@ -258,6 +261,9 @@ const App = () => (
                   <Route path="/tools/fake-data" element={<FakeDataGenerator />} />
                   <Route path="/tools/pdf-viewer" element={<PdfViewer />} />
                   <Route path="/tools/md-slides" element={<MarkdownSlidePresenter />} />
+                  <Route path="/tools/sql-playground" element={<SqlPlayground />} />
+                  <Route path="/tools/mongo-query" element={<MongoQueryBuilder />} />
+                  <Route path="/tools/websocket-tester" element={<WebSocketTester />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>

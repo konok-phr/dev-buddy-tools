@@ -15,7 +15,8 @@ import {
   ShieldAlert, KeyRound, Webhook, Wifi, LockKeyhole, Box,
   Gauge, CalendarClock, KeySquare, Container, Bug, GitFork, TableIcon, Search, ArrowRightLeft, Radio,
   FileImage, Scaling, Pipette, TerminalSquare, RefreshCw, Wand2 as WandIcon, Crop,
-  Waypoints, BookOpenCheck, Zap, PackagePlus, GlassWater, Layers, ArrowRightFromLine, PenTool
+  Waypoints, BookOpenCheck, Zap, PackagePlus, GlassWater, Layers, ArrowRightFromLine, PenTool,
+  Plug, TerminalIcon
 } from "lucide-react";
 
 export interface ToolDef {
@@ -157,4 +158,7 @@ export const tools: ToolDef[] = [
   { id: "fake-data", title: "Fake Data Generator", description: "Generate realistic fake data for testing", icon: Database, category: "converters", path: "/tools/fake-data" },
   { id: "pdf-viewer", title: "PDF Viewer", description: "View PDFs with zoom, search & page navigation", icon: FileSearch, category: "text-data", path: "/tools/pdf-viewer" },
   { id: "md-slides", title: "Markdown Slide Presenter", description: "Create presentations from Markdown", icon: Play, category: "text-data", path: "/tools/md-slides" },
+  { id: "sql-playground", title: "SQL Playground", description: "Run SQL queries in-browser with SQLite", icon: TerminalIcon, category: "code-testing", path: "/tools/sql-playground" },
+  { id: "mongo-query", title: "MongoDB Query Builder", description: "Build MongoDB find & aggregate queries visually", icon: Database, category: "code-testing", path: "/tools/mongo-query" },
+  { id: "websocket-tester", title: "WebSocket Tester", description: "Connect to WebSocket servers and test messages", icon: Plug, category: "code-testing", path: "/tools/websocket-tester" },
 ];
