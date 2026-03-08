@@ -46,6 +46,9 @@ const Index = () => {
         <p className="text-muted-foreground">
           Free, fast, client-side developer tools. No sign-up required.
         </p>
+        <Badge variant="secondary" className="mt-3 text-sm font-mono">
+          {tools.length} tools available
+        </Badge>
       </div>
 
       {/* Favorites */}
