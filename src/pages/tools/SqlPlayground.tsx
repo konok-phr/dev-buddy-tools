@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Play, Trash2, Plus, Database, Download, Upload } from "lucide-react";
 import { toast } from "sonner";
-// sql.js loaded dynamically
+// sql.js types
+type SqlDatabase = any;
 
 const SAMPLE_SETUP = `CREATE TABLE users (
   id INTEGER PRIMARY KEY,
