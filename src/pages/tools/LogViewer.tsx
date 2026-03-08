@@ -2,6 +2,7 @@ import { useState, useMemo, useRef } from "react";
 import { ToolHeader } from "@/components/ToolPage";
 import { Button } from "@/components/ui/button";
 import { Upload } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 
