@@ -64,7 +64,8 @@ export default function JsonToZod() {
   };
 
   return (
-    <ToolPage toolId="json-to-zod" title="JSON to Zod Schema" description="Generate Zod validation schemas from JSON data">
+    <div className="space-y-0">
+      <ToolHeader title="JSON to Zod Schema" description="Generate Zod validation schemas from JSON data" />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="space-y-3">
           <div className="flex items-center gap-2">
