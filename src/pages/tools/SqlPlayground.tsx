@@ -62,6 +62,8 @@ export default function SqlPlayground() {
   useEffect(() => {
     const init = async () => {
       try {
+        const sqljs = await import("sql.js");
+        const initSqlJs = sqljs.default;
         const SQL = await initSqlJs({
           locateFile: (file: string) => `https://sql.js.org/dist/${file}`,
         });
