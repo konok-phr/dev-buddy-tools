@@ -53,7 +53,8 @@ export default function NeumorphismGenerator() {
   const shapes: Shape[] = ["flat", "concave", "convex", "pressed"];
 
   return (
-    <ToolPage toolId="neumorphism" title="Neumorphism Generator" description="Create soft, raised UI elements with CSS shadows">
+    <div className="space-y-0">
+      <ToolHeader title="Neumorphism Generator" description="Create soft, raised UI elements with CSS shadows" />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-5">
           <div className="flex items-center gap-3">
