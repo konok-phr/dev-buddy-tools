@@ -12,7 +12,8 @@ import {
   Link2, Bot, Map, FileOutput, ImageDown, EyeOff, Hash as HashIcon,
   Camera, FileKey, Monitor,
   TableProperties, Minimize2, Sparkles, Package as PackageIcon, FileEdit,
-  ShieldAlert, KeyRound, Webhook, Wifi, LockKeyhole, Box
+  ShieldAlert, KeyRound, Webhook, Wifi, LockKeyhole, Box,
+  Gauge, CalendarClock, KeySquare, Container, Bug, GitFork, TableIcon, Search, ArrowRightLeft, Radio
 } from "lucide-react";
 
 export interface ToolDef {
