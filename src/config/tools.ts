@@ -5,7 +5,7 @@ import {
   Hash, FileJson, CheckSquare, CaseSensitive, Network, ShieldCheck, List, Table2,
   Paintbrush, Square, AlignHorizontalSpaceBetween, LayoutGrid,
   Blend, Circle, TypeIcon, Ratio, ImageIcon, Smile, Tags, Eye,
-  QrCode, LetterText, MapPin, Ruler
+  QrCode, LetterText, MapPin, Ruler, FileType, Database, Wind, Wand2
 } from "lucide-react";
 
 export interface ToolDef {
@@ -75,4 +75,8 @@ export const tools: ToolDef[] = [
   { id: "char-counter", title: "Character Counter", description: "Count characters, words & reading time", icon: LetterText, category: "text-data", path: "/tools/char-counter" },
   { id: "json-path", title: "JSON Path Finder", description: "Navigate and query JSON with paths", icon: MapPin, category: "text-data", path: "/tools/json-path" },
   { id: "css-unit", title: "CSS Unit Converter", description: "Convert between px, rem, em, vw & more", icon: Ruler, category: "css-design", path: "/tools/css-unit" },
+  { id: "encoding", title: "Encoding Converter", description: "Convert between UTF-8, Unicode, Hex & Binary", icon: FileType, category: "converters", path: "/tools/encoding" },
+  { id: "sql-formatter", title: "SQL Formatter", description: "Format and beautify SQL queries", icon: Database, category: "code-testing", path: "/tools/sql-formatter" },
+  { id: "tailwind", title: "Tailwind Converter", description: "Convert CSS to Tailwind utility classes", icon: Wind, category: "css-design", path: "/tools/tailwind" },
+  { id: "regex-generator", title: "Regex Generator", description: "Build regex from presets & patterns", icon: Wand2, category: "code-testing", path: "/tools/regex-generator" },
 ];
