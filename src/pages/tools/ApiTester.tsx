@@ -43,7 +43,7 @@ export default function ApiTester() {
       <ToolHeader title="API Tester" description="Send HTTP requests and view responses" />
       <div className="flex flex-col sm:flex-row gap-2 mb-4">
         <Select value={method} onValueChange={setMethod}>
-          <SelectTrigger className="w-[120px] bg-card"><SelectValue /></SelectTrigger>
+          <SelectTrigger className="w-full sm:w-[120px] bg-card"><SelectValue /></SelectTrigger>
           <SelectContent>
             {["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"].map(m => (
               <SelectItem key={m} value={m}>{m}</SelectItem>

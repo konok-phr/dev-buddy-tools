@@ -78,6 +78,30 @@
   }
 }
 
+/* Responsive utilities */
+@layer utilities {
+  .overflow-wrap-anywhere {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Global responsive fixes */
+@media (max-width: 640px) {
+  pre, code {
+    font-size: 0.75rem !important;
+    word-break: break-all;
+  }
+  textarea {
+    min-height: 150px !important;
+    max-height: 300px !important;
+  }
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: hsl(var(--background)); }
 ::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 3px; }

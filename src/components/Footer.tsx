@@ -5,12 +5,12 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-card/30 px-4 py-6 mt-auto">
       <div className="max-w-5xl mx-auto">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Terminal className="h-4 w-4 text-primary" />
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+            <Terminal className="h-4 w-4 text-primary shrink-0" />
             <span>DevTools Hub</span>
-            <span>•</span>
-            <span>Free & open-source developer tools</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="hidden sm:inline">Free & open-source developer tools</span>
           </div>
           <div className="flex items-center gap-4">
             <span className="text-xs text-muted-foreground flex items-center gap-1">
