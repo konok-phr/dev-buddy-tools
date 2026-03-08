@@ -18,6 +18,11 @@ import HashGenerator from "./pages/tools/HashGenerator";
 import MarkdownPreview from "./pages/tools/MarkdownPreview";
 import LoremIpsum from "./pages/tools/LoremIpsum";
 import LogViewer from "./pages/tools/LogViewer";
+import JwtDecoder from "./pages/tools/JwtDecoder";
+import UrlEncoder from "./pages/tools/UrlEncoder";
+import DiffChecker from "./pages/tools/DiffChecker";
+import CssMinifier from "./pages/tools/CssMinifier";
+import HtmlEntityEncoder from "./pages/tools/HtmlEntityEncoder";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +47,11 @@ const App = () => (
             <Route path="/tools/markdown-preview" element={<MarkdownPreview />} />
             <Route path="/tools/lorem-ipsum" element={<LoremIpsum />} />
             <Route path="/tools/log-viewer" element={<LogViewer />} />
+            <Route path="/tools/jwt-decoder" element={<JwtDecoder />} />
+            <Route path="/tools/url-encoder" element={<UrlEncoder />} />
+            <Route path="/tools/diff-checker" element={<DiffChecker />} />
+            <Route path="/tools/css-minifier" element={<CssMinifier />} />
+            <Route path="/tools/html-entity" element={<HtmlEntityEncoder />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
