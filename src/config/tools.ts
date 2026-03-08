@@ -14,7 +14,8 @@ import {
   TableProperties, Minimize2, Sparkles, Package as PackageIcon, FileEdit,
   ShieldAlert, KeyRound, Webhook, Wifi, LockKeyhole, Box,
   Gauge, CalendarClock, KeySquare, Container, Bug, GitFork, TableIcon, Search, ArrowRightLeft, Radio,
-  FileImage, Scaling, Pipette, TerminalSquare, RefreshCw, Wand2 as WandIcon, Crop
+  FileImage, Scaling, Pipette, TerminalSquare, RefreshCw, Wand2 as WandIcon, Crop,
+  Waypoints, BookOpenCheck, Zap, PackagePlus, GlassWater, Layers, ArrowRightFromLine, PenTool
 } from "lucide-react";
 
 export interface ToolDef {
@@ -143,4 +144,12 @@ export const tools: ToolDef[] = [
   { id: "image-convert", title: "Image Format Converter", description: "Convert between PNG, JPEG & WebP", icon: RefreshCw, category: "imagery", path: "/tools/image-convert" },
   { id: "image-filters", title: "Image Filters", description: "Apply CSS filters & effects to images", icon: WandIcon, category: "imagery", path: "/tools/image-filters" },
   { id: "image-cropper", title: "Image Cropper", description: "Crop images with aspect ratio lock", icon: Crop, category: "imagery", path: "/tools/image-cropper" },
+  { id: "graphql-playground", title: "GraphQL Playground", description: "Send GraphQL queries & view responses", icon: Waypoints, category: "code-testing", path: "/tools/graphql-playground" },
+  { id: "openapi-viewer", title: "OpenAPI Viewer", description: "Browse Swagger/OpenAPI specs visually", icon: BookOpenCheck, category: "code-testing", path: "/tools/openapi-viewer" },
+  { id: "json-to-zod", title: "JSON to Zod Schema", description: "Generate Zod validation schemas from JSON", icon: Zap, category: "code-testing", path: "/tools/json-to-zod" },
+  { id: "package-json", title: "package.json Generator", description: "Build package.json interactively", icon: PackagePlus, category: "code-testing", path: "/tools/package-json" },
+  { id: "glassmorphism", title: "Glassmorphism Generator", description: "Create frosted glass UI effects", icon: GlassWater, category: "css-design", path: "/tools/glassmorphism" },
+  { id: "neumorphism", title: "Neumorphism Generator", description: "Create soft raised UI elements", icon: Layers, category: "css-design", path: "/tools/neumorphism" },
+  { id: "css-transition", title: "CSS Transition Builder", description: "Build multi-property transitions visually", icon: ArrowRightFromLine, category: "css-design", path: "/tools/css-transition" },
+  { id: "svg-path-editor", title: "SVG Path Editor", description: "Edit SVG paths with live preview", icon: PenTool, category: "css-design", path: "/tools/svg-path-editor" },
 ];

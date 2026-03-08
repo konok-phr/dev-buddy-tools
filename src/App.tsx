@@ -112,6 +112,14 @@ import ImageToAscii from "./pages/tools/ImageToAscii";
 import ImageFormatConverter from "./pages/tools/ImageFormatConverter";
 import ImageFilters from "./pages/tools/ImageFilters";
 import ImageCropper from "./pages/tools/ImageCropper";
+import GraphqlPlayground from "./pages/tools/GraphqlPlayground";
+import OpenApiViewer from "./pages/tools/OpenApiViewer";
+import JsonToZod from "./pages/tools/JsonToZod";
+import PackageJsonGenerator from "./pages/tools/PackageJsonGenerator";
+import GlassmorphismGenerator from "./pages/tools/GlassmorphismGenerator";
+import NeumorphismGenerator from "./pages/tools/NeumorphismGenerator";
+import CssTransitionBuilder from "./pages/tools/CssTransitionBuilder";
+import SvgPathEditor from "./pages/tools/SvgPathEditor";
 
 const queryClient = new QueryClient();
 
@@ -232,6 +240,14 @@ const App = () => (
                   <Route path="/tools/image-convert" element={<ImageFormatConverter />} />
                   <Route path="/tools/image-filters" element={<ImageFilters />} />
                   <Route path="/tools/image-cropper" element={<ImageCropper />} />
+                  <Route path="/tools/graphql-playground" element={<GraphqlPlayground />} />
+                  <Route path="/tools/openapi-viewer" element={<OpenApiViewer />} />
+                  <Route path="/tools/json-to-zod" element={<JsonToZod />} />
+                  <Route path="/tools/package-json" element={<PackageJsonGenerator />} />
+                  <Route path="/tools/glassmorphism" element={<GlassmorphismGenerator />} />
+                  <Route path="/tools/neumorphism" element={<NeumorphismGenerator />} />
+                  <Route path="/tools/css-transition" element={<CssTransitionBuilder />} />
+                  <Route path="/tools/svg-path-editor" element={<SvgPathEditor />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>

@@ -525,4 +525,44 @@ export const toolSEO: Record<string, { title: string; description: string; keywo
     description: "Crop images with aspect ratio presets (1:1, 4:3, 16:9). Drag to select area, resize handles, rule-of-thirds grid. Free tool.",
     keywords: "image cropper, crop image, crop photo, aspect ratio crop, image crop online, photo cropper",
   },
+  "graphql-playground": {
+    title: "GraphQL Playground — Query Builder Online",
+    description: "Send GraphQL queries to any endpoint with variables and headers. View JSON responses with timing. Free online GraphQL client.",
+    keywords: "graphql playground, graphql client, graphql query, graphql online, graphql tester, graphql api",
+  },
+  "openapi-viewer": {
+    title: "OpenAPI / Swagger Viewer Online",
+    description: "Browse and explore OpenAPI/Swagger specs visually. View endpoints, parameters and schemas. Free online API documentation viewer.",
+    keywords: "openapi viewer, swagger viewer, api docs, openapi browser, swagger ui, api explorer",
+  },
+  "json-to-zod": {
+    title: "JSON to Zod Schema Generator Online",
+    description: "Generate Zod validation schemas from JSON data automatically. Export TypeScript types with z.infer. Free online tool.",
+    keywords: "json to zod, zod schema generator, zod from json, typescript validation, zod converter",
+  },
+  "package-json": {
+    title: "package.json Generator Online",
+    description: "Build package.json files interactively with presets for React, Express, CLI tools. Add scripts and dependencies. Free tool.",
+    keywords: "package.json generator, npm init, package json builder, node project setup, npm package generator",
+  },
+  "glassmorphism": {
+    title: "Glassmorphism CSS Generator Online",
+    description: "Create frosted glass UI effects with CSS backdrop-filter. Adjust blur, opacity and saturation with live preview. Free tool.",
+    keywords: "glassmorphism generator, glass effect css, backdrop filter, frosted glass css, glass ui",
+  },
+  "neumorphism": {
+    title: "Neumorphism CSS Generator Online",
+    description: "Create soft, raised UI elements with neumorphic CSS shadows. Flat, concave, convex and pressed shapes. Free tool.",
+    keywords: "neumorphism generator, neumorphic css, soft ui, neu design, neumorphism css generator",
+  },
+  "css-transition": {
+    title: "CSS Transition Builder — Visual Editor",
+    description: "Build multi-property CSS transitions visually with duration, delay and easing controls. Live hover preview. Free tool.",
+    keywords: "css transition builder, css transition generator, transition editor, css animation, easing editor",
+  },
+  "svg-path-editor": {
+    title: "SVG Path Editor — Live Preview Online",
+    description: "Edit SVG path data with live preview. Preset shapes, stroke and fill controls. Copy SVG code. Free online tool.",
+    keywords: "svg path editor, svg editor, svg path, edit svg online, svg builder, svg path generator",
+  },
 };
