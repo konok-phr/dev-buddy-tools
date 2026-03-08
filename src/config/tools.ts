@@ -12,7 +12,8 @@ import {
   Link2, Bot, Map, FileOutput, ImageDown, EyeOff, Hash as HashIcon,
   Camera, FileKey, Monitor,
   TableProperties, Minimize2, Sparkles, Package as PackageIcon, FileEdit,
-  ShieldAlert, KeyRound, Webhook, Wifi, LockKeyhole, Box
+  ShieldAlert, KeyRound, Webhook, Wifi, LockKeyhole, Box,
+  Gauge, CalendarClock, KeySquare, Container, Bug, GitFork, TableIcon, Search, ArrowRightLeft, Radio
 } from "lucide-react";
 
 export interface ToolDef {
@@ -123,4 +124,14 @@ export const tools: ToolDef[] = [
   { id: "dns-lookup", title: "DNS Lookup", description: "Query DNS records for any domain", icon: Wifi, category: "networking", path: "/tools/dns-lookup" },
   { id: "ssl-decoder", title: "SSL Certificate Decoder", description: "Check and decode SSL certificates", icon: Shield, category: "networking", path: "/tools/ssl-decoder" },
   { id: "npm-size", title: "NPM Package Size", description: "Check bundle size of npm packages", icon: Box, category: "code-testing", path: "/tools/npm-size" },
+  { id: "js-benchmark", title: "JS Benchmarker", description: "Compare JavaScript code performance", icon: Gauge, category: "code-testing", path: "/tools/js-benchmark" },
+  { id: "cron-builder", title: "Cron Builder", description: "Build cron schedules visually with presets", icon: CalendarClock, category: "code-testing", path: "/tools/cron-builder" },
+  { id: "ssh-keygen", title: "SSH Key Generator", description: "Generate RSA/ECDSA key pairs in-browser", icon: KeySquare, category: "security", path: "/tools/ssh-keygen" },
+  { id: "docker-compose", title: "Docker Compose Gen", description: "Build docker-compose.yml visually", icon: Container, category: "code-testing", path: "/tools/docker-compose" },
+  { id: "regex-debugger", title: "Regex Debugger", description: "Step-by-step regex match visualization", icon: Bug, category: "code-testing", path: "/tools/regex-debugger" },
+  { id: "gitignore", title: ".gitignore Generator", description: "Generate .gitignore for any stack", icon: GitFork, category: "code-testing", path: "/tools/gitignore" },
+  { id: "ascii-table", title: "ASCII Table Generator", description: "Build text tables for docs & README", icon: TableIcon, category: "text-data", path: "/tools/ascii-table" },
+  { id: "http-headers", title: "HTTP Header Inspector", description: "Inspect response headers of any URL", icon: Search, category: "networking", path: "/tools/http-headers" },
+  { id: "ts-to-json", title: "TS to JSON", description: "Convert TypeScript interfaces to JSON", icon: ArrowRightLeft, category: "converters", path: "/tools/ts-to-json" },
+  { id: "dns-propagation", title: "DNS Propagation", description: "Check DNS propagation across servers", icon: Radio, category: "networking", path: "/tools/dns-propagation" },
 ];

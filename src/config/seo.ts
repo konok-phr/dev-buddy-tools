@@ -440,4 +440,54 @@ export const toolSEO: Record<string, { title: string; description: string; keywo
     description: "Check the bundle size (minified + gzipped) of any npm package. Compare package sizes. Free online tool.",
     keywords: "npm package size, bundle size, bundlephobia, npm size checker, package size, npm bundle analyzer",
   },
+  "js-benchmark": {
+    title: "JavaScript Performance Benchmarker Online",
+    description: "Compare JavaScript code snippet execution speed. Measure ops/sec and average time. Free browser-based benchmark tool.",
+    keywords: "javascript benchmark, js performance, code benchmark, ops per second, js speed test",
+  },
+  "cron-builder": {
+    title: "Cron Expression Builder — Visual Cron Schedule",
+    description: "Build cron expressions visually with presets and next run preview. Free online cron schedule builder.",
+    keywords: "cron builder, cron expression builder, cron schedule, visual cron, cron generator",
+  },
+  "ssh-keygen": {
+    title: "SSH Key Generator Online — RSA & ECDSA",
+    description: "Generate RSA and ECDSA key pairs in your browser using WebCrypto. Download PEM files. Free and secure.",
+    keywords: "ssh key generator, rsa key generator, ecdsa key, generate ssh key, key pair generator",
+  },
+  "docker-compose": {
+    title: "Docker Compose Generator Online",
+    description: "Build docker-compose.yml visually with service presets. Node, MongoDB, PostgreSQL, Redis templates. Free tool.",
+    keywords: "docker compose generator, docker compose builder, docker yml, docker compose template",
+  },
+  "regex-debugger": {
+    title: "Regex Debugger — Step-by-Step Match Viewer",
+    description: "Debug regular expressions step by step with capture group visualization and match highlighting. Free tool.",
+    keywords: "regex debugger, regex step by step, regex visualizer, regex capture groups, debug regex",
+  },
+  "gitignore": {
+    title: ".gitignore Generator — All Languages & Frameworks",
+    description: "Generate .gitignore files by selecting languages, frameworks, IDEs and OS. Templates for Node, Python, Java and more.",
+    keywords: "gitignore generator, generate gitignore, gitignore template, gitignore node, gitignore python",
+  },
+  "ascii-table": {
+    title: "ASCII Table Generator — Text Tables Online",
+    description: "Build ASCII, Unicode and Markdown tables for README files and documentation. Free online table generator.",
+    keywords: "ascii table generator, text table, markdown table, unicode table, readme table",
+  },
+  "http-headers": {
+    title: "HTTP Header Inspector — Response Headers Checker",
+    description: "Inspect HTTP response headers of any URL. Check security headers and CORS configuration. Free tool.",
+    keywords: "http headers, header inspector, response headers, security headers, check headers",
+  },
+  "ts-to-json": {
+    title: "TypeScript to JSON Converter Online",
+    description: "Convert TypeScript interfaces to JSON with smart mock data generation. Free online TS to JSON tool.",
+    keywords: "typescript to json, ts to json, interface to json, typescript converter, ts interface",
+  },
+  "dns-propagation": {
+    title: "DNS Propagation Checker Online",
+    description: "Check DNS record propagation across global DNS servers. Verify A, AAAA, CNAME, MX records. Free tool.",
+    keywords: "dns propagation, dns propagation checker, dns check, dns global, dns server check",
+  },
 };

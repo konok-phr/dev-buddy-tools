@@ -95,6 +95,16 @@ import WebhookTester from "./pages/tools/WebhookTester";
 import DnsLookup from "./pages/tools/DnsLookup";
 import SslDecoder from "./pages/tools/SslDecoder";
 import NpmPackageSize from "./pages/tools/NpmPackageSize";
+import JsBenchmark from "./pages/tools/JsBenchmark";
+import CronBuilder from "./pages/tools/CronBuilder";
+import SshKeyGenerator from "./pages/tools/SshKeyGenerator";
+import DockerComposeGenerator from "./pages/tools/DockerComposeGenerator";
+import RegexDebugger from "./pages/tools/RegexDebugger";
+import GitignoreGenerator from "./pages/tools/GitignoreGenerator";
+import AsciiTableGenerator from "./pages/tools/AsciiTableGenerator";
+import HttpHeaderInspector from "./pages/tools/HttpHeaderInspector";
+import TsToJson from "./pages/tools/TsToJson";
+import DnsPropagation from "./pages/tools/DnsPropagation";
 
 const queryClient = new QueryClient();
 
@@ -198,6 +208,16 @@ const App = () => (
                   <Route path="/tools/dns-lookup" element={<DnsLookup />} />
                   <Route path="/tools/ssl-decoder" element={<SslDecoder />} />
                   <Route path="/tools/npm-size" element={<NpmPackageSize />} />
+                  <Route path="/tools/js-benchmark" element={<JsBenchmark />} />
+                  <Route path="/tools/cron-builder" element={<CronBuilder />} />
+                  <Route path="/tools/ssh-keygen" element={<SshKeyGenerator />} />
+                  <Route path="/tools/docker-compose" element={<DockerComposeGenerator />} />
+                  <Route path="/tools/regex-debugger" element={<RegexDebugger />} />
+                  <Route path="/tools/gitignore" element={<GitignoreGenerator />} />
+                  <Route path="/tools/ascii-table" element={<AsciiTableGenerator />} />
+                  <Route path="/tools/http-headers" element={<HttpHeaderInspector />} />
+                  <Route path="/tools/ts-to-json" element={<TsToJson />} />
+                  <Route path="/tools/dns-propagation" element={<DnsPropagation />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
