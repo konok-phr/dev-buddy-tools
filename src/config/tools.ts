@@ -10,7 +10,9 @@ import {
   Contrast, SmilePlus, ImagePlus, Quote, Pentagon,
   FileCode as FileCodeIcon, FileX, Settings2, ClockArrowUp, HardDrive,
   Link2, Bot, Map, FileOutput, ImageDown, EyeOff, Hash as HashIcon,
-  Camera, FileKey, Monitor
+  Camera, FileKey, Monitor,
+  TableProperties, Minimize2, Sparkles, Package as PackageIcon, FileEdit,
+  ShieldAlert, KeyRound, Webhook, Wifi, LockKeyhole, Box
 } from "lucide-react";
 
 export interface ToolDef {
