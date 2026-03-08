@@ -136,8 +136,17 @@ const queryClient = new QueryClient();
 
 function LoadingFallback() {
   return (
-    <div className="flex items-center justify-center min-h-[400px]">
-      <div className="animate-spin h-8 w-8 border-2 border-primary border-t-transparent rounded-full" />
+    <div className="flex flex-col items-center justify-center min-h-[400px] gap-4 animate-fade-in">
+      <div className="relative">
+        <div className="h-12 w-12 rounded-xl border-2 border-primary/20 animate-pulse" />
+        <div className="absolute inset-0 h-12 w-12 rounded-xl border-2 border-transparent border-t-primary animate-spin" />
+      </div>
+      <div className="flex gap-1.5">
+        <span className="h-2 w-2 rounded-full bg-primary/60 animate-bounce [animation-delay:0ms]" />
+        <span className="h-2 w-2 rounded-full bg-primary/60 animate-bounce [animation-delay:150ms]" />
+        <span className="h-2 w-2 rounded-full bg-primary/60 animate-bounce [animation-delay:300ms]" />
+      </div>
+      <p className="text-sm text-muted-foreground font-medium">Loading tool...</p>
     </div>
   );
 }
