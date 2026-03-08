@@ -14,7 +14,8 @@ import {
   TableProperties, Minimize2, Sparkles, Package as PackageIcon, FileEdit,
   ShieldAlert, KeyRound, Webhook, Wifi, LockKeyhole, Box,
   Gauge, CalendarClock, KeySquare, Container, Bug, GitFork, TableIcon, Search, ArrowRightLeft, Radio,
-  FileImage, Scaling, Pipette, TerminalSquare, RefreshCw, Wand2 as WandIcon, Crop
+  FileImage, Scaling, Pipette, TerminalSquare, RefreshCw, Wand2 as WandIcon, Crop,
+  Waypoints, BookOpenCheck, Zap, PackagePlus, GlassWater, Layers, ArrowRightFromLine, PenTool
 } from "lucide-react";
 
 export interface ToolDef {
