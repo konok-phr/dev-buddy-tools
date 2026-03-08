@@ -43,6 +43,10 @@ import ColorPaletteGenerator from "./pages/tools/ColorPaletteGenerator";
 import BoxShadowGenerator from "./pages/tools/BoxShadowGenerator";
 import FlexboxPlayground from "./pages/tools/FlexboxPlayground";
 import CssGridGenerator from "./pages/tools/CssGridGenerator";
+import GradientGenerator from "./pages/tools/GradientGenerator";
+import BorderRadiusGenerator from "./pages/tools/BorderRadiusGenerator";
+import TextShadowGenerator from "./pages/tools/TextShadowGenerator";
+import AspectRatioCalculator from "./pages/tools/AspectRatioCalculator";
 
 const queryClient = new QueryClient();
 
@@ -94,6 +98,10 @@ const App = () => (
                   <Route path="/tools/box-shadow" element={<BoxShadowGenerator />} />
                   <Route path="/tools/flexbox" element={<FlexboxPlayground />} />
                   <Route path="/tools/css-grid" element={<CssGridGenerator />} />
+                  <Route path="/tools/gradient" element={<GradientGenerator />} />
+                  <Route path="/tools/border-radius" element={<BorderRadiusGenerator />} />
+                  <Route path="/tools/text-shadow" element={<TextShadowGenerator />} />
+                  <Route path="/tools/aspect-ratio" element={<AspectRatioCalculator />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
