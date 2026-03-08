@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useState, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -134,7 +134,13 @@ const WebSocketTester = lazy(() => import("./pages/tools/WebSocketTester"));
 
 const queryClient = new QueryClient();
 
-function LoadingFallback() {
+function DelayedFallback() {
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setShow(true), 250);
+    return () => clearTimeout(t);
+  }, []);
+  if (!show) return null;
   return (
     <div className="flex flex-col items-center justify-center min-h-[400px] gap-4 animate-fade-in">
       <div className="relative">
@@ -161,7 +167,7 @@ const App = () => (
             <Sonner />
             <BrowserRouter>
               <Layout>
-                <Suspense fallback={<LoadingFallback />}>
+                <Suspense fallback={<DelayedFallback />}>
                   <Routes>
                     <Route path="/" element={<Index />} />
                     <Route path="/tools/json-formatter" element={<JsonFormatter />} />
