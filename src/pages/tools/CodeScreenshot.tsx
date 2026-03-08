@@ -157,6 +157,9 @@ export default function CodeScreenshot() {
   const [showDots, setShowDots] = useState(true);
   const [borderRadius, setBorderRadius] = useState(12);
   const [opacity, setOpacity] = useState(100);
+  const [watermark, setWatermark] = useState("");
+  const [watermarkPosition, setWatermarkPosition] = useState<"bottom-right" | "bottom-left" | "bottom-center">("bottom-right");
+  const [showWatermark, setShowWatermark] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const t = themes[theme as keyof typeof themes];
@@ -270,6 +273,27 @@ export default function CodeScreenshot() {
       });
     });
 
+    // Watermark
+    if (showWatermark && watermark) {
+      const wmFs = Math.max(11, fs * 0.75);
+      ctx.font = `${wmFs}px "SF Mono","Fira Code","JetBrains Mono",Menlo,monospace`;
+      ctx.fillStyle = t.comment;
+      ctx.globalAlpha = 0.5;
+      const wmY = innerY + innerH - 10;
+      if (watermarkPosition === "bottom-right") {
+        ctx.textAlign = "right";
+        ctx.fillText(watermark, innerX + innerW - 14, wmY);
+      } else if (watermarkPosition === "bottom-left") {
+        ctx.textAlign = "left";
+        ctx.fillText(watermark, innerX + 14, wmY);
+      } else {
+        ctx.textAlign = "center";
+        ctx.fillText(watermark, w / 2, wmY);
+      }
+      ctx.textAlign = "left";
+      ctx.globalAlpha = 1;
+    }
+
     canvas.toBlob(blob => {
       if (!blob) return;
       const link = document.createElement("a");
@@ -365,6 +389,27 @@ export default function CodeScreenshot() {
         x += ctx.measureText(tok.text).width;
       });
     });
+
+    // Watermark for copy
+    if (showWatermark && watermark) {
+      const wmFs = Math.max(11, fs * 0.75);
+      ctx.font = `${wmFs}px "SF Mono","Fira Code","JetBrains Mono",Menlo,monospace`;
+      ctx.fillStyle = t.comment;
+      ctx.globalAlpha = 0.5;
+      const wmY = innerY + innerH - 10;
+      if (watermarkPosition === "bottom-right") {
+        ctx.textAlign = "right";
+        ctx.fillText(watermark, innerX + innerW - 14, wmY);
+      } else if (watermarkPosition === "bottom-left") {
+        ctx.textAlign = "left";
+        ctx.fillText(watermark, innerX + 14, wmY);
+      } else {
+        ctx.textAlign = "center";
+        ctx.fillText(watermark, w / 2, wmY);
+      }
+      ctx.textAlign = "left";
+      ctx.globalAlpha = 1;
+    }
   };
 
   const gradientStyle = grad[0] !== "transparent"
@@ -443,6 +488,27 @@ export default function CodeScreenshot() {
             <Switch checked={showDots} onCheckedChange={setShowDots} />
           </div>
 
+          {/* Watermark / Branding */}
+          <div className="pt-2 border-t border-border">
+            <div className="flex items-center justify-between mb-2">
+              <Label className="text-xs text-muted-foreground">Watermark</Label>
+              <Switch checked={showWatermark} onCheckedChange={setShowWatermark} />
+            </div>
+            {showWatermark && (
+              <div className="space-y-2">
+                <Input value={watermark} onChange={e => setWatermark(e.target.value)} className="h-8 text-xs" placeholder="@yourname or brand" />
+                <Select value={watermarkPosition} onValueChange={v => setWatermarkPosition(v as typeof watermarkPosition)}>
+                  <SelectTrigger className="h-8 text-xs"><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="bottom-right">Bottom Right</SelectItem>
+                    <SelectItem value="bottom-left">Bottom Left</SelectItem>
+                    <SelectItem value="bottom-center">Bottom Center</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
+          </div>
+
           <div className="flex gap-2 pt-2">
             <Button onClick={exportImage} size="sm" className="flex-1 text-xs">
               <Download className="h-3.5 w-3.5 mr-1" /> Export PNG
@@ -450,14 +516,27 @@ export default function CodeScreenshot() {
             <Button onClick={copyToClipboard} size="sm" variant="outline" className="text-xs">
               <Copy className="h-3.5 w-3.5" />
             </Button>
-            <Button onClick={() => { setCode(defaultCode); setTheme("One Dark"); setPadding(40); setFontSize(14); setGradient("Purple Haze"); setShowLineNumbers(true); setShowDots(true); setBorderRadius(12); setOpacity(100); setTitle("Counter.tsx"); setLanguage("typescript"); }} size="sm" variant="ghost" className="text-xs">
+            <Button onClick={() => { setCode(defaultCode); setTheme("One Dark"); setPadding(40); setFontSize(14); setGradient("Purple Haze"); setShowLineNumbers(true); setShowDots(true); setBorderRadius(12); setOpacity(100); setTitle("Counter.tsx"); setLanguage("typescript"); setWatermark(""); setShowWatermark(false); }} size="sm" variant="ghost" className="text-xs">
               <RotateCcw className="h-3.5 w-3.5" />
             </Button>
           </div>
         </div>
 
-        {/* Right side: Preview + Code Input */}
+        {/* Right side: Code Input on top, Preview on bottom */}
         <div className="space-y-4">
+          {/* Code Input */}
+          <div>
+            <Label className="text-xs text-muted-foreground mb-1 block">Code</Label>
+            <Textarea
+              value={code}
+              onChange={e => setCode(e.target.value)}
+              rows={12}
+              className="font-mono text-sm resize-y"
+              placeholder="Paste your code here..."
+              spellCheck={false}
+            />
+          </div>
+
           {/* Live Preview */}
           <div className="rounded-lg border border-border overflow-hidden">
             <div className="p-2 border-b border-border bg-muted/50">
@@ -465,7 +544,7 @@ export default function CodeScreenshot() {
             </div>
             <div className="p-6 bg-muted/20 flex justify-center overflow-auto">
               <div
-                className="inline-block overflow-hidden"
+                className="inline-block overflow-hidden relative"
                 style={{
                   background: gradientStyle,
                   padding: `${padding / 2}px`,
@@ -473,7 +552,7 @@ export default function CodeScreenshot() {
                 }}
               >
                 <div
-                  className="overflow-hidden"
+                  className="overflow-hidden relative"
                   style={{
                     background: t.bg,
                     borderRadius: `${Math.max(borderRadius - 4, 4)}px`,
@@ -511,22 +590,22 @@ export default function CodeScreenshot() {
                       ))}
                     </pre>
                   </div>
+                  {/* Watermark in preview */}
+                  {showWatermark && watermark && (
+                    <div
+                      className="px-4 pb-2 text-xs opacity-50"
+                      style={{
+                        color: t.comment,
+                        fontFamily: '"JetBrains Mono", monospace',
+                        textAlign: watermarkPosition === "bottom-right" ? "right" : watermarkPosition === "bottom-center" ? "center" : "left",
+                      }}
+                    >
+                      {watermark}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Code Input */}
-          <div>
-            <Label className="text-xs text-muted-foreground mb-1 block">Code</Label>
-            <Textarea
-              value={code}
-              onChange={e => setCode(e.target.value)}
-              rows={12}
-              className="font-mono text-sm resize-y"
-              placeholder="Paste your code here..."
-              spellCheck={false}
-            />
           </div>
         </div>
       </div>
