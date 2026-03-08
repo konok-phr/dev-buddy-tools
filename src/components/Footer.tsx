@@ -26,14 +26,6 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-4 mt-4 text-xs text-muted-foreground">
-          <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
-          <span>•</span>
-          <span>All tools run 100% client-side — your data never leaves the browser</span>
-          <span>•</span>
-          <kbd className="px-1.5 py-0.5 bg-muted rounded text-[10px] font-mono">Ctrl+K</kbd>
-          <span>to search</span>
-        </div>
       </div>
     </footer>
   );
