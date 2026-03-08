@@ -29,7 +29,7 @@ export default function PdfPageExtractor() {
       const copied = await newDoc.copyPages(src, indices);
       copied.forEach(p => newDoc.addPage(p));
       const bytes = await newDoc.save();
-      const blob = new Blob([bytes.buffer], { type: "application/pdf" });
+      const blob = new Blob([bytes as unknown as ArrayBuffer], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url; a.download = `extracted-${pages.replace(/[^0-9,-]/g, "")}.pdf`; a.click();
