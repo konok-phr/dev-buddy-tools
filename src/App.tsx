@@ -240,6 +240,14 @@ const App = () => (
                   <Route path="/tools/image-convert" element={<ImageFormatConverter />} />
                   <Route path="/tools/image-filters" element={<ImageFilters />} />
                   <Route path="/tools/image-cropper" element={<ImageCropper />} />
+                  <Route path="/tools/graphql-playground" element={<GraphqlPlayground />} />
+                  <Route path="/tools/openapi-viewer" element={<OpenApiViewer />} />
+                  <Route path="/tools/json-to-zod" element={<JsonToZod />} />
+                  <Route path="/tools/package-json" element={<PackageJsonGenerator />} />
+                  <Route path="/tools/glassmorphism" element={<GlassmorphismGenerator />} />
+                  <Route path="/tools/neumorphism" element={<NeumorphismGenerator />} />
+                  <Route path="/tools/css-transition" element={<CssTransitionBuilder />} />
+                  <Route path="/tools/svg-path-editor" element={<SvgPathEditor />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
