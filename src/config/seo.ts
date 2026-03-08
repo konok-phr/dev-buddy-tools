@@ -384,7 +384,6 @@ export const toolSEO: Record<string, { title: string; description: string; keywo
     title: "CSV & Excel Viewer Online — Sort, Filter & Edit",
     description: "View, sort, filter and edit CSV & Excel (.xlsx) files in a spreadsheet table. Upload or paste data. Export as CSV or XLSX. Free tool.",
     keywords: "csv viewer, excel viewer, xlsx viewer, csv editor, spreadsheet viewer, csv sort filter, csv online, excel online viewer",
-    keywords: "csv viewer, csv editor, csv reader, view csv online, edit csv, csv table",
   },
   "html-css-js-minifier": {
     title: "HTML CSS JS Minifier Online",
