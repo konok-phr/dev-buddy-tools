@@ -238,7 +238,7 @@ export default function DnsLookup() {
           {domainInfo && !domainInfo.registered && (
             <div className="border rounded-lg p-6 text-center space-y-3">
               <div className="flex justify-center">
-                <CheckCircle className="h-12 w-12 text-green-500" />
+                <CheckCircle className="h-12 w-12 text-primary" />
               </div>
               <h2 className="text-lg font-semibold text-foreground">Domain Available!</h2>
               <p className="text-sm text-muted-foreground">
