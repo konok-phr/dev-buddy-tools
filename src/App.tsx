@@ -95,6 +95,16 @@ import WebhookTester from "./pages/tools/WebhookTester";
 import DnsLookup from "./pages/tools/DnsLookup";
 import SslDecoder from "./pages/tools/SslDecoder";
 import NpmPackageSize from "./pages/tools/NpmPackageSize";
+import JsBenchmark from "./pages/tools/JsBenchmark";
+import CronBuilder from "./pages/tools/CronBuilder";
+import SshKeyGenerator from "./pages/tools/SshKeyGenerator";
+import DockerComposeGenerator from "./pages/tools/DockerComposeGenerator";
+import RegexDebugger from "./pages/tools/RegexDebugger";
+import GitignoreGenerator from "./pages/tools/GitignoreGenerator";
+import AsciiTableGenerator from "./pages/tools/AsciiTableGenerator";
+import HttpHeaderInspector from "./pages/tools/HttpHeaderInspector";
+import TsToJson from "./pages/tools/TsToJson";
+import DnsPropagation from "./pages/tools/DnsPropagation";
 
 const queryClient = new QueryClient();
 
