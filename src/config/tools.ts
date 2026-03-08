@@ -2,7 +2,7 @@ import {
   Braces, Binary, Regex, Globe, Clock, Fingerprint, Lock, Palette,
   Shield, FileText, Type, FileSearch, Key, Link, GitCompare, Code, FileCode,
   ArrowLeftRight, Timer, BookOpen, Image, FileUp, Scissors, FileCheck,
-  Hash, FileJson, CheckSquare, CaseSensitive
+  Hash, FileJson, CheckSquare, CaseSensitive, Network, ShieldCheck, List, Table2
 } from "lucide-react";
 
 export interface ToolDef {
@@ -51,4 +51,8 @@ export const tools: ToolDef[] = [
   { id: "yaml-json", title: "YAML ↔ JSON", description: "Convert between YAML and JSON", icon: FileJson, category: "text-data", path: "/tools/yaml-json" },
   { id: "json-schema", title: "JSON Schema Validator", description: "Validate JSON against a schema", icon: CheckSquare, category: "code-testing", path: "/tools/json-schema" },
   { id: "text-case", title: "Text Case Converter", description: "Convert text between different cases", icon: CaseSensitive, category: "text-data", path: "/tools/text-case" },
+  { id: "ip-analyzer", title: "IP Address Analyzer", description: "Analyze IPv4 addresses — class, type & binary", icon: Network, category: "code-testing", path: "/tools/ip-analyzer" },
+  { id: "unix-permissions", title: "Unix Permissions", description: "Calculate chmod values interactively", icon: ShieldCheck, category: "code-testing", path: "/tools/unix-permissions" },
+  { id: "http-status", title: "HTTP Status Codes", description: "Quick reference for HTTP status codes", icon: List, category: "code-testing", path: "/tools/http-status" },
+  { id: "markdown-table", title: "Markdown Table Generator", description: "Build markdown tables visually", icon: Table2, category: "text-data", path: "/tools/markdown-table" },
 ];

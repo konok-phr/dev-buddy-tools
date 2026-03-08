@@ -35,6 +35,10 @@ import NumberBaseConverter from "./pages/tools/NumberBaseConverter";
 import YamlToJson from "./pages/tools/YamlToJson";
 import JsonSchemaValidator from "./pages/tools/JsonSchemaValidator";
 import TextCaseConverter from "./pages/tools/TextCaseConverter";
+import IpAddressAnalyzer from "./pages/tools/IpAddressAnalyzer";
+import UnixPermissionsCalculator from "./pages/tools/UnixPermissionsCalculator";
+import HttpStatusCodeReference from "./pages/tools/HttpStatusCodeReference";
+import MarkdownTableGenerator from "./pages/tools/MarkdownTableGenerator";
 
 const queryClient = new QueryClient();
 
@@ -78,6 +82,10 @@ const App = () => (
                   <Route path="/tools/yaml-json" element={<YamlToJson />} />
                   <Route path="/tools/json-schema" element={<JsonSchemaValidator />} />
                   <Route path="/tools/text-case" element={<TextCaseConverter />} />
+                  <Route path="/tools/ip-analyzer" element={<IpAddressAnalyzer />} />
+                  <Route path="/tools/unix-permissions" element={<UnixPermissionsCalculator />} />
+                  <Route path="/tools/http-status" element={<HttpStatusCodeReference />} />
+                  <Route path="/tools/markdown-table" element={<MarkdownTableGenerator />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
