@@ -224,6 +224,12 @@ const App = () => (
                   <Route path="/tools/http-headers" element={<HttpHeaderInspector />} />
                   <Route path="/tools/ts-to-json" element={<TsToJson />} />
                   <Route path="/tools/dns-propagation" element={<DnsPropagation />} />
+                  <Route path="/tools/image-metadata" element={<ImageMetadata />} />
+                  <Route path="/tools/image-resizer" element={<ImageResizer />} />
+                  <Route path="/tools/image-colors" element={<ImageColorExtractor />} />
+                  <Route path="/tools/image-ascii" element={<ImageToAscii />} />
+                  <Route path="/tools/image-convert" element={<ImageFormatConverter />} />
+                  <Route path="/tools/image-filters" element={<ImageFilters />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
