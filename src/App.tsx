@@ -39,6 +39,10 @@ import IpAddressAnalyzer from "./pages/tools/IpAddressAnalyzer";
 import UnixPermissionsCalculator from "./pages/tools/UnixPermissionsCalculator";
 import HttpStatusCodeReference from "./pages/tools/HttpStatusCodeReference";
 import MarkdownTableGenerator from "./pages/tools/MarkdownTableGenerator";
+import ColorPaletteGenerator from "./pages/tools/ColorPaletteGenerator";
+import BoxShadowGenerator from "./pages/tools/BoxShadowGenerator";
+import FlexboxPlayground from "./pages/tools/FlexboxPlayground";
+import CssGridGenerator from "./pages/tools/CssGridGenerator";
 
 const queryClient = new QueryClient();
 
@@ -86,6 +90,10 @@ const App = () => (
                   <Route path="/tools/unix-permissions" element={<UnixPermissionsCalculator />} />
                   <Route path="/tools/http-status" element={<HttpStatusCodeReference />} />
                   <Route path="/tools/markdown-table" element={<MarkdownTableGenerator />} />
+                  <Route path="/tools/color-palette" element={<ColorPaletteGenerator />} />
+                  <Route path="/tools/box-shadow" element={<BoxShadowGenerator />} />
+                  <Route path="/tools/flexbox" element={<FlexboxPlayground />} />
+                  <Route path="/tools/css-grid" element={<CssGridGenerator />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
