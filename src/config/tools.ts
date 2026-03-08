@@ -13,7 +13,8 @@ import {
   Camera, FileKey, Monitor,
   TableProperties, Minimize2, Sparkles, Package as PackageIcon, FileEdit,
   ShieldAlert, KeyRound, Webhook, Wifi, LockKeyhole, Box,
-  Gauge, CalendarClock, KeySquare, Container, Bug, GitFork, TableIcon, Search, ArrowRightLeft, Radio
+  Gauge, CalendarClock, KeySquare, Container, Bug, GitFork, TableIcon, Search, ArrowRightLeft, Radio,
+  FileImage, Scaling, Pipette, TerminalSquare, RefreshCw, Wand
 } from "lucide-react";
 
 export interface ToolDef {
