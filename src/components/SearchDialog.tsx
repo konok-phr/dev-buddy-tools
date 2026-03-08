@@ -36,8 +36,8 @@ export function SearchDialog() {
             <CommandItem key={tool.id} onSelect={() => select(tool.path)} className="cursor-pointer">
               <tool.icon className="mr-2 h-4 w-4 text-primary" />
               <div>
-                <span className="text-foreground">{tool.title}</span>
-                <span className="ml-2 text-xs text-muted-foreground">{tool.description}</span>
+                <span>{tool.title}</span>
+                <span className="ml-2 text-xs opacity-70">{tool.description}</span>
               </div>
             </CommandItem>
           ))}
