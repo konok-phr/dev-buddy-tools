@@ -135,11 +135,36 @@ const Index = () => {
   );
 };
 
+const prefetchCache = new Set<string>();
+const toolImports: Record<string, () => Promise<any>> = Object.fromEntries(
+  Object.entries(import.meta.glob("../pages/tools/*.tsx")).map(([path, loader]) => {
+    const name = path.split("/").pop()?.replace(".tsx", "") || "";
+    return [name, loader];
+  })
+);
+
+function prefetchTool(toolPath: string) {
+  if (prefetchCache.has(toolPath)) return;
+  // Extract component name from path like /tools/json-formatter -> JsonFormatter
+  const slug = toolPath.split("/").pop() || "";
+  const componentName = slug.split("-").map(s => s.charAt(0).toUpperCase() + s.slice(1)).join("");
+  const loader = toolImports[componentName];
+  if (loader) {
+    prefetchCache.add(toolPath);
+    loader();
+  }
+}
+
 function ToolCard({ tool, isFav, onToggleFav, onClick }: {
   tool: typeof tools[0]; isFav: boolean; onToggleFav: () => void; onClick: () => void;
 }) {
+  const handleMouseEnter = useCallback(() => prefetchTool(tool.path), [tool.path]);
   return (
-    <div className="group relative rounded-lg border border-border bg-card p-5 hover:border-primary/50 hover:bg-card/80 transition-all cursor-pointer" onClick={onClick}>
+    <div
+      className="group relative rounded-lg border border-border bg-card p-5 hover:border-primary/50 hover:bg-card/80 transition-all cursor-pointer"
+      onClick={onClick}
+      onMouseEnter={handleMouseEnter}
+    >
       <button
         onClick={e => { e.stopPropagation(); onToggleFav(); }}
         className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity"
