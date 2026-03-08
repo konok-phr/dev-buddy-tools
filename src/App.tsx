@@ -167,7 +167,7 @@ const App = () => (
             <Sonner />
             <BrowserRouter>
               <Layout>
-                <Suspense fallback={<LoadingFallback />}>
+                <Suspense fallback={<DelayedFallback />}>
                   <Routes>
                     <Route path="/" element={<Index />} />
                     <Route path="/tools/json-formatter" element={<JsonFormatter />} />
