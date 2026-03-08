@@ -120,6 +120,9 @@ import GlassmorphismGenerator from "./pages/tools/GlassmorphismGenerator";
 import NeumorphismGenerator from "./pages/tools/NeumorphismGenerator";
 import CssTransitionBuilder from "./pages/tools/CssTransitionBuilder";
 import SvgPathEditor from "./pages/tools/SvgPathEditor";
+import NginxConfigGenerator from "./pages/tools/NginxConfigGenerator";
+import GithubActionsBuilder from "./pages/tools/GithubActionsBuilder";
+import FakeDataGenerator from "./pages/tools/FakeDataGenerator";
 
 const queryClient = new QueryClient();
 
@@ -248,6 +251,9 @@ const App = () => (
                   <Route path="/tools/neumorphism" element={<NeumorphismGenerator />} />
                   <Route path="/tools/css-transition" element={<CssTransitionBuilder />} />
                   <Route path="/tools/svg-path-editor" element={<SvgPathEditor />} />
+                  <Route path="/tools/nginx-config" element={<NginxConfigGenerator />} />
+                  <Route path="/tools/github-actions" element={<GithubActionsBuilder />} />
+                  <Route path="/tools/fake-data" element={<FakeDataGenerator />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>

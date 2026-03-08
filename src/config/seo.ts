@@ -565,4 +565,19 @@ export const toolSEO: Record<string, { title: string; description: string; keywo
     description: "Edit SVG path data with live preview. Preset shapes, stroke and fill controls. Copy SVG code. Free online tool.",
     keywords: "svg path editor, svg editor, svg path, edit svg online, svg builder, svg path generator",
   },
+  "nginx-config": {
+    title: "Nginx Config Generator — Build Configs Visually",
+    description: "Generate production-ready Nginx configurations with SSL, gzip, rate limiting, load balancing and reverse proxy. Free online tool.",
+    keywords: "nginx config generator, nginx configuration, nginx reverse proxy, nginx ssl, nginx gzip, nginx load balancer",
+  },
+  "github-actions": {
+    title: "GitHub Actions Builder — CI/CD Workflow Generator",
+    description: "Build GitHub Actions CI/CD workflow YAML files visually with templates for Node.js, Docker, Python and Vercel. Free tool.",
+    keywords: "github actions builder, github actions yaml, ci cd pipeline, github workflow, github actions generator",
+  },
+  "fake-data": {
+    title: "Fake Data Generator — Test Data Online",
+    description: "Generate realistic fake data for testing: names, emails, phones, addresses, companies and more. Export as JSON or CSV. Free tool.",
+    keywords: "fake data generator, test data, mock data, random data, fake names, fake emails, dummy data generator",
+  },
 };
