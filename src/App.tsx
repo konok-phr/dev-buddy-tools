@@ -83,6 +83,18 @@ import CssSpecificityCalculator from "./pages/tools/CssSpecificityCalculator";
 import CodeScreenshot from "./pages/tools/CodeScreenshot";
 import HtaccessGenerator from "./pages/tools/HtaccessGenerator";
 import ResponsiveBreakpointTester from "./pages/tools/ResponsiveBreakpointTester";
+import CsvViewer from "./pages/tools/CsvViewer";
+import HtmlCssJsMinifier from "./pages/tools/HtmlCssJsMinifier";
+import CodeBeautifier from "./pages/tools/CodeBeautifier";
+import WebpackConfigGenerator from "./pages/tools/WebpackConfigGenerator";
+import EnvFileEditor from "./pages/tools/EnvFileEditor";
+import CorsHeaderChecker from "./pages/tools/CorsHeaderChecker";
+import CspGenerator from "./pages/tools/CspGenerator";
+import TotpGenerator from "./pages/tools/TotpGenerator";
+import WebhookTester from "./pages/tools/WebhookTester";
+import DnsLookup from "./pages/tools/DnsLookup";
+import SslDecoder from "./pages/tools/SslDecoder";
+import NpmPackageSize from "./pages/tools/NpmPackageSize";
 
 const queryClient = new QueryClient();
 
