@@ -55,6 +55,10 @@ import QrCodeGenerator from "./pages/tools/QrCodeGenerator";
 import CharacterCounter from "./pages/tools/CharacterCounter";
 import JsonPathFinder from "./pages/tools/JsonPathFinder";
 import CssUnitConverter from "./pages/tools/CssUnitConverter";
+import EncodingConverter from "./pages/tools/EncodingConverter";
+import SqlFormatter from "./pages/tools/SqlFormatter";
+import TailwindConverter from "./pages/tools/TailwindConverter";
+import RegexGenerator from "./pages/tools/RegexGenerator";
 
 const queryClient = new QueryClient();
 
@@ -118,6 +122,10 @@ const App = () => (
                   <Route path="/tools/char-counter" element={<CharacterCounter />} />
                   <Route path="/tools/json-path" element={<JsonPathFinder />} />
                   <Route path="/tools/css-unit" element={<CssUnitConverter />} />
+                  <Route path="/tools/encoding" element={<EncodingConverter />} />
+                  <Route path="/tools/sql-formatter" element={<SqlFormatter />} />
+                  <Route path="/tools/tailwind" element={<TailwindConverter />} />
+                  <Route path="/tools/regex-generator" element={<RegexGenerator />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
