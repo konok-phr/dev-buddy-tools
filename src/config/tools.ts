@@ -6,7 +6,9 @@ import {
   Paintbrush, Square, AlignHorizontalSpaceBetween, LayoutGrid,
   Blend, Circle, TypeIcon, Ratio, ImageIcon, Smile, Tags, Eye,
   QrCode, LetterText, MapPin, Ruler, FileType, Database, Wind, Wand2,
-  FileDiff, Play, GitBranch, Braces as BracesIcon
+  FileDiff, Play, GitBranch, Braces as BracesIcon,
+  Contrast, SmilePlus, ImagePlus, Quote, Scissors as ScissorsIcon, Pentagon,
+  Eye as EyeIcon, FileCode as FileCodeIcon, FileXml, Settings2, ClockArrowUp, HardDrive
 } from "lucide-react";
 
 export interface ToolDef {
