@@ -141,5 +141,5 @@ export const tools: ToolDef[] = [
   { id: "image-colors", title: "Image Color Extractor", description: "Extract dominant colors from images", icon: Pipette, category: "imagery", path: "/tools/image-colors" },
   { id: "image-ascii", title: "Image to ASCII Art", description: "Convert images to ASCII text art", icon: TerminalSquare, category: "imagery", path: "/tools/image-ascii" },
   { id: "image-convert", title: "Image Format Converter", description: "Convert between PNG, JPEG & WebP", icon: RefreshCw, category: "imagery", path: "/tools/image-convert" },
-  { id: "image-filters", title: "Image Filters", description: "Apply CSS filters & effects to images", icon: Wand, category: "imagery", path: "/tools/image-filters" },
+  { id: "image-filters", title: "Image Filters", description: "Apply CSS filters & effects to images", icon: WandIcon, category: "imagery", path: "/tools/image-filters" },
 ];
