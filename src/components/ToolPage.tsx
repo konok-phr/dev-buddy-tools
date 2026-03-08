@@ -1,11 +1,23 @@
 import { ArrowLeft, Copy, Check } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { SEO } from "@/components/SEO";
+import { toolSEO } from "@/config/seo";
+import { tools } from "@/config/tools";
 
 export function ToolHeader({ title, description }: { title: string; description: string }) {
+  const location = useLocation();
+  const tool = tools.find(t => t.path === location.pathname);
+  const seo = tool ? toolSEO[tool.id] : null;
+
   return (
     <div className="mb-6">
+      {seo ? (
+        <SEO title={seo.title} description={seo.description} path={location.pathname} keywords={seo.keywords} />
+      ) : (
+        <SEO title={title} description={description} path={location.pathname} />
+      )}
       <Link to="/" className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground mb-3">
         <ArrowLeft className="h-3 w-3" /> Back to tools
       </Link>
