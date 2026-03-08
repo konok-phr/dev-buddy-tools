@@ -95,6 +95,6 @@ export default function JsonToZod() {
           </pre>
         </div>
       </div>
-    </ToolPage>
+    </div>
   );
 }

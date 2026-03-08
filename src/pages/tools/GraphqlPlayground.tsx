@@ -135,6 +135,6 @@ export default function GraphqlPlayground() {
           </div>
         )}
       </div>
-    </ToolPage>
+    </div>
   );
 }

@@ -150,6 +150,6 @@ export default function OpenApiViewer() {
 
         {!spec && raw.trim() && <p className="text-sm text-destructive">Invalid JSON — paste a valid OpenAPI spec.</p>}
       </div>
-    </ToolPage>
+    </div>
   );
 }

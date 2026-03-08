@@ -93,6 +93,6 @@ border: 1px solid rgba(${r}, ${g}, ${b}, ${borderOpacity.toFixed(2)});`;
           <pre className="bg-muted rounded-lg p-4 text-xs font-mono whitespace-pre-wrap">{css}</pre>
         </div>
       </div>
-    </ToolPage>
+    </div>
   );
 }

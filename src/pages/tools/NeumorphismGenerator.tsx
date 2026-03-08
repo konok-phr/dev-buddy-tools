@@ -100,6 +100,6 @@ export default function NeumorphismGenerator() {
           <pre className="bg-muted rounded-lg p-4 text-xs font-mono whitespace-pre-wrap">{css}</pre>
         </div>
       </div>
-    </ToolPage>
+    </div>
   );
 }

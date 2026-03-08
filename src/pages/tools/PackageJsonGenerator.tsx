@@ -129,6 +129,6 @@ export default function PackageJsonGenerator() {
           <pre className="bg-muted rounded-lg p-4 overflow-auto min-h-[400px] text-xs font-mono whitespace-pre-wrap">{output}</pre>
         </div>
       </div>
-    </ToolPage>
+    </div>
   );
 }
