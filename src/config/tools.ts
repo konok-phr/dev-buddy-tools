@@ -15,7 +15,8 @@ import {
   ShieldAlert, KeyRound, Webhook, Wifi, LockKeyhole, Box,
   Gauge, CalendarClock, KeySquare, Container, Bug, GitFork, TableIcon, Search, ArrowRightLeft, Radio,
   FileImage, Scaling, Pipette, TerminalSquare, RefreshCw, Wand2 as WandIcon, Crop,
-  Waypoints, BookOpenCheck, Zap, PackagePlus, GlassWater, Layers, ArrowRightFromLine, PenTool
+  Waypoints, BookOpenCheck, Zap, PackagePlus, GlassWater, Layers, ArrowRightFromLine, PenTool,
+  Plug, TerminalIcon
 } from "lucide-react";
 
 export interface ToolDef {
