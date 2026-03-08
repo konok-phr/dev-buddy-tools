@@ -39,6 +39,10 @@ import IpAddressAnalyzer from "./pages/tools/IpAddressAnalyzer";
 import UnixPermissionsCalculator from "./pages/tools/UnixPermissionsCalculator";
 import HttpStatusCodeReference from "./pages/tools/HttpStatusCodeReference";
 import MarkdownTableGenerator from "./pages/tools/MarkdownTableGenerator";
+import ColorPaletteGenerator from "./pages/tools/ColorPaletteGenerator";
+import BoxShadowGenerator from "./pages/tools/BoxShadowGenerator";
+import FlexboxPlayground from "./pages/tools/FlexboxPlayground";
+import CssGridGenerator from "./pages/tools/CssGridGenerator";
 
 const queryClient = new QueryClient();
 
