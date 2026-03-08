@@ -13,7 +13,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem("devtools-theme", theme);
   }, [theme]);
 
-  const toggle = () => setTheme(t => (t === "dark" ? "light" : "dark"));
+  const toggle = useCallback(() => {
+    document.documentElement.classList.add("theme-transition");
+    setTheme(t => (t === "dark" ? "light" : "dark"));
+    setTimeout(() => document.documentElement.classList.remove("theme-transition"), 500);
+  }, []);
 
   return <ThemeContext.Provider value={{ theme, toggle }}>{children}</ThemeContext.Provider>;
 }
