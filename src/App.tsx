@@ -51,6 +51,10 @@ import Base64ImageEncoder from "./pages/tools/Base64ImageEncoder";
 import FaviconGenerator from "./pages/tools/FaviconGenerator";
 import MetaTagGenerator from "./pages/tools/MetaTagGenerator";
 import OpenGraphPreview from "./pages/tools/OpenGraphPreview";
+import QrCodeGenerator from "./pages/tools/QrCodeGenerator";
+import CharacterCounter from "./pages/tools/CharacterCounter";
+import JsonPathFinder from "./pages/tools/JsonPathFinder";
+import CssUnitConverter from "./pages/tools/CssUnitConverter";
 
 const queryClient = new QueryClient();
 
@@ -110,6 +114,10 @@ const App = () => (
                   <Route path="/tools/favicon-generator" element={<FaviconGenerator />} />
                   <Route path="/tools/meta-tag" element={<MetaTagGenerator />} />
                   <Route path="/tools/og-preview" element={<OpenGraphPreview />} />
+                  <Route path="/tools/qr-code" element={<QrCodeGenerator />} />
+                  <Route path="/tools/char-counter" element={<CharacterCounter />} />
+                  <Route path="/tools/json-path" element={<JsonPathFinder />} />
+                  <Route path="/tools/css-unit" element={<CssUnitConverter />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
