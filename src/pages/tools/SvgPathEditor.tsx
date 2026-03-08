@@ -34,7 +34,8 @@ export default function SvgPathEditor() {
   const copy = () => { navigator.clipboard.writeText(svgCode); setCopied(true); setTimeout(() => setCopied(false), 1500); };
 
   return (
-    <ToolPage toolId="svg-path-editor" title="SVG Path Editor" description="Edit SVG paths with live preview and presets">
+    <div className="space-y-0">
+      <ToolHeader title="SVG Path Editor" description="Edit SVG paths with live preview and presets" />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-4">
           <div className="flex gap-2 flex-wrap">
