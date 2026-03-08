@@ -55,7 +55,7 @@ export function AppSidebar() {
           const catTools = filtered.filter(t => t.category === cat.id);
           if (catTools.length === 0) return null;
           return (
-            <SidebarGroup key={cat.id} defaultOpen>
+            <SidebarGroup key={cat.id}>
               <SidebarGroupLabel className="text-xs uppercase tracking-wider text-muted-foreground">
                 {!collapsed ? cat.label : ""}
               </SidebarGroupLabel>
