@@ -38,15 +38,15 @@ const Index = () => {
         path="/"
         keywords="developer tools, online tools, json formatter, base64 encoder, regex tester, uuid generator, css generator, pdf tools, free dev tools"
       />
-      <div className="text-center mb-8">
+      <div className="text-center mb-6 sm:mb-8 px-2">
         <div className="inline-flex items-center gap-2 mb-3">
-          <Terminal className="h-8 w-8 text-primary" />
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground">DevTools Hub</h1>
+          <Terminal className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">DevTools Hub</h1>
         </div>
-        <p className="text-muted-foreground">
+        <p className="text-sm sm:text-base text-muted-foreground">
           Free, fast, client-side developer tools. No sign-up required.
         </p>
-        <Badge variant="secondary" className="mt-3 text-sm font-mono">
+        <Badge variant="secondary" className="mt-3 text-xs sm:text-sm font-mono">
           {tools.length} tools available
         </Badge>
       </div>
