@@ -74,7 +74,8 @@ export default function OpenApiViewer() {
   const schemas = spec?.components?.schemas ? Object.entries(spec.components.schemas as Record<string, any>) : [];
 
   return (
-    <ToolPage toolId="openapi-viewer" title="OpenAPI / Swagger Viewer" description="Paste or fetch an OpenAPI spec and browse endpoints visually">
+    <div className="space-y-0">
+      <ToolHeader title="OpenAPI / Swagger Viewer" description="Paste or fetch an OpenAPI spec and browse endpoints visually" />
       <div className="space-y-4">
         <div className="flex gap-2">
           <Input placeholder="https://petstore.swagger.io/v2/swagger.json" value={url} onChange={(e) => setUrl(e.target.value)} className="flex-1" />
