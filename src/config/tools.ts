@@ -5,7 +5,8 @@ import {
   Hash, FileJson, CheckSquare, CaseSensitive, Network, ShieldCheck, List, Table2,
   Paintbrush, Square, AlignHorizontalSpaceBetween, LayoutGrid,
   Blend, Circle, TypeIcon, Ratio, ImageIcon, Smile, Tags, Eye,
-  QrCode, LetterText, MapPin, Ruler, FileType, Database, Wind, Wand2
+  QrCode, LetterText, MapPin, Ruler, FileType, Database, Wind, Wand2,
+  FileDiff, Play, GitBranch, Braces as BracesIcon
 } from "lucide-react";
 
 export interface ToolDef {
@@ -79,4 +80,8 @@ export const tools: ToolDef[] = [
   { id: "sql-formatter", title: "SQL Formatter", description: "Format and beautify SQL queries", icon: Database, category: "code-testing", path: "/tools/sql-formatter" },
   { id: "tailwind", title: "Tailwind Converter", description: "Convert CSS to Tailwind utility classes", icon: Wind, category: "css-design", path: "/tools/tailwind" },
   { id: "regex-generator", title: "Regex Generator", description: "Build regex from presets & patterns", icon: Wand2, category: "code-testing", path: "/tools/regex-generator" },
+  { id: "json-diff", title: "JSON Diff Viewer", description: "Compare two JSON objects visually", icon: FileDiff, category: "text-data", path: "/tools/json-diff" },
+  { id: "css-animation", title: "CSS Animation Generator", description: "Create CSS keyframe animations", icon: Play, category: "css-design", path: "/tools/css-animation" },
+  { id: "git-command", title: "Git Command Builder", description: "Build Git commands interactively", icon: GitBranch, category: "code-testing", path: "/tools/git-command" },
+  { id: "ts-type", title: "TS Type Generator", description: "Generate TypeScript types from JSON", icon: BracesIcon, category: "code-testing", path: "/tools/ts-type" },
 ];
