@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { ToolHeader, CopyButton } from "@/components/ToolPage";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -13,23 +13,16 @@ const bases = [
 export default function NumberBaseConverter() {
   const [input, setInput] = useState("");
   const [fromBase, setFromBase] = useState("10");
-  const [error, setError] = useState("");
 
-  const convert = (base: number) => {
-    try {
-      const dec = parseInt(input, parseInt(fromBase));
-      if (isNaN(dec)) throw new Error("Invalid number");
-      setError("");
-      return dec.toString(base).toUpperCase();
-    } catch (e: any) {
-      setError(e.message);
-      return "";
-    }
-  };
-
-  const results = input
-    ? bases.map(b => ({ ...b, result: convert(parseInt(b.value)) }))
-    : bases.map(b => ({ ...b, result: "" }));
+  const { results, error } = useMemo(() => {
+    if (!input) return { results: bases.map(b => ({ ...b, result: "" })), error: "" };
+    const dec = parseInt(input, parseInt(fromBase));
+    if (isNaN(dec)) return { results: bases.map(b => ({ ...b, result: "" })), error: "Invalid number for selected base" };
+    return {
+      results: bases.map(b => ({ ...b, result: dec.toString(parseInt(b.value)).toUpperCase() })),
+      error: "",
+    };
+  }, [input, fromBase]);
 
   return (
     <div className="max-w-2xl mx-auto">
