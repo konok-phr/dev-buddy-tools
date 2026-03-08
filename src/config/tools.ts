@@ -33,6 +33,7 @@ export const categories = [
   { id: "security", label: "Security" },
   { id: "networking", label: "Networking" },
   { id: "pdf", label: "PDF Tools" },
+  { id: "imagery", label: "Image Tools" },
 ];
 
 export const tools: ToolDef[] = [
