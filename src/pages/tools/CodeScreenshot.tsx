@@ -273,6 +273,27 @@ export default function CodeScreenshot() {
       });
     });
 
+    // Watermark
+    if (showWatermark && watermark) {
+      const wmFs = Math.max(11, fs * 0.75);
+      ctx.font = `${wmFs}px "SF Mono","Fira Code","JetBrains Mono",Menlo,monospace`;
+      ctx.fillStyle = t.comment;
+      ctx.globalAlpha = 0.5;
+      const wmY = innerY + innerH - 10;
+      if (watermarkPosition === "bottom-right") {
+        ctx.textAlign = "right";
+        ctx.fillText(watermark, innerX + innerW - 14, wmY);
+      } else if (watermarkPosition === "bottom-left") {
+        ctx.textAlign = "left";
+        ctx.fillText(watermark, innerX + 14, wmY);
+      } else {
+        ctx.textAlign = "center";
+        ctx.fillText(watermark, w / 2, wmY);
+      }
+      ctx.textAlign = "left";
+      ctx.globalAlpha = 1;
+    }
+
     canvas.toBlob(blob => {
       if (!blob) return;
       const link = document.createElement("a");
