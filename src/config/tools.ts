@@ -7,8 +7,8 @@ import {
   Blend, Circle, TypeIcon, Ratio, ImageIcon, Smile, Tags, Eye,
   QrCode, LetterText, MapPin, Ruler, FileType, Database, Wind, Wand2,
   FileDiff, Play, GitBranch, Braces as BracesIcon,
-  Contrast, SmilePlus, ImagePlus, Quote, Scissors as ScissorsIcon, Pentagon,
-  Eye as EyeIcon, FileCode as FileCodeIcon, FileXml, Settings2, ClockArrowUp, HardDrive
+  Contrast, SmilePlus, ImagePlus, Quote, Pentagon,
+  FileCode as FileCodeIcon, FileX, Settings2, ClockArrowUp, HardDrive
 } from "lucide-react";
 
 export interface ToolDef {
@@ -86,4 +86,14 @@ export const tools: ToolDef[] = [
   { id: "css-animation", title: "CSS Animation Generator", description: "Create CSS keyframe animations", icon: Play, category: "css-design", path: "/tools/css-animation" },
   { id: "git-command", title: "Git Command Builder", description: "Build Git commands interactively", icon: GitBranch, category: "code-testing", path: "/tools/git-command" },
   { id: "ts-type", title: "TS Type Generator", description: "Generate TypeScript types from JSON", icon: BracesIcon, category: "code-testing", path: "/tools/ts-type" },
+  { id: "color-contrast", title: "Color Contrast Checker", description: "Check WCAG contrast ratio", icon: Contrast, category: "css-design", path: "/tools/color-contrast" },
+  { id: "emoji-picker", title: "Emoji Picker", description: "Browse and copy emojis", icon: SmilePlus, category: "converters", path: "/tools/emoji-picker" },
+  { id: "placeholder-image", title: "Placeholder Image", description: "Generate placeholder images", icon: ImagePlus, category: "css-design", path: "/tools/placeholder-image" },
+  { id: "string-escaper", title: "String Escape/Unescape", description: "Escape strings for JSON, JS, HTML, URL", icon: Quote, category: "text-data", path: "/tools/string-escaper" },
+  { id: "clip-path", title: "CSS Clip Path", description: "Generate CSS clip-path shapes", icon: Pentagon, category: "css-design", path: "/tools/clip-path" },
+  { id: "html-preview", title: "HTML Preview", description: "Write HTML with live preview", icon: FileCodeIcon, category: "code-testing", path: "/tools/html-preview" },
+  { id: "xml-formatter", title: "XML Formatter", description: "Format and minify XML", icon: FileX, category: "text-data", path: "/tools/xml-formatter" },
+  { id: "toml-json", title: "TOML ↔ JSON", description: "Convert between TOML and JSON", icon: Settings2, category: "text-data", path: "/tools/toml-json" },
+  { id: "epoch-batch", title: "Epoch Batch Converter", description: "Convert multiple timestamps at once", icon: ClockArrowUp, category: "converters", path: "/tools/epoch-batch" },
+  { id: "byte-size", title: "Byte Size Calculator", description: "Convert between byte units", icon: HardDrive, category: "converters", path: "/tools/byte-size" },
 ];
