@@ -522,8 +522,21 @@ export default function CodeScreenshot() {
           </div>
         </div>
 
-        {/* Right side: Preview + Code Input */}
+        {/* Right side: Code Input on top, Preview on bottom */}
         <div className="space-y-4">
+          {/* Code Input */}
+          <div>
+            <Label className="text-xs text-muted-foreground mb-1 block">Code</Label>
+            <Textarea
+              value={code}
+              onChange={e => setCode(e.target.value)}
+              rows={12}
+              className="font-mono text-sm resize-y"
+              placeholder="Paste your code here..."
+              spellCheck={false}
+            />
+          </div>
+
           {/* Live Preview */}
           <div className="rounded-lg border border-border overflow-hidden">
             <div className="p-2 border-b border-border bg-muted/50">
@@ -531,7 +544,7 @@ export default function CodeScreenshot() {
             </div>
             <div className="p-6 bg-muted/20 flex justify-center overflow-auto">
               <div
-                className="inline-block overflow-hidden"
+                className="inline-block overflow-hidden relative"
                 style={{
                   background: gradientStyle,
                   padding: `${padding / 2}px`,
@@ -539,7 +552,7 @@ export default function CodeScreenshot() {
                 }}
               >
                 <div
-                  className="overflow-hidden"
+                  className="overflow-hidden relative"
                   style={{
                     background: t.bg,
                     borderRadius: `${Math.max(borderRadius - 4, 4)}px`,
@@ -577,22 +590,22 @@ export default function CodeScreenshot() {
                       ))}
                     </pre>
                   </div>
+                  {/* Watermark in preview */}
+                  {showWatermark && watermark && (
+                    <div
+                      className="px-4 pb-2 text-xs opacity-50"
+                      style={{
+                        color: t.comment,
+                        fontFamily: '"JetBrains Mono", monospace',
+                        textAlign: watermarkPosition === "bottom-right" ? "right" : watermarkPosition === "bottom-center" ? "center" : "left",
+                      }}
+                    >
+                      {watermark}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Code Input */}
-          <div>
-            <Label className="text-xs text-muted-foreground mb-1 block">Code</Label>
-            <Textarea
-              value={code}
-              onChange={e => setCode(e.target.value)}
-              rows={12}
-              className="font-mono text-sm resize-y"
-              placeholder="Paste your code here..."
-              spellCheck={false}
-            />
           </div>
         </div>
       </div>
