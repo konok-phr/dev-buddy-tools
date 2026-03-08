@@ -4,7 +4,7 @@ import {
   ArrowLeftRight, Timer, BookOpen, Image, FileUp, Scissors, FileCheck,
   Hash, FileJson, CheckSquare, CaseSensitive, Network, ShieldCheck, List, Table2,
   Paintbrush, Square, AlignHorizontalSpaceBetween, LayoutGrid,
-  Blend, Circle, TypeIcon, Ratio
+  Blend, Circle, TypeIcon, Ratio, ImageIcon, Smile, Tags, Eye
 } from "lucide-react";
 
 export interface ToolDef {
@@ -66,4 +66,8 @@ export const tools: ToolDef[] = [
   { id: "border-radius", title: "Border Radius Generator", description: "Visually adjust CSS border-radius", icon: Circle, category: "css-design", path: "/tools/border-radius" },
   { id: "text-shadow", title: "Text Shadow Generator", description: "Design CSS text-shadow values", icon: TypeIcon, category: "css-design", path: "/tools/text-shadow" },
   { id: "aspect-ratio", title: "Aspect Ratio Calculator", description: "Calculate and visualize aspect ratios", icon: Ratio, category: "css-design", path: "/tools/aspect-ratio" },
+  { id: "base64-image", title: "Base64 Image Encoder", description: "Convert images to Base64 data URIs", icon: ImageIcon, category: "converters", path: "/tools/base64-image" },
+  { id: "favicon-generator", title: "Favicon Generator", description: "Generate favicons from emoji", icon: Smile, category: "css-design", path: "/tools/favicon-generator" },
+  { id: "meta-tag", title: "Meta Tag Generator", description: "Generate SEO-friendly meta tags", icon: Tags, category: "code-testing", path: "/tools/meta-tag" },
+  { id: "og-preview", title: "Open Graph Preview", description: "Preview social media share cards", icon: Eye, category: "code-testing", path: "/tools/og-preview" },
 ];

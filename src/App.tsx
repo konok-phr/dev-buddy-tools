@@ -47,6 +47,10 @@ import GradientGenerator from "./pages/tools/GradientGenerator";
 import BorderRadiusGenerator from "./pages/tools/BorderRadiusGenerator";
 import TextShadowGenerator from "./pages/tools/TextShadowGenerator";
 import AspectRatioCalculator from "./pages/tools/AspectRatioCalculator";
+import Base64ImageEncoder from "./pages/tools/Base64ImageEncoder";
+import FaviconGenerator from "./pages/tools/FaviconGenerator";
+import MetaTagGenerator from "./pages/tools/MetaTagGenerator";
+import OpenGraphPreview from "./pages/tools/OpenGraphPreview";
 
 const queryClient = new QueryClient();
 
@@ -102,6 +106,10 @@ const App = () => (
                   <Route path="/tools/border-radius" element={<BorderRadiusGenerator />} />
                   <Route path="/tools/text-shadow" element={<TextShadowGenerator />} />
                   <Route path="/tools/aspect-ratio" element={<AspectRatioCalculator />} />
+                  <Route path="/tools/base64-image" element={<Base64ImageEncoder />} />
+                  <Route path="/tools/favicon-generator" element={<FaviconGenerator />} />
+                  <Route path="/tools/meta-tag" element={<MetaTagGenerator />} />
+                  <Route path="/tools/og-preview" element={<OpenGraphPreview />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
