@@ -23,6 +23,13 @@ import UrlEncoder from "./pages/tools/UrlEncoder";
 import DiffChecker from "./pages/tools/DiffChecker";
 import CssMinifier from "./pages/tools/CssMinifier";
 import HtmlEntityEncoder from "./pages/tools/HtmlEntityEncoder";
+import JsonToCsv from "./pages/tools/JsonToCsv";
+import CronParser from "./pages/tools/CronParser";
+import RegexCheatsheet from "./pages/tools/RegexCheatsheet";
+import SvgOptimizer from "./pages/tools/SvgOptimizer";
+import PdfMerger from "./pages/tools/PdfMerger";
+import PdfPageExtractor from "./pages/tools/PdfPageExtractor";
+import PdfMetadata from "./pages/tools/PdfMetadata";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +59,13 @@ const App = () => (
             <Route path="/tools/diff-checker" element={<DiffChecker />} />
             <Route path="/tools/css-minifier" element={<CssMinifier />} />
             <Route path="/tools/html-entity" element={<HtmlEntityEncoder />} />
+            <Route path="/tools/json-csv" element={<JsonToCsv />} />
+            <Route path="/tools/cron-parser" element={<CronParser />} />
+            <Route path="/tools/regex-cheatsheet" element={<RegexCheatsheet />} />
+            <Route path="/tools/svg-optimizer" element={<SvgOptimizer />} />
+            <Route path="/tools/pdf-merger" element={<PdfMerger />} />
+            <Route path="/tools/pdf-extractor" element={<PdfPageExtractor />} />
+            <Route path="/tools/pdf-metadata" element={<PdfMetadata />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

@@ -1,6 +1,7 @@
 import {
   Braces, Binary, Regex, Globe, Clock, Fingerprint, Lock, Palette,
-  Shield, FileText, Type, FileSearch, Key, Link, GitCompare, Code, FileCode
+  Shield, FileText, Type, FileSearch, Key, Link, GitCompare, Code, FileCode,
+  ArrowLeftRight, Timer, BookOpen, Image, FileUp, Scissors, FileCheck
 } from "lucide-react";
 
 export interface ToolDef {
@@ -17,6 +18,7 @@ export const categories = [
   { id: "code-testing", label: "Code & Testing" },
   { id: "converters", label: "Converters & Generators" },
   { id: "security", label: "Security" },
+  { id: "pdf", label: "PDF Tools" },
 ];
 
 export const tools: ToolDef[] = [
@@ -26,10 +28,14 @@ export const tools: ToolDef[] = [
   { id: "lorem-ipsum", title: "Lorem Ipsum", description: "Generate placeholder text", icon: Type, category: "text-data", path: "/tools/lorem-ipsum" },
   { id: "log-viewer", title: "Log Viewer", description: "Paste & filter log lines", icon: FileSearch, category: "text-data", path: "/tools/log-viewer" },
   { id: "diff-checker", title: "Diff Checker", description: "Compare two texts side by side", icon: GitCompare, category: "text-data", path: "/tools/diff-checker" },
+  { id: "json-csv", title: "JSON ↔ CSV", description: "Convert between JSON and CSV", icon: ArrowLeftRight, category: "text-data", path: "/tools/json-csv" },
   { id: "regex-tester", title: "Regex Tester", description: "Test regex with live match highlighting", icon: Regex, category: "code-testing", path: "/tools/regex-tester" },
+  { id: "regex-cheatsheet", title: "Regex Cheatsheet", description: "Quick regex syntax reference", icon: BookOpen, category: "code-testing", path: "/tools/regex-cheatsheet" },
   { id: "api-tester", title: "API Tester", description: "Send HTTP requests & view responses", icon: Globe, category: "code-testing", path: "/tools/api-tester" },
   { id: "css-minifier", title: "CSS Minifier", description: "Minify CSS code", icon: Code, category: "code-testing", path: "/tools/css-minifier" },
   { id: "html-entity", title: "HTML Entity Encoder", description: "Encode & decode HTML entities", icon: FileCode, category: "code-testing", path: "/tools/html-entity" },
+  { id: "cron-parser", title: "Cron Parser", description: "Parse & understand cron expressions", icon: Timer, category: "code-testing", path: "/tools/cron-parser" },
+  { id: "svg-optimizer", title: "SVG Optimizer", description: "Optimize SVG files", icon: Image, category: "code-testing", path: "/tools/svg-optimizer" },
   { id: "timestamp", title: "Timestamp Converter", description: "Convert Unix ↔ human-readable dates", icon: Clock, category: "converters", path: "/tools/timestamp" },
   { id: "uuid-generator", title: "UUID Generator", description: "Generate UUID v4 identifiers", icon: Fingerprint, category: "converters", path: "/tools/uuid-generator" },
   { id: "password-generator", title: "Password Generator", description: "Generate secure passwords", icon: Lock, category: "converters", path: "/tools/password-generator" },
@@ -37,4 +43,7 @@ export const tools: ToolDef[] = [
   { id: "url-encoder", title: "URL Encoder/Decoder", description: "Encode & decode URL components", icon: Link, category: "converters", path: "/tools/url-encoder" },
   { id: "jwt-decoder", title: "JWT Decoder", description: "Decode & inspect JSON Web Tokens", icon: Key, category: "security", path: "/tools/jwt-decoder" },
   { id: "hash-generator", title: "Hash Generator", description: "Generate SHA-1, SHA-256, SHA-512 hashes", icon: Shield, category: "security", path: "/tools/hash-generator" },
+  { id: "pdf-merger", title: "PDF Merger", description: "Combine multiple PDF files into one", icon: FileUp, category: "pdf", path: "/tools/pdf-merger" },
+  { id: "pdf-extractor", title: "PDF Page Extractor", description: "Extract specific pages from a PDF", icon: Scissors, category: "pdf", path: "/tools/pdf-extractor" },
+  { id: "pdf-metadata", title: "PDF Metadata Viewer", description: "View PDF properties & metadata", icon: FileCheck, category: "pdf", path: "/tools/pdf-metadata" },
 ];
