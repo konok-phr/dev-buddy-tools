@@ -83,6 +83,18 @@ import CssSpecificityCalculator from "./pages/tools/CssSpecificityCalculator";
 import CodeScreenshot from "./pages/tools/CodeScreenshot";
 import HtaccessGenerator from "./pages/tools/HtaccessGenerator";
 import ResponsiveBreakpointTester from "./pages/tools/ResponsiveBreakpointTester";
+import CsvViewer from "./pages/tools/CsvViewer";
+import HtmlCssJsMinifier from "./pages/tools/HtmlCssJsMinifier";
+import CodeBeautifier from "./pages/tools/CodeBeautifier";
+import WebpackConfigGenerator from "./pages/tools/WebpackConfigGenerator";
+import EnvFileEditor from "./pages/tools/EnvFileEditor";
+import CorsHeaderChecker from "./pages/tools/CorsHeaderChecker";
+import CspGenerator from "./pages/tools/CspGenerator";
+import TotpGenerator from "./pages/tools/TotpGenerator";
+import WebhookTester from "./pages/tools/WebhookTester";
+import DnsLookup from "./pages/tools/DnsLookup";
+import SslDecoder from "./pages/tools/SslDecoder";
+import NpmPackageSize from "./pages/tools/NpmPackageSize";
 
 const queryClient = new QueryClient();
 
@@ -174,6 +186,18 @@ const App = () => (
                   <Route path="/tools/code-screenshot" element={<CodeScreenshot />} />
                   <Route path="/tools/htaccess" element={<HtaccessGenerator />} />
                   <Route path="/tools/responsive-tester" element={<ResponsiveBreakpointTester />} />
+                  <Route path="/tools/csv-viewer" element={<CsvViewer />} />
+                  <Route path="/tools/html-css-js-minifier" element={<HtmlCssJsMinifier />} />
+                  <Route path="/tools/code-beautifier" element={<CodeBeautifier />} />
+                  <Route path="/tools/webpack-config" element={<WebpackConfigGenerator />} />
+                  <Route path="/tools/env-editor" element={<EnvFileEditor />} />
+                  <Route path="/tools/cors-checker" element={<CorsHeaderChecker />} />
+                  <Route path="/tools/csp-generator" element={<CspGenerator />} />
+                  <Route path="/tools/totp-generator" element={<TotpGenerator />} />
+                  <Route path="/tools/webhook-tester" element={<WebhookTester />} />
+                  <Route path="/tools/dns-lookup" element={<DnsLookup />} />
+                  <Route path="/tools/ssl-decoder" element={<SslDecoder />} />
+                  <Route path="/tools/npm-size" element={<NpmPackageSize />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>

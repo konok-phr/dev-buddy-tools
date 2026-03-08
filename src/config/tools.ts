@@ -10,7 +10,9 @@ import {
   Contrast, SmilePlus, ImagePlus, Quote, Pentagon,
   FileCode as FileCodeIcon, FileX, Settings2, ClockArrowUp, HardDrive,
   Link2, Bot, Map, FileOutput, ImageDown, EyeOff, Hash as HashIcon,
-  Camera, FileKey, Monitor
+  Camera, FileKey, Monitor,
+  TableProperties, Minimize2, Sparkles, Package as PackageIcon, FileEdit,
+  ShieldAlert, KeyRound, Webhook, Wifi, LockKeyhole, Box
 } from "lucide-react";
 
 export interface ToolDef {
@@ -28,6 +30,7 @@ export const categories = [
   { id: "converters", label: "Converters & Generators" },
   { id: "css-design", label: "CSS & Design" },
   { id: "security", label: "Security" },
+  { id: "networking", label: "Networking" },
   { id: "pdf", label: "PDF Tools" },
 ];
 
@@ -108,4 +111,16 @@ export const tools: ToolDef[] = [
   { id: "code-screenshot", title: "Code Screenshot", description: "Create beautiful code screenshots", icon: Camera, category: "code-testing", path: "/tools/code-screenshot" },
   { id: "htaccess", title: ".htaccess Generator", description: "Generate Apache .htaccess configs", icon: FileKey, category: "code-testing", path: "/tools/htaccess" },
   { id: "responsive-tester", title: "Responsive Tester", description: "Preview websites at different screen sizes", icon: Monitor, category: "code-testing", path: "/tools/responsive-tester" },
+  { id: "csv-viewer", title: "CSV Viewer / Editor", description: "View, edit and export CSV data", icon: TableProperties, category: "text-data", path: "/tools/csv-viewer" },
+  { id: "html-css-js-minifier", title: "HTML/CSS/JS Minifier", description: "Minify HTML, CSS and JavaScript combined", icon: Minimize2, category: "code-testing", path: "/tools/html-css-js-minifier" },
+  { id: "code-beautifier", title: "Code Beautifier", description: "Beautify JSON, CSS, HTML, SQL and XML", icon: Sparkles, category: "code-testing", path: "/tools/code-beautifier" },
+  { id: "webpack-config", title: "Webpack Config Generator", description: "Generate webpack.config.js interactively", icon: PackageIcon, category: "code-testing", path: "/tools/webpack-config" },
+  { id: "env-editor", title: ".env File Editor", description: "Edit environment variable files visually", icon: FileEdit, category: "code-testing", path: "/tools/env-editor" },
+  { id: "cors-checker", title: "CORS Header Checker", description: "Check CORS headers on any URL", icon: ShieldAlert, category: "networking", path: "/tools/cors-checker" },
+  { id: "csp-generator", title: "CSP Generator", description: "Generate Content Security Policy headers", icon: LockKeyhole, category: "security", path: "/tools/csp-generator" },
+  { id: "totp-generator", title: "TOTP/2FA Generator", description: "Generate time-based one-time passwords", icon: KeyRound, category: "security", path: "/tools/totp-generator" },
+  { id: "webhook-tester", title: "Webhook Tester", description: "Send test webhook requests", icon: Webhook, category: "networking", path: "/tools/webhook-tester" },
+  { id: "dns-lookup", title: "DNS Lookup", description: "Query DNS records for any domain", icon: Wifi, category: "networking", path: "/tools/dns-lookup" },
+  { id: "ssl-decoder", title: "SSL Certificate Decoder", description: "Check and decode SSL certificates", icon: Shield, category: "networking", path: "/tools/ssl-decoder" },
+  { id: "npm-size", title: "NPM Package Size", description: "Check bundle size of npm packages", icon: Box, category: "code-testing", path: "/tools/npm-size" },
 ];

@@ -380,4 +380,64 @@ export const toolSEO: Record<string, { title: string; description: string; keywo
     description: "Preview any website at different screen sizes. Test responsive design for iPhone, iPad, desktop and custom dimensions. Free tool.",
     keywords: "responsive tester, responsive design test, mobile preview, screen size tester, viewport tester, responsive checker",
   },
+  "csv-viewer": {
+    title: "CSV Viewer & Editor Online",
+    description: "View, edit and export CSV data in a spreadsheet-like table. Upload CSV files or paste data. Free online tool.",
+    keywords: "csv viewer, csv editor, csv reader, view csv online, edit csv, csv table",
+  },
+  "html-css-js-minifier": {
+    title: "HTML CSS JS Minifier Online",
+    description: "Minify HTML, CSS and JavaScript code in one tool. Remove whitespace, comments and reduce file size. Free online minifier.",
+    keywords: "html minifier, css minifier, js minifier, minify code, code compressor, html css js minifier",
+  },
+  "code-beautifier": {
+    title: "Code Beautifier — Format JSON CSS HTML SQL XML",
+    description: "Format and beautify code in multiple languages: JSON, CSS, HTML, SQL and XML. Free online code formatter.",
+    keywords: "code beautifier, code formatter, format code, beautify json, beautify css, beautify html, beautify sql",
+  },
+  "webpack-config": {
+    title: "Webpack Config Generator Online",
+    description: "Generate webpack.config.js interactively with loaders, plugins and dev server options. Free webpack configuration tool.",
+    keywords: "webpack config generator, webpack configuration, generate webpack config, webpack setup, webpack tool",
+  },
+  "env-editor": {
+    title: ".env File Editor Online",
+    description: "Edit environment variable files visually or in raw mode. Upload, download and manage .env files. Free tool.",
+    keywords: "env file editor, dotenv editor, environment variables, env editor online, edit env file",
+  },
+  "cors-checker": {
+    title: "CORS Header Checker Online",
+    description: "Check if a URL returns proper CORS headers. Verify Access-Control-Allow-Origin and other CORS headers. Free tool.",
+    keywords: "cors checker, cors header checker, check cors, cors tester, access control allow origin, cors debug",
+  },
+  "csp-generator": {
+    title: "CSP Generator — Content Security Policy Builder",
+    description: "Generate Content Security Policy headers interactively. Configure directives and export as HTTP header or meta tag. Free tool.",
+    keywords: "csp generator, content security policy, csp builder, security headers, csp header generator",
+  },
+  "totp-generator": {
+    title: "TOTP/2FA Code Generator Online",
+    description: "Generate time-based one-time passwords (TOTP) for two-factor authentication. Compatible with Google Authenticator. Free tool.",
+    keywords: "totp generator, 2fa generator, authenticator code, time based otp, two factor authentication, totp code",
+  },
+  "webhook-tester": {
+    title: "Webhook Tester — Send Test Webhooks Online",
+    description: "Send test webhook requests with custom headers and body. Inspect responses and debug webhooks. Free online tool.",
+    keywords: "webhook tester, test webhook, send webhook, webhook debug, webhook tool, http webhook",
+  },
+  "dns-lookup": {
+    title: "DNS Lookup Tool — Query DNS Records Online",
+    description: "Query DNS records (A, AAAA, CNAME, MX, NS, TXT) for any domain using Google DNS. Free online DNS lookup tool.",
+    keywords: "dns lookup, dns query, dns records, domain lookup, mx lookup, ns lookup, dns checker",
+  },
+  "ssl-decoder": {
+    title: "SSL Certificate Decoder & Checker",
+    description: "Check SSL/TLS certificates by URL or decode PEM-encoded certificates. Verify HTTPS connectivity. Free online tool.",
+    keywords: "ssl checker, ssl decoder, certificate decoder, check ssl, pem decoder, tls checker, https checker",
+  },
+  "npm-size": {
+    title: "NPM Package Size Checker — Bundlephobia",
+    description: "Check the bundle size (minified + gzipped) of any npm package. Compare package sizes. Free online tool.",
+    keywords: "npm package size, bundle size, bundlephobia, npm size checker, package size, npm bundle analyzer",
+  },
 };
