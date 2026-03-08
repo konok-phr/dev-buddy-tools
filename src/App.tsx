@@ -256,6 +256,8 @@ const App = () => (
                   <Route path="/tools/nginx-config" element={<NginxConfigGenerator />} />
                   <Route path="/tools/github-actions" element={<GithubActionsBuilder />} />
                   <Route path="/tools/fake-data" element={<FakeDataGenerator />} />
+                  <Route path="/tools/pdf-viewer" element={<PdfViewer />} />
+                  <Route path="/tools/md-slides" element={<MarkdownSlidePresenter />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
