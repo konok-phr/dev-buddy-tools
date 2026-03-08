@@ -142,4 +142,5 @@ export const tools: ToolDef[] = [
   { id: "image-ascii", title: "Image to ASCII Art", description: "Convert images to ASCII text art", icon: TerminalSquare, category: "imagery", path: "/tools/image-ascii" },
   { id: "image-convert", title: "Image Format Converter", description: "Convert between PNG, JPEG & WebP", icon: RefreshCw, category: "imagery", path: "/tools/image-convert" },
   { id: "image-filters", title: "Image Filters", description: "Apply CSS filters & effects to images", icon: WandIcon, category: "imagery", path: "/tools/image-filters" },
+  { id: "image-cropper", title: "Image Cropper", description: "Crop images with aspect ratio lock", icon: Crop, category: "imagery", path: "/tools/image-cropper" },
 ];

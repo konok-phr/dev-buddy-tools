@@ -520,4 +520,9 @@ export const toolSEO: Record<string, { title: string; description: string; keywo
     description: "Apply filters and effects to images: grayscale, sepia, blur, brightness, contrast. Presets and custom values. Free tool.",
     keywords: "image filter, photo effects, css filter, image effects, photo filter online, grayscale sepia",
   },
+  "image-cropper": {
+    title: "Image Cropper Online — Crop with Aspect Ratio Lock",
+    description: "Crop images with aspect ratio presets (1:1, 4:3, 16:9). Drag to select area, resize handles, rule-of-thirds grid. Free tool.",
+    keywords: "image cropper, crop image, crop photo, aspect ratio crop, image crop online, photo cropper",
+  },
 };
