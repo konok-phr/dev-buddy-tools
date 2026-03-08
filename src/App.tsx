@@ -111,6 +111,7 @@ import ImageColorExtractor from "./pages/tools/ImageColorExtractor";
 import ImageToAscii from "./pages/tools/ImageToAscii";
 import ImageFormatConverter from "./pages/tools/ImageFormatConverter";
 import ImageFilters from "./pages/tools/ImageFilters";
+import ImageCropper from "./pages/tools/ImageCropper";
 
 const queryClient = new QueryClient();
 
