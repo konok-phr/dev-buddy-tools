@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import ToolPage from "@/components/ToolPage";
+import { ToolHeader } from "@/components/ToolPage";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Copy, Check } from "lucide-react";
