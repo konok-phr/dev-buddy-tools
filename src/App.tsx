@@ -123,6 +123,8 @@ import SvgPathEditor from "./pages/tools/SvgPathEditor";
 import NginxConfigGenerator from "./pages/tools/NginxConfigGenerator";
 import GithubActionsBuilder from "./pages/tools/GithubActionsBuilder";
 import FakeDataGenerator from "./pages/tools/FakeDataGenerator";
+import PdfViewer from "./pages/tools/PdfViewer";
+import MarkdownSlidePresenter from "./pages/tools/MarkdownSlidePresenter";
 
 const queryClient = new QueryClient();
 
@@ -254,6 +256,8 @@ const App = () => (
                   <Route path="/tools/nginx-config" element={<NginxConfigGenerator />} />
                   <Route path="/tools/github-actions" element={<GithubActionsBuilder />} />
                   <Route path="/tools/fake-data" element={<FakeDataGenerator />} />
+                  <Route path="/tools/pdf-viewer" element={<PdfViewer />} />
+                  <Route path="/tools/md-slides" element={<MarkdownSlidePresenter />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>

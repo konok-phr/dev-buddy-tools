@@ -580,4 +580,14 @@ export const toolSEO: Record<string, { title: string; description: string; keywo
     description: "Generate realistic fake data for testing: names, emails, phones, addresses, companies and more. Export as JSON or CSV. Free tool.",
     keywords: "fake data generator, test data, mock data, random data, fake names, fake emails, dummy data generator",
   },
+  "pdf-viewer": {
+    title: "PDF Viewer Online — Zoom, Search & Navigate",
+    description: "View PDF files in browser with zoom, page navigation, text search, and rotation. No upload to server. Free online PDF viewer tool.",
+    keywords: "pdf viewer, pdf reader online, view pdf, pdf zoom, pdf search, pdf navigation, free pdf viewer",
+  },
+  "md-slides": {
+    title: "Markdown Slide Presenter — Quick Presentations",
+    description: "Create quick presentations from Markdown text. Fullscreen mode, keyboard navigation, grid overview. Free presentation tool.",
+    keywords: "markdown slides, markdown presentation, slide presenter, markdown to slides, quick presentation, free slides tool",
+  },
 };
