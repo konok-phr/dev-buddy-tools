@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Search, Terminal, Star, Clock } from "lucide-react";
 import { tools, categories } from "@/config/tools";
