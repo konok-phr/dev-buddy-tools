@@ -123,6 +123,8 @@ import SvgPathEditor from "./pages/tools/SvgPathEditor";
 import NginxConfigGenerator from "./pages/tools/NginxConfigGenerator";
 import GithubActionsBuilder from "./pages/tools/GithubActionsBuilder";
 import FakeDataGenerator from "./pages/tools/FakeDataGenerator";
+import PdfViewer from "./pages/tools/PdfViewer";
+import MarkdownSlidePresenter from "./pages/tools/MarkdownSlidePresenter";
 
 const queryClient = new QueryClient();
 
