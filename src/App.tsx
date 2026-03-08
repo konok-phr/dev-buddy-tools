@@ -59,6 +59,10 @@ import EncodingConverter from "./pages/tools/EncodingConverter";
 import SqlFormatter from "./pages/tools/SqlFormatter";
 import TailwindConverter from "./pages/tools/TailwindConverter";
 import RegexGenerator from "./pages/tools/RegexGenerator";
+import JsonDiffViewer from "./pages/tools/JsonDiffViewer";
+import CssAnimationGenerator from "./pages/tools/CssAnimationGenerator";
+import GitCommandBuilder from "./pages/tools/GitCommandBuilder";
+import TypeScriptTypeGenerator from "./pages/tools/TypeScriptTypeGenerator";
 
 const queryClient = new QueryClient();
 
@@ -126,6 +130,10 @@ const App = () => (
                   <Route path="/tools/sql-formatter" element={<SqlFormatter />} />
                   <Route path="/tools/tailwind" element={<TailwindConverter />} />
                   <Route path="/tools/regex-generator" element={<RegexGenerator />} />
+                  <Route path="/tools/json-diff" element={<JsonDiffViewer />} />
+                  <Route path="/tools/css-animation" element={<CssAnimationGenerator />} />
+                  <Route path="/tools/git-command" element={<GitCommandBuilder />} />
+                  <Route path="/tools/ts-type" element={<TypeScriptTypeGenerator />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Layout>
