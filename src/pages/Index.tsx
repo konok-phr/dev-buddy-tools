@@ -95,6 +95,9 @@ const Index = () => {
             onChange={e => setSearch(e.target.value)}
             className="pl-12 py-6 text-base bg-card border-border rounded-xl w-full"
           />
+          <kbd className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none hidden sm:inline-flex h-6 items-center gap-1 rounded border border-border bg-muted px-2 font-mono text-xs text-muted-foreground">
+            ⌘K
+          </kbd>
         </div>
       </div>
       <div className="flex gap-2 flex-wrap mb-6">
