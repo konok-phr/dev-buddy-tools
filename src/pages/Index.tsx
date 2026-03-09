@@ -86,6 +86,53 @@ const Index = () => {
         </Badge>
       </div>
 
+      {/* User Actions Bar */}
+      {!search && !activeCategory && (
+        <div className="mb-6 flex flex-wrap items-center gap-2">
+          <input type="file" accept=".json" ref={fileInputRef} onChange={handleImport} className="hidden" />
+          {favorites.length > 0 && (
+            <>
+              <Button variant="outline" size="sm" onClick={handleExport} className="gap-1.5">
+                <Download className="h-3.5 w-3.5" /> Export
+              </Button>
+              <Button variant="outline" size="sm" onClick={() => fileInputRef.current?.click()} className="gap-1.5">
+                <Upload className="h-3.5 w-3.5" /> Import
+              </Button>
+            </>
+          )}
+          {getTotalUsage() > 0 && (
+            <Button variant="outline" size="sm" onClick={() => setShowStats(!showStats)} className="gap-1.5">
+              <BarChart3 className="h-3.5 w-3.5" /> Stats ({getTotalUsage()})
+            </Button>
+          )}
+        </div>
+      )}
+
+      {/* Usage Stats */}
+      {showStats && mostUsed.length > 0 && !search && !activeCategory && (
+        <div className="mb-6 p-4 bg-card border border-border rounded-lg">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-sm font-semibold text-foreground flex items-center gap-2">
+              <BarChart3 className="h-4 w-4 text-primary" /> Usage Stats
+            </h2>
+            <Button variant="ghost" size="sm" onClick={() => { clearStats(); toast.success("Stats cleared"); }} className="h-7 text-xs text-muted-foreground hover:text-destructive">
+              <Trash2 className="h-3 w-3 mr-1" /> Clear
+            </Button>
+          </div>
+          <div className="space-y-2">
+            {mostUsed.map((m, i) => (
+              <div key={m.id} className="flex items-center gap-3">
+                <span className="text-xs text-muted-foreground w-4">#{i + 1}</span>
+                <m.tool!.icon className="h-4 w-4 text-primary" />
+                <span className="text-sm text-foreground flex-1">{m.tool!.title}</span>
+                <Badge variant="secondary" className="text-xs">{m.count}x</Badge>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-muted-foreground mt-3">Total: {getTotalUsage()} tool uses</p>
+        </div>
+      )}
+
       {/* Favorites */}
       {favTools.length > 0 && !search && !activeCategory && (
         <div className="mb-6">
