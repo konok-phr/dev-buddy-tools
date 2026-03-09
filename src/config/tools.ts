@@ -37,6 +37,7 @@ export const categories = [
   { id: "networking", label: "Networking" },
   { id: "pdf", label: "PDF Tools" },
   { id: "imagery", label: "Image Tools" },
+  { id: "math", label: "Math & Calculators" },
 ];
 
 export const tools: ToolDef[] = [
