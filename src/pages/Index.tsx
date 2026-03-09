@@ -120,14 +120,17 @@ const Index = () => {
             </Button>
           </div>
           <div className="space-y-2">
-            {mostUsed.map((m, i) => (
-              <div key={m.id} className="flex items-center gap-3">
-                <span className="text-xs text-muted-foreground w-4">#{i + 1}</span>
-                <m.tool!.icon className="h-4 w-4 text-primary" />
-                <span className="text-sm text-foreground flex-1">{m.tool!.title}</span>
-                <Badge variant="secondary" className="text-xs">{m.count}x</Badge>
-              </div>
-            ))}
+            {mostUsed.map((m, i) => {
+              const Icon = m.tool!.icon;
+              return (
+                <div key={m.id} className="flex items-center gap-3">
+                  <span className="text-xs text-muted-foreground w-4">#{i + 1}</span>
+                  <Icon className="h-4 w-4 text-primary" />
+                  <span className="text-sm text-foreground flex-1">{m.tool!.title}</span>
+                  <Badge variant="secondary" className="text-xs">{m.count}x</Badge>
+                </div>
+              );
+            })}
           </div>
           <p className="text-xs text-muted-foreground mt-3">Total: {getTotalUsage()} tool uses</p>
         </div>
