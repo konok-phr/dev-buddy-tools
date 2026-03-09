@@ -108,6 +108,7 @@ const AsciiTableGenerator = lazy(() => import("./pages/tools/AsciiTableGenerator
 const HttpHeaderInspector = lazy(() => import("./pages/tools/HttpHeaderInspector"));
 const TsToJson = lazy(() => import("./pages/tools/TsToJson"));
 const DnsPropagation = lazy(() => import("./pages/tools/DnsPropagation"));
+const DomainChecker = lazy(() => import("./pages/tools/DomainChecker"));
 const ImageMetadata = lazy(() => import("./pages/tools/ImageMetadata"));
 const ImageResizer = lazy(() => import("./pages/tools/ImageResizer"));
 const ImageColorExtractor = lazy(() => import("./pages/tools/ImageColorExtractor"));
@@ -269,6 +270,7 @@ const App = () => (
                     <Route path="/tools/http-headers" element={<HttpHeaderInspector />} />
                     <Route path="/tools/ts-to-json" element={<TsToJson />} />
                     <Route path="/tools/dns-propagation" element={<DnsPropagation />} />
+                    <Route path="/tools/domain-checker" element={<DomainChecker />} />
                     <Route path="/tools/image-metadata" element={<ImageMetadata />} />
                     <Route path="/tools/image-resizer" element={<ImageResizer />} />
                     <Route path="/tools/image-colors" element={<ImageColorExtractor />} />
