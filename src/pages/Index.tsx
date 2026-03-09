@@ -12,9 +12,12 @@ import { toast } from "sonner";
 const Index = () => {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const { favorites, toggleFav, isFav } = useFavorites();
+  const [showStats, setShowStats] = useState(false);
+  const { favorites, toggleFav, isFav, exportFavorites, importFavorites, clearFavorites } = useFavorites();
   const { recents, addRecent } = useRecents();
+  const { trackUsage, getMostUsed, getTotalUsage, clearStats } = useStats();
   const navigate = useNavigate();
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const filtered = tools.filter(t => {
     const matchSearch = t.title.toLowerCase().includes(search.toLowerCase()) ||
