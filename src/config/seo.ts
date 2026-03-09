@@ -610,4 +610,94 @@ export const toolSEO: Record<string, { title: string; description: string; keywo
     description: "Test WebSocket connections in real-time. Connect to any WebSocket server, send and receive messages with timestamps. Free online tool.",
     keywords: "websocket tester, websocket client, ws tester, websocket debug, websocket online, test websocket",
   },
+  "curl-to-code": {
+    title: "cURL to Code Converter — JS, Python, PHP, Go, Ruby",
+    description: "Convert cURL commands to JavaScript fetch, Python requests, PHP curl, Go net/http and Ruby code. Free online tool.",
+    keywords: "curl to code, curl to javascript, curl to python, curl to php, curl converter, curl to fetch",
+  },
+  "html-to-jsx": {
+    title: "HTML to JSX Converter Online",
+    description: "Convert HTML markup to valid JSX syntax. Handles className, htmlFor, style objects, self-closing tags. Free tool.",
+    keywords: "html to jsx, html to react, jsx converter, convert html jsx, react html converter",
+  },
+  "json-to-go": {
+    title: "JSON to Go Struct Generator",
+    description: "Convert JSON objects to Go struct definitions with json tags. Handles nested objects and arrays. Free online tool.",
+    keywords: "json to go, json to go struct, go struct generator, golang json, convert json go",
+  },
+  "html-to-markdown": {
+    title: "HTML to Markdown Converter Online",
+    description: "Convert HTML markup to clean Markdown syntax. Handles headings, links, images, lists and more. Free tool.",
+    keywords: "html to markdown, html to md, convert html markdown, html markdown converter",
+  },
+  "json-to-python": {
+    title: "JSON to Python Dataclass Generator",
+    description: "Convert JSON to Python dataclass definitions with type hints. Free online tool.",
+    keywords: "json to python, json to dataclass, python dataclass generator, json python converter",
+  },
+  "password-strength": {
+    title: "Password Strength Checker — Entropy & Crack Time",
+    description: "Analyze password strength with entropy calculation, crack time estimation and detailed criteria checks. Free online tool.",
+    keywords: "password strength checker, password analyzer, password entropy, password security, password tester",
+  },
+  "aes-encryption": {
+    title: "AES Encryption Tool — Encrypt & Decrypt Text Online",
+    description: "Encrypt and decrypt text using AES-256-GCM with PBKDF2 key derivation. Runs entirely in your browser. Free tool.",
+    keywords: "aes encryption, aes decrypt, encrypt text online, aes 256, encryption tool, decrypt text",
+  },
+  "cipher-tools": {
+    title: "Cipher & Encoding Tools — ROT13, Caesar, Morse Code",
+    description: "Encode and decode text with ROT13, Caesar cipher and Morse code. Free online cipher tools.",
+    keywords: "rot13, caesar cipher, morse code, cipher encoder, cipher decoder, text encoder",
+  },
+  "unit-converter": {
+    title: "Unit Converter — Length, Weight, Temperature, Speed",
+    description: "Convert between units of length, weight, temperature, speed and area. Free online unit converter.",
+    keywords: "unit converter, length converter, weight converter, temperature converter, metric converter",
+  },
+  "percentage-calc": {
+    title: "Percentage Calculator — Calculate Percentages Online",
+    description: "Calculate percentages, percentage of, percentage change, increase and decrease. Free online calculator.",
+    keywords: "percentage calculator, percent calculator, calculate percentage, percentage change, percent of",
+  },
+  "date-calculator": {
+    title: "Date Calculator — Add/Subtract Days & Date Difference",
+    description: "Add or subtract days, months, years from a date. Calculate the difference between two dates. Free tool.",
+    keywords: "date calculator, days between dates, add days to date, date difference, date math",
+  },
+  "subnet-calc": {
+    title: "Subnet Calculator — IP CIDR Network Calculator",
+    description: "Calculate subnet mask, network address, broadcast address, host range from IP/CIDR notation. Free tool.",
+    keywords: "subnet calculator, cidr calculator, ip subnet, network calculator, subnet mask calculator",
+  },
+  "timezone-converter": {
+    title: "Timezone Converter — Convert Time Between Timezones",
+    description: "Convert time between different timezones worldwide. View current time in major cities. Free tool.",
+    keywords: "timezone converter, time zone converter, convert timezone, world clock, time converter",
+  },
+  "remove-duplicates": {
+    title: "Remove Duplicate Lines Online",
+    description: "Remove duplicate lines from text. Keep unique entries with case sensitivity options. Free online tool.",
+    keywords: "remove duplicate lines, deduplicate text, unique lines, remove duplicates online",
+  },
+  "sort-lines": {
+    title: "Sort Lines Online — Alphabetical, Length, Numeric",
+    description: "Sort text lines alphabetically, by length, numerically, shuffle or reverse. Free online text sorting tool.",
+    keywords: "sort lines, sort text, alphabetical sort, sort lines online, text sorter",
+  },
+  "word-frequency": {
+    title: "Word Frequency Counter Online",
+    description: "Count word occurrences and frequency in text. Visual bar charts and percentage breakdown. Free tool.",
+    keywords: "word frequency counter, word count, word occurrence, text analysis, word frequency analyzer",
+  },
+  "text-reverser": {
+    title: "Text Reverser — Reverse Characters, Words & Lines",
+    description: "Reverse text by characters, words, lines or each word individually. Free online text reverser.",
+    keywords: "text reverser, reverse text, reverse string, reverse words, text flip",
+  },
+  "line-numbers": {
+    title: "Add/Remove Line Numbers Online",
+    description: "Add line numbers to text with custom separators or remove existing line numbers. Free online tool.",
+    keywords: "add line numbers, remove line numbers, number lines, line numbering tool",
+  },
 };
