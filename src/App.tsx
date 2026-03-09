@@ -312,6 +312,24 @@ const App = () => (
                     <Route path="/tools/sql-playground" element={<SqlPlayground />} />
                     <Route path="/tools/mongo-query" element={<MongoQueryBuilder />} />
                     <Route path="/tools/websocket-tester" element={<WebSocketTester />} />
+                    <Route path="/tools/curl-to-code" element={<CurlToCode />} />
+                    <Route path="/tools/html-to-jsx" element={<HtmlToJsx />} />
+                    <Route path="/tools/json-to-go" element={<JsonToGoStruct />} />
+                    <Route path="/tools/html-to-markdown" element={<HtmlToMarkdown />} />
+                    <Route path="/tools/json-to-python" element={<JsonToPython />} />
+                    <Route path="/tools/password-strength" element={<PasswordStrengthChecker />} />
+                    <Route path="/tools/aes-encryption" element={<AesEncryption />} />
+                    <Route path="/tools/cipher-tools" element={<CipherTools />} />
+                    <Route path="/tools/unit-converter" element={<UnitConverter />} />
+                    <Route path="/tools/percentage-calc" element={<PercentageCalculator />} />
+                    <Route path="/tools/date-calculator" element={<DateCalculator />} />
+                    <Route path="/tools/subnet-calc" element={<SubnetCalculator />} />
+                    <Route path="/tools/timezone-converter" element={<TimezoneConverter />} />
+                    <Route path="/tools/remove-duplicates" element={<RemoveDuplicateLines />} />
+                    <Route path="/tools/sort-lines" element={<SortLines />} />
+                    <Route path="/tools/word-frequency" element={<WordFrequencyCounter />} />
+                    <Route path="/tools/text-reverser" element={<TextReverser />} />
+                    <Route path="/tools/line-numbers" element={<AddLineNumbers />} />
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                 </Suspense>
