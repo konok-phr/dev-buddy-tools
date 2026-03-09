@@ -31,8 +31,39 @@ const Index = () => {
 
   const handleToolClick = (tool: typeof tools[0]) => {
     addRecent(tool.id);
+    trackUsage(tool.id);
     navigate(tool.path);
   };
+
+  const handleExport = () => {
+    const data = exportFavorites();
+    const blob = new Blob([data], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "devtools-favorites.json";
+    a.click();
+    URL.revokeObjectURL(url);
+    toast.success("Favorites exported!");
+  };
+
+  const handleImport = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      const result = ev.target?.result as string;
+      if (importFavorites(result)) {
+        toast.success("Favorites imported!");
+      } else {
+        toast.error("Invalid file format");
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = "";
+  };
+
+  const mostUsed = getMostUsed(5).map(m => ({ ...m, tool: tools.find(t => t.id === m.id) })).filter(m => m.tool);
 
   return (
     <div className="max-w-5xl mx-auto">
