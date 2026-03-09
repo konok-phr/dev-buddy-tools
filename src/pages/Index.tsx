@@ -1,12 +1,13 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Search, Terminal, Star, Clock } from "lucide-react";
+import { Search, Terminal, Star, Clock, Download, Upload, BarChart3, Trash2 } from "lucide-react";
 import { tools, categories } from "@/config/tools";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { useFavorites, useRecents } from "@/hooks/use-preferences";
+import { useFavorites, useRecents, useStats } from "@/hooks/use-preferences";
 import { SEO } from "@/components/SEO";
+import { toast } from "sonner";
 
 const Index = () => {
   const [search, setSearch] = useState("");
