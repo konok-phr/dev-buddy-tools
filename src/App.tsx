@@ -108,6 +108,7 @@ const AsciiTableGenerator = lazy(() => import("./pages/tools/AsciiTableGenerator
 const HttpHeaderInspector = lazy(() => import("./pages/tools/HttpHeaderInspector"));
 const TsToJson = lazy(() => import("./pages/tools/TsToJson"));
 const DnsPropagation = lazy(() => import("./pages/tools/DnsPropagation"));
+const DomainChecker = lazy(() => import("./pages/tools/DomainChecker"));
 const ImageMetadata = lazy(() => import("./pages/tools/ImageMetadata"));
 const ImageResizer = lazy(() => import("./pages/tools/ImageResizer"));
 const ImageColorExtractor = lazy(() => import("./pages/tools/ImageColorExtractor"));
