@@ -426,9 +426,14 @@ export const toolSEO: Record<string, { title: string; description: string; keywo
     keywords: "webhook tester, test webhook, send webhook, webhook debug, webhook tool, http webhook",
   },
   "dns-lookup": {
-    title: "DNS Lookup Tool — Query DNS Records Online",
-    description: "Query DNS records (A, AAAA, CNAME, MX, NS, TXT) for any domain using Google DNS. Free online DNS lookup tool.",
-    keywords: "dns lookup, dns query, dns records, domain lookup, mx lookup, ns lookup, dns checker",
+    title: "DNS Checker Tool — Query DNS Records Online",
+    description: "Query DNS records (A, AAAA, CNAME, MX, NS, TXT) for any domain using Google DNS. Free online DNS checker tool.",
+    keywords: "dns checker, dns lookup, dns query, dns records, mx lookup, ns lookup",
+  },
+  "domain-checker": {
+    title: "Domain Checker — WHOIS & Availability Check",
+    description: "Check domain availability, registration status, WHOIS details, expiry date, nameservers and bulk domain status. Free online domain checker.",
+    keywords: "domain checker, domain availability checker, whois lookup, domain status, domain expiry, bulk domain check",
   },
   "ssl-decoder": {
     title: "SSL Certificate Decoder & Checker",

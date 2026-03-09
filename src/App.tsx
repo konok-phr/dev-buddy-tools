@@ -270,6 +270,7 @@ const App = () => (
                     <Route path="/tools/http-headers" element={<HttpHeaderInspector />} />
                     <Route path="/tools/ts-to-json" element={<TsToJson />} />
                     <Route path="/tools/dns-propagation" element={<DnsPropagation />} />
+                    <Route path="/tools/domain-checker" element={<DomainChecker />} />
                     <Route path="/tools/image-metadata" element={<ImageMetadata />} />
                     <Route path="/tools/image-resizer" element={<ImageResizer />} />
                     <Route path="/tools/image-colors" element={<ImageColorExtractor />} />
