@@ -298,6 +298,7 @@ const App = () => (
               </Layout>
             </BrowserRouter>
           </TooltipProvider>
+        </StatsProvider>
         </RecentsProvider>
       </FavoritesProvider>
     </ThemeProvider>
