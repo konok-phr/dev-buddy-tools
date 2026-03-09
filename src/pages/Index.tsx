@@ -1,19 +1,23 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Search, Terminal, Star, Clock } from "lucide-react";
+import { Search, Terminal, Star, Clock, Download, Upload, BarChart3, Trash2 } from "lucide-react";
 import { tools, categories } from "@/config/tools";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { useFavorites, useRecents } from "@/hooks/use-preferences";
+import { useFavorites, useRecents, useStats } from "@/hooks/use-preferences";
 import { SEO } from "@/components/SEO";
+import { toast } from "sonner";
 
 const Index = () => {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const { favorites, toggleFav, isFav } = useFavorites();
+  const [showStats, setShowStats] = useState(false);
+  const { favorites, toggleFav, isFav, exportFavorites, importFavorites, clearFavorites } = useFavorites();
   const { recents, addRecent } = useRecents();
+  const { trackUsage, getMostUsed, getTotalUsage, clearStats } = useStats();
   const navigate = useNavigate();
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const filtered = tools.filter(t => {
     const matchSearch = t.title.toLowerCase().includes(search.toLowerCase()) ||
@@ -27,8 +31,39 @@ const Index = () => {
 
   const handleToolClick = (tool: typeof tools[0]) => {
     addRecent(tool.id);
+    trackUsage(tool.id);
     navigate(tool.path);
   };
+
+  const handleExport = () => {
+    const data = exportFavorites();
+    const blob = new Blob([data], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "devtools-favorites.json";
+    a.click();
+    URL.revokeObjectURL(url);
+    toast.success("Favorites exported!");
+  };
+
+  const handleImport = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      const result = ev.target?.result as string;
+      if (importFavorites(result)) {
+        toast.success("Favorites imported!");
+      } else {
+        toast.error("Invalid file format");
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = "";
+  };
+
+  const mostUsed = getMostUsed(5).map(m => ({ ...m, tool: tools.find(t => t.id === m.id) })).filter(m => m.tool);
 
   return (
     <div className="max-w-5xl mx-auto">
@@ -50,6 +85,56 @@ const Index = () => {
           {tools.length} tools available
         </Badge>
       </div>
+
+      {/* User Actions Bar */}
+      {!search && !activeCategory && (
+        <div className="mb-6 flex flex-wrap items-center gap-2">
+          <input type="file" accept=".json" ref={fileInputRef} onChange={handleImport} className="hidden" />
+          {favorites.length > 0 && (
+            <>
+              <Button variant="outline" size="sm" onClick={handleExport} className="gap-1.5">
+                <Download className="h-3.5 w-3.5" /> Export
+              </Button>
+              <Button variant="outline" size="sm" onClick={() => fileInputRef.current?.click()} className="gap-1.5">
+                <Upload className="h-3.5 w-3.5" /> Import
+              </Button>
+            </>
+          )}
+          {getTotalUsage() > 0 && (
+            <Button variant="outline" size="sm" onClick={() => setShowStats(!showStats)} className="gap-1.5">
+              <BarChart3 className="h-3.5 w-3.5" /> Stats ({getTotalUsage()})
+            </Button>
+          )}
+        </div>
+      )}
+
+      {/* Usage Stats */}
+      {showStats && mostUsed.length > 0 && !search && !activeCategory && (
+        <div className="mb-6 p-4 bg-card border border-border rounded-lg">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-sm font-semibold text-foreground flex items-center gap-2">
+              <BarChart3 className="h-4 w-4 text-primary" /> Usage Stats
+            </h2>
+            <Button variant="ghost" size="sm" onClick={() => { clearStats(); toast.success("Stats cleared"); }} className="h-7 text-xs text-muted-foreground hover:text-destructive">
+              <Trash2 className="h-3 w-3 mr-1" /> Clear
+            </Button>
+          </div>
+          <div className="space-y-2">
+            {mostUsed.map((m, i) => {
+              const Icon = m.tool!.icon;
+              return (
+                <div key={m.id} className="flex items-center gap-3">
+                  <span className="text-xs text-muted-foreground w-4">#{i + 1}</span>
+                  <Icon className="h-4 w-4 text-primary" />
+                  <span className="text-sm text-foreground flex-1">{m.tool!.title}</span>
+                  <Badge variant="secondary" className="text-xs">{m.count}x</Badge>
+                </div>
+              );
+            })}
+          </div>
+          <p className="text-xs text-muted-foreground mt-3">Total: {getTotalUsage()} tool uses</p>
+        </div>
+      )}
 
       {/* Favorites */}
       {favTools.length > 0 && !search && !activeCategory && (

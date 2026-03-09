@@ -5,7 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "@/components/Layout";
-import { ThemeProvider, FavoritesProvider, RecentsProvider } from "@/hooks/use-preferences";
+import { ThemeProvider, FavoritesProvider, RecentsProvider, StatsProvider } from "@/hooks/use-preferences";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -162,12 +162,13 @@ const App = () => (
     <ThemeProvider>
       <FavoritesProvider>
         <RecentsProvider>
-          <TooltipProvider>
-            <Toaster />
-            <Sonner />
-            <BrowserRouter>
-              <Layout>
-                <Suspense fallback={<DelayedFallback />}>
+          <StatsProvider>
+            <TooltipProvider>
+              <Toaster />
+              <Sonner />
+              <BrowserRouter>
+                <Layout>
+                  <Suspense fallback={<DelayedFallback />}>
                   <Routes>
                     <Route path="/" element={<Index />} />
                     <Route path="/tools/json-formatter" element={<JsonFormatter />} />
@@ -297,6 +298,7 @@ const App = () => (
               </Layout>
             </BrowserRouter>
           </TooltipProvider>
+        </StatsProvider>
         </RecentsProvider>
       </FavoritesProvider>
     </ThemeProvider>
