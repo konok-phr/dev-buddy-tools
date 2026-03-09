@@ -37,6 +37,7 @@ export const categories = [
   { id: "networking", label: "Networking" },
   { id: "pdf", label: "PDF Tools" },
   { id: "imagery", label: "Image Tools" },
+  { id: "math", label: "Math & Calculators" },
 ];
 
 export const tools: ToolDef[] = [
@@ -162,4 +163,26 @@ export const tools: ToolDef[] = [
   { id: "sql-playground", title: "SQL Playground", description: "Run SQL queries in-browser with SQLite", icon: TerminalIcon, category: "code-testing", path: "/tools/sql-playground" },
   { id: "mongo-query", title: "MongoDB Query Builder", description: "Build MongoDB find & aggregate queries visually", icon: Database, category: "code-testing", path: "/tools/mongo-query" },
   { id: "websocket-tester", title: "WebSocket Tester", description: "Connect to WebSocket servers and test messages", icon: Plug, category: "code-testing", path: "/tools/websocket-tester" },
+  // Code Converters
+  { id: "curl-to-code", title: "cURL to Code", description: "Convert cURL commands to JS, Python, PHP, Go, Ruby", icon: ArrowRightLeft, category: "converters", path: "/tools/curl-to-code" },
+  { id: "html-to-jsx", title: "HTML to JSX", description: "Convert HTML markup to valid JSX syntax", icon: FileCode, category: "converters", path: "/tools/html-to-jsx" },
+  { id: "json-to-go", title: "JSON to Go Struct", description: "Convert JSON objects to Go struct definitions", icon: Braces, category: "converters", path: "/tools/json-to-go" },
+  { id: "html-to-markdown", title: "HTML to Markdown", description: "Convert HTML markup to clean Markdown", icon: FileOutput, category: "converters", path: "/tools/html-to-markdown" },
+  { id: "json-to-python", title: "JSON to Python", description: "Convert JSON to Python dataclass definitions", icon: Braces, category: "converters", path: "/tools/json-to-python" },
+  // Security & Crypto
+  { id: "password-strength", title: "Password Strength", description: "Analyze password strength, entropy & crack time", icon: ShieldCheck, category: "security", path: "/tools/password-strength" },
+  { id: "aes-encryption", title: "AES Encryption", description: "Encrypt/decrypt text with AES-256-GCM", icon: LockKeyhole, category: "security", path: "/tools/aes-encryption" },
+  { id: "cipher-tools", title: "Cipher & Encoding", description: "ROT13, Caesar cipher and Morse code converter", icon: Lock, category: "security", path: "/tools/cipher-tools" },
+  // Math & Calculators
+  { id: "unit-converter", title: "Unit Converter", description: "Convert length, weight, temperature, speed & area", icon: Ruler, category: "math", path: "/tools/unit-converter" },
+  { id: "percentage-calc", title: "Percentage Calculator", description: "Calculate percentages, change, increase/decrease", icon: Hash, category: "math", path: "/tools/percentage-calc" },
+  { id: "date-calculator", title: "Date Calculator", description: "Add/subtract days, calculate date differences", icon: CalendarClock, category: "math", path: "/tools/date-calculator" },
+  { id: "subnet-calc", title: "Subnet Calculator", description: "Calculate subnet details from IP/CIDR notation", icon: Network, category: "networking", path: "/tools/subnet-calc" },
+  { id: "timezone-converter", title: "Timezone Converter", description: "Convert time between different timezones", icon: Clock, category: "math", path: "/tools/timezone-converter" },
+  // Text Processing
+  { id: "remove-duplicates", title: "Remove Duplicate Lines", description: "Remove duplicate lines, keep unique entries", icon: FileX, category: "text-data", path: "/tools/remove-duplicates" },
+  { id: "sort-lines", title: "Sort Lines", description: "Sort lines alphabetically, by length, numerically", icon: List, category: "text-data", path: "/tools/sort-lines" },
+  { id: "word-frequency", title: "Word Frequency Counter", description: "Count word occurrences and frequency", icon: LetterText, category: "text-data", path: "/tools/word-frequency" },
+  { id: "text-reverser", title: "Text Reverser", description: "Reverse text by characters, words or lines", icon: ArrowRightLeft, category: "text-data", path: "/tools/text-reverser" },
+  { id: "line-numbers", title: "Add/Remove Line Numbers", description: "Add or remove line numbers from text", icon: Hash, category: "text-data", path: "/tools/line-numbers" },
 ];
