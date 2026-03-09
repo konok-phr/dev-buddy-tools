@@ -162,12 +162,13 @@ const App = () => (
     <ThemeProvider>
       <FavoritesProvider>
         <RecentsProvider>
-          <TooltipProvider>
-            <Toaster />
-            <Sonner />
-            <BrowserRouter>
-              <Layout>
-                <Suspense fallback={<DelayedFallback />}>
+          <StatsProvider>
+            <TooltipProvider>
+              <Toaster />
+              <Sonner />
+              <BrowserRouter>
+                <Layout>
+                  <Suspense fallback={<DelayedFallback />}>
                   <Routes>
                     <Route path="/" element={<Index />} />
                     <Route path="/tools/json-formatter" element={<JsonFormatter />} />
