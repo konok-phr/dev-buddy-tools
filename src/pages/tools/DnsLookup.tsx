@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ToolHeader, CopyButton } from "@/components/ToolPage";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Loader2, Globe } from "lucide-react";
+import { Loader2, Globe, History, Trash2, RotateCw } from "lucide-react";
 
 interface DnsRecord {
   name: string;
@@ -12,8 +12,18 @@ interface DnsRecord {
   data: string;
 }
 
+interface HistoryEntry {
+  domain: string;
+  type: string;
+  recordCount: number;
+  timestamp: string;
+}
+
 const RECORD_TYPES = ["A", "AAAA", "CNAME", "MX", "NS", "TXT", "SOA", "SRV"];
 const typeNames: Record<number, string> = { 1: "A", 28: "AAAA", 5: "CNAME", 15: "MX", 2: "NS", 16: "TXT", 6: "SOA", 33: "SRV" };
+
+const HISTORY_KEY = "dns-lookup-history";
+const MAX_HISTORY = 20;
 
 export default function DnsLookup() {
   const [domain, setDomain] = useState("");
@@ -21,24 +31,59 @@ export default function DnsLookup() {
   const [records, setRecords] = useState<DnsRecord[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [history, setHistory] = useState<HistoryEntry[]>(() => {
+    try { return JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]"); } catch { return []; }
+  });
 
-  const lookup = async () => {
-    if (!domain.trim()) return;
+  useEffect(() => {
+    localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+  }, [history]);
+
+  const addToHistory = (d: string, t: string, count: number) => {
+    setHistory(prev => {
+      const filtered = prev.filter(h => !(h.domain === d && h.type === t));
+      return [{ domain: d, type: t, recordCount: count, timestamp: new Date().toISOString() }, ...filtered].slice(0, MAX_HISTORY);
+    });
+  };
+
+  const lookup = async (d?: string, t?: string) => {
+    const lookupDomain = d || domain.trim();
+    const lookupType = t || type;
+    if (!lookupDomain) return;
     setLoading(true);
     setError("");
     setRecords([]);
+    if (d) { setDomain(d); setType(t || type); }
 
     try {
-      const res = await fetch(`https://dns.google/resolve?name=${encodeURIComponent(domain.trim())}&type=${type}`);
+      const res = await fetch(`https://dns.google/resolve?name=${encodeURIComponent(lookupDomain)}&type=${lookupType}`);
       const data = await res.json();
-      if (data.Answer) setRecords(data.Answer);
-      else if (data.Authority) setRecords(data.Authority);
-      else setError("No records found");
+      if (data.Answer) {
+        setRecords(data.Answer);
+        addToHistory(lookupDomain, lookupType, data.Answer.length);
+      } else if (data.Authority) {
+        setRecords(data.Authority);
+        addToHistory(lookupDomain, lookupType, data.Authority.length);
+      } else {
+        setError("No records found");
+      }
     } catch (e: any) {
       setError(`Lookup failed: ${e.message}`);
     } finally {
       setLoading(false);
     }
+  };
+
+  const clearHistory = () => setHistory([]);
+
+  const timeAgo = (ts: string) => {
+    const diff = Date.now() - new Date(ts).getTime();
+    const mins = Math.floor(diff / 60000);
+    if (mins < 1) return "just now";
+    if (mins < 60) return `${mins}m ago`;
+    const hrs = Math.floor(mins / 60);
+    if (hrs < 24) return `${hrs}h ago`;
+    return `${Math.floor(hrs / 24)}d ago`;
   };
 
   return (
@@ -59,7 +104,7 @@ export default function DnsLookup() {
             {RECORD_TYPES.map(t => <SelectItem key={t} value={t}>{t}</SelectItem>)}
           </SelectContent>
         </Select>
-        <Button onClick={lookup} disabled={loading}>
+        <Button onClick={() => lookup()} disabled={loading}>
           {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <><Globe className="h-4 w-4 mr-2" />Lookup</>}
         </Button>
       </div>
@@ -67,7 +112,7 @@ export default function DnsLookup() {
       {error && <p className="text-sm text-destructive mb-4">{error}</p>}
 
       {records.length > 0 && (
-        <div>
+        <div className="mb-6">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-sm font-semibold text-foreground">{records.length} record(s) found</h2>
             <CopyButton text={records.map(r => `${r.data}`).join("\n")} />
@@ -93,6 +138,39 @@ export default function DnsLookup() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      )}
+
+      {history.length > 0 && (
+        <div>
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-sm font-semibold text-foreground flex items-center gap-1.5">
+              <History className="h-4 w-4 text-muted-foreground" />
+              Recent Lookups
+            </h2>
+            <Button variant="ghost" size="sm" onClick={clearHistory} className="text-xs text-muted-foreground h-7 px-2">
+              <Trash2 className="h-3 w-3 mr-1" />Clear
+            </Button>
+          </div>
+          <div className="border rounded-md divide-y divide-border">
+            {history.map((h, i) => (
+              <button
+                key={i}
+                onClick={() => lookup(h.domain, h.type)}
+                className="w-full flex items-center justify-between p-2.5 text-left hover:bg-muted/50 transition-colors group"
+              >
+                <div className="flex items-center gap-2 min-w-0">
+                  <span className="text-xs font-mono px-1.5 py-0.5 rounded bg-primary/10 text-primary shrink-0">{h.type}</span>
+                  <span className="font-mono text-sm text-foreground truncate">{h.domain}</span>
+                  <span className="text-xs text-muted-foreground shrink-0">{h.recordCount} record(s)</span>
+                </div>
+                <div className="flex items-center gap-2 shrink-0">
+                  <span className="text-xs text-muted-foreground">{timeAgo(h.timestamp)}</span>
+                  <RotateCw className="h-3.5 w-3.5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+              </button>
+            ))}
           </div>
         </div>
       )}
