@@ -5,7 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "@/components/Layout";
-import { ThemeProvider, FavoritesProvider, RecentsProvider } from "@/hooks/use-preferences";
+import { ThemeProvider, FavoritesProvider, RecentsProvider, StatsProvider } from "@/hooks/use-preferences";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
