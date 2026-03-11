@@ -189,6 +189,7 @@ const PrettierConfigGenerator = lazy(() => import("./pages/tools/PrettierConfigG
 const ImageWatermark = lazy(() => import("./pages/tools/ImageWatermark"));
 const ImagePixelate = lazy(() => import("./pages/tools/ImagePixelate"));
 const ImageFlipRotate = lazy(() => import("./pages/tools/ImageFlipRotate"));
+const CmsChecker = lazy(() => import("./pages/tools/CmsChecker"));
 
 const queryClient = new QueryClient();
 
