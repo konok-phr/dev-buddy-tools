@@ -418,6 +418,7 @@ const App = () => (
                     <Route path="/tools/robots-txt" element={<RobotsTxtGenerator />} />
                     <Route path="/tools/sitemap-generator" element={<SitemapGeneratorPage />} />
                     <Route path="/tools/structured-data" element={<StructuredDataGenerator />} />
+                    <Route path="/tools/cms-checker" element={<CmsChecker />} />
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                 </Suspense>
