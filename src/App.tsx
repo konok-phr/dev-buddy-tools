@@ -189,6 +189,7 @@ const PrettierConfigGenerator = lazy(() => import("./pages/tools/PrettierConfigG
 const ImageWatermark = lazy(() => import("./pages/tools/ImageWatermark"));
 const ImagePixelate = lazy(() => import("./pages/tools/ImagePixelate"));
 const ImageFlipRotate = lazy(() => import("./pages/tools/ImageFlipRotate"));
+const CmsChecker = lazy(() => import("./pages/tools/CmsChecker"));
 
 const queryClient = new QueryClient();
 
@@ -417,6 +418,7 @@ const App = () => (
                     <Route path="/tools/robots-txt" element={<RobotsTxtGenerator />} />
                     <Route path="/tools/sitemap-generator" element={<SitemapGeneratorPage />} />
                     <Route path="/tools/structured-data" element={<StructuredDataGenerator />} />
+                    <Route path="/tools/cms-checker" element={<CmsChecker />} />
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                 </Suspense>

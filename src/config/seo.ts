@@ -738,4 +738,5 @@ export const toolSEO: Record<string, { title: string; description: string; keywo
   "image-watermark": { title: "Image Watermark Tool Online", description: "Add text watermark to images with adjustable opacity and size. Free tool.", keywords: "image watermark, add watermark, watermark tool, photo watermark" },
   "image-pixelate": { title: "Image Pixelate Tool Online", description: "Pixelate images with adjustable block size. Free browser tool.", keywords: "image pixelate, pixelate photo, pixel art, image blur" },
   "image-flip-rotate": { title: "Image Flip & Rotate Online", description: "Flip and rotate images with one click. Free browser tool.", keywords: "flip image, rotate image, mirror image, image transform" },
+  "cms-checker": { title: "CMS Checker — Detect Website CMS Online", description: "Detect what CMS, framework, or platform a website is built with. Supports WordPress, Shopify, Wix, Next.js & more.", keywords: "cms checker, cms detector, what cms, detect wordpress, website technology checker" },
 };

@@ -244,4 +244,5 @@ export const tools: ToolDef[] = [
   { id: "robots-txt", title: "Robots.txt Generator", description: "Generate robots.txt for crawlers", icon: Bot, category: "seo", path: "/tools/robots-txt" },
   { id: "sitemap-generator", title: "Sitemap Generator", description: "Generate XML sitemaps for SEO", icon: Map, category: "seo", path: "/tools/sitemap-generator" },
   { id: "structured-data", title: "JSON-LD Generator", description: "Generate structured data markup for SEO", icon: FileSearch2, category: "seo", path: "/tools/structured-data" },
+  { id: "cms-checker", title: "CMS Checker", description: "Detect what CMS or framework a website uses", icon: Search, category: "seo", path: "/tools/cms-checker" },
 ];
